@@ -1,8 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Bazar Frontend
 
-## Available Scripts
+## How To Use
 
-In the project directory, you can run:
+Clone this repository with: ```git clone https://yourusername@gitlab.com/neodimium60144/bazar-frontend.git``` In the project directory, you can run:
+
+### `npm install`
+To install all package into your local project.
 
 ### `npm start`
 
