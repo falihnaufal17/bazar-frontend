@@ -1,8 +1,11 @@
 import React from 'react';
+import '../assets/styles/Home.scss';
 
-const Home = p => {
+const Home = (props) => {
     return(
-        <div>Home Page Bazar</div>
+        <div>
+            <h1>Home Page Bazar</h1>
+        </div>
     )
 }
 
