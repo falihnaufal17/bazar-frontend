@@ -1,1 +1,39 @@
 @import './assets/styles/_variables.scss';
+footer{
+
+    background: #C0AAA0;
+    padding-top: 71px;
+    padding-bottom: 35px;
+    font-style: normal;
+    font-size:25px;
+    line-height:33px;
+    color: #FFFFFF;
+    p{
+        font-size: 14px;
+    }
+      .col-md{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 195.68%;
+    /* or 27px */
+
+
+    color: #000000;
+    }
+
+    .description{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 195.68%;
+        color: #FFFFFF;
+    }
+
+    .hline{
+        height: 1px;
+        width: 100%;
+        background-color: #EAEAEA;
+     }
+}
+
