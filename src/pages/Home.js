@@ -25,14 +25,14 @@ const Home = (props) => {
     return(
         <div className="mb-5 container">
             <div className="row">
-                <div className="col-6">
+                <div className="col col-md-6 col-lg-6 order-2 order-sm-1">
                     <div class="jumbotron">
                         <h1 class="display-4">Bazar collection</h1>
                         <p class="lead">let your self be concuered by the elegance of the summer collection of fashion</p>
                         <a class="btn btn-primary btn-lg" href="#" role="button">Join Now</a>
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col col-md-6 col-lg-6 order-1 order-sm-2">
                     <Sliders>
                         {
                             data.map(item => {
