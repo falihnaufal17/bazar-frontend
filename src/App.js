@@ -1,5 +1,7 @@
 import React, {Suspense, lazy} from 'react';
 import './App.scss';
+import "slick-carousel/slick/slick.scss"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const Container = lazy(()=>import('./pages/Container'));
 const Navbar = lazy(()=>import('./components/Navbar'));
