@@ -1,6 +1,7 @@
 import React, {Suspense, lazy} from 'react';
 import '../assets/styles/Home.scss';
 import bannerimage from '../assets/images/banner-item.png';
+import joinIcon from '../assets/icons/JOIN.svg';
 
 const Sliders = lazy(() => import('../components/Sliders'));
 
@@ -23,28 +24,32 @@ const Home = (props) => {
         }
     ]
     return(
-        <div className="mb-5 container">
-            <div className="row">
-                <div className="col col-md-6 col-lg-6 order-2 order-sm-1">
-                    <div class="jumbotron">
-                        <h1 class="display-4">Bazar collection</h1>
-                        <p class="lead">let your self be concuered by the elegance of the summer collection of fashion</p>
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Join Now</a>
+        <section id="section-jumbotron" className="mb-5">
+            <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col col-md-6 col-lg-5 order-2 order-md-1">
+                            <div class="jumbotron">
+                                <h1 class="display-4">Bazar collection</h1>
+                                <p class="lead">let your self be concuered by the elegance of the summer collection of fashion</p>
+                                <a class="btn btn-primary btn-lg" href="#" role="button">Join Now <img src={joinIcon} alt="join-icon" /></a>
+                            </div>
+                        </div>
+                        <div className="col col-md-6 col-lg-7 order-1 order-md-2">
+                            <Sliders>
+                                {
+                                    data.map((item, key) => {
+                                        return(
+                                            <div key={key}>
+                                                <img src={item.image} className="d-block w-100" alt={item.title} />
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </Sliders>
+                        </div>
                     </div>
-                </div>
-                <div className="col col-md-6 col-lg-6 order-1 order-sm-2">
-                    <Sliders>
-                        {
-                            data.map(item => {
-                                return(
-                                    <img src={item.image} alt={item.title} />
-                                )
-                            })
-                        }
-                    </Sliders>
-                </div>
             </div>
-        </div>
+        </section>
     )
 }
 
