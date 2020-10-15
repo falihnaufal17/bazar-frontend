@@ -45,3 +45,16 @@
         }
     }
 }
+
+h2{
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 33px;
+    color: $primary;
+    text-align: center;
+    margin-bottom: 62px;
+}
+
+.bg-dark{
+    background-color: #000 !important;
+}
