@@ -3,7 +3,6 @@
 #section-jumbotron{ // id = section-jumbotron
     position: relative;
     background-image: url('../images/bg-jumbotron.svg');
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 75px 0;
@@ -62,7 +61,6 @@
         line-height: 33px;
         color: $primary;
         text-align: center;
-        margin-bottom: 62px;
     }
     
     &.bg-dark{
@@ -71,4 +69,11 @@
 
     padding-bottom: 69px;
     padding-top: 69px;
+
+    .row{
+        margin: auto -5px;
+        > * {
+            padding: 0 5px;
+        }
+    }
 }

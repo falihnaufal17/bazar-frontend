@@ -157,16 +157,20 @@ footer{
         }
 
         > * {
-            padding: 0 5px !important;
+            padding: 0 15px !important;
             display: inline-block;
             float: none;
-            width: 250px;
+            width: 300px;
             padding-bottom: 10px !important;
             padding-top: 10px !important;
             max-width: inherit;
             vertical-align: top;
             white-space: normal;
             margin-bottom: 42px;
+            @media screen and (max-width: 768px) {
+                padding: 0 5px !important;
+                width: 250px;
+            }
         }
 
         &.scroll-white{
@@ -216,5 +220,23 @@ footer{
         &.bottom {
         vertical-align: bottom;
         }
+    }
+}
+
+.head-line-primary{
+    background: linear-gradient(90deg, #000000 26.42%, rgba(236, 198, 177, 0) 73.58%);
+    width: 100%;
+    height: 2px;
+    &.rotate-min-180{
+        transform: rotate(-180deg);
+    }
+}
+
+.head-line-secondary{
+    background: linear-gradient(90deg, #AC9A92 26.42%, rgba(172, 154, 146, 0) 73.58%);
+    width: 100%;
+    height: 2px;
+    &.rotate-min-180{
+        transform: rotate(-180deg);
     }
 }

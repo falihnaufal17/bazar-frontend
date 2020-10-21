@@ -53,12 +53,20 @@ const Home = (props) => {
                 </div>
             </section>
             <section className="container" id="section-popular-category">
-                <h2>Popular Category</h2>
+                <div className="row align-items-center mb-5">
+                    <div className="col"><div className="head-line-primary rotate-min-180"/></div>
+                    <div className="col-auto"><h2>Popular Category</h2></div>
+                    <div className="col"><div className="head-line-primary"/></div>
+                </div>
                 <PopularCategory />
             </section>
             <section className="bg-dark" id="section-popular-category">
                 <div className="container">
-                    <h2 className="text-white">Popular Category</h2>
+                    <div className="row align-items-center mb-5">
+                        <div className="col"><div className="head-line-secondary rotate-min-180"/></div>
+                        <div className="col-auto"><h2 className="text-white">Popular Category</h2></div>
+                        <div className="col"><div className="head-line-secondary"/></div>
+                    </div>
                     <PopularCategory className="scroll-white" />
                 </div>
             </section>
