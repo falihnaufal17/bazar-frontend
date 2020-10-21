@@ -26,7 +26,7 @@ const Home = (props) => {
     ]
     return(
         <div>
-            <section id="section-jumbotron" className="mb-5">
+            <section id="section-jumbotron">
                 <div className="container">
                         <div className="row align-items-center">
                             <div className="col col-md-6 col-lg-5 order-2 order-md-1">
@@ -52,14 +52,14 @@ const Home = (props) => {
                         </div>
                 </div>
             </section>
-            <section className="container">
+            <section className="container" id="section-popular-category">
                 <h2>Popular Category</h2>
                 <PopularCategory />
             </section>
-            <section className="bg-dark">
+            <section className="bg-dark" id="section-popular-category">
                 <div className="container">
                     <h2 className="text-white">Popular Category</h2>
-                    <PopularCategory />
+                    <PopularCategory className="scroll-white" />
                 </div>
             </section>
         </div>

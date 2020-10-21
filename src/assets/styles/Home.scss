@@ -1,8 +1,9 @@
 @import './variables';
 
-#section-jumbotron{
+#section-jumbotron{ // id = section-jumbotron
     position: relative;
     background-image: url('../images/bg-jumbotron.svg');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 75px 0;
@@ -46,15 +47,28 @@
     }
 }
 
-h2{
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 33px;
-    color: $primary;
-    text-align: center;
-    margin-bottom: 62px;
-}
+#section-popular-category{ // id=section-popular-category
+    .slick-slider{
+        @media screen and (max-width: 768px) {
+            .slick-arrow{
+                display: none !important;
+            }
+        }
+    }
 
-.bg-dark{
-    background-color: #000 !important;
+    h2{
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 33px;
+        color: $primary;
+        text-align: center;
+        margin-bottom: 62px;
+    }
+    
+    &.bg-dark{
+        background-color: #000 !important;
+    }
+
+    padding-bottom: 69px;
+    padding-top: 69px;
 }

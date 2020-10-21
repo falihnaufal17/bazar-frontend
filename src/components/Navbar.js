@@ -12,27 +12,31 @@ const Navbar = (props) => {
                     <div className="col-auto col-lg order-2 order-md-2 order-lg-1">
                         <a className="navbar-brand" href="/">Bazar</a>
                     </div>
-                    <div className="col-auto order-5 order-md-3 order-lg-2">
-                        <div className="row row-p align-items-center nav-box">
-                            <div className="col col-lg-auto">
-                                <input className="form-control" type="text" placeholder="What are you looking for?" aria-label="Search" />
-                            </div>
-                            <div className="col-auto">
-                                <img src={SearchIcon} alt="search-icon" />
-                            </div>
+                    <div className="col col-md col-lg-auto order-5 order-md-3 order-lg-2">
+                        <div className="d-flex nav-box">
+                            <input className="form-control" type="text" placeholder="What are you looking for?" aria-label="Search" />
+                            <img src={SearchIcon} alt="search-icon" />
                         </div>
                     </div>
                     <div className="col-auto order-3 order-md-4 order-lg-3">
-                        <a href="#">
-                            <div className="row align-items-center nav-box shadow-none p3">
-                                <div className="col-auto">
-                                    <img src={SignInIcon} alt="signin-icon" />
-                                </div>
-                                <div className="col-auto">
-                                    <div className="login-text">Sign In</div>
-                                </div>
+                        <div className="valign">
+                            <div className="inner">
+                                <a href="#" className="btn-login">
+                                    {/* <div className="row align-items-center nav-box shadow-none p3">
+                                        <div className="col-auto"> */}
+                                        {/* </div>
+                                        <div className="col-auto"> */}
+                                        {/* </div>
+                                    </div> */}
+                                    {/* <img src={SignInIcon} alt="signin-icon" /> */}
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fillRule="evenodd" clipRule="evenodd" d="M8.38098 15H13.5H16V12.5V2.5V0H13.5H8.38098V2.5H13.5V12.5H8.38098V15Z" fill="black"/>
+                                            <path d="M8.91128 8.38775C9.20417 8.09486 9.20417 7.61999 8.91128 7.32709L4.13831 2.55412C3.84542 2.26123 3.37054 2.26123 3.07765 2.55412C2.78476 2.84701 2.78476 3.32189 3.07765 3.61478L7.32029 7.85742L3.07765 12.1001C2.78476 12.393 2.78476 12.8678 3.07765 13.1607C3.37054 13.4536 3.84542 13.4536 4.13831 13.1607L8.91128 8.38775ZM0 8.60742H8.38095V7.10742H0V8.60742Z" fill="black"/>
+                                        </svg>
+                                        <span className="login-text">Sign In</span>
+                                </a>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div className="col-auto order-4 order-md-5 order-lg-4">
                         <a href="#">

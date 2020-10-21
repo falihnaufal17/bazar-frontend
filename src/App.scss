@@ -38,10 +38,10 @@
         box-shadow:none;
         font-size: 10px;
         line-height: 12px;
-        padding: 0;
-        padding-left: 26px;
-        margin-right: 150px;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        @media screen and (min-width: 991px){
+            width: 319px;
+        }
     }
     .nav-box{
         background-color: #FFF;
@@ -63,7 +63,8 @@
         font-weight: bold;
         font-size: 10px;
         line-height: 14px;
-        color: #000;
+        margin-left: 7px;
+        // color: #000;
     }
     .row-p{
         margin: auto 0;
@@ -85,6 +86,22 @@
         top: 50%;
         left: 50%;
         position: absolute;
+    }
+
+    .btn-login{
+        background: $secondary;
+        border: 1px solid #F2F2F2;
+        padding: 4px 16px;
+        &:hover{
+            background-color: $primary;
+            color: $secondary !important;
+            transition: 500ms all;
+            svg{
+                path{
+                    fill: $secondary;
+                }
+            }
+        }
     }
 }
 
@@ -126,3 +143,78 @@ footer{
      }
 }
 
+.vertical-xs{
+    // @media screen and (max-width: 768px) {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-x: auto;
+        margin: 0 -20px !important;
+        margin-top: -10px !important;
+        padding: 0 15px !important;
+        @media screen and (max-width: 768px) {
+            margin: 0 -15px !important;
+        }
+
+        > * {
+            padding: 0 5px !important;
+            display: inline-block;
+            float: none;
+            width: 250px;
+            padding-bottom: 10px !important;
+            padding-top: 10px !important;
+            max-width: inherit;
+            vertical-align: top;
+            white-space: normal;
+            margin-bottom: 42px;
+        }
+
+        &.scroll-white{
+            &::-webkit-scrollbar {
+                height: 6px;
+            }
+            
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: #000;
+                border-bottom: 1px solid #FFF;
+            }
+            
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #FFF; 
+            }   
+        }
+
+        &::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #FFF;
+            border-bottom: 2px solid #000;
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #000000; 
+        }     
+          
+    // }
+}
+
+.valign {
+    display: table;
+    width: 100%;
+    height: 100%;
+  
+    .inner {
+        vertical-align: middle;
+        display: table-cell;
+
+        &.bottom {
+        vertical-align: bottom;
+        }
+    }
+}
