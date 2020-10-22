@@ -1,72 +1,74 @@
 import React from 'react';
-import Slider from 'react-slick';
 import Gambar from '../assets/images/category-1.svg';
+import ArrowUp from '../assets/icons/ARROW UP.svg';
+import ArrowUpBlack from '../assets/icons/ARROW UP BLACK.svg';
 
 const PopularCategory = (props) => {
-    const settings = {
-        className: "center",
-        centerMode: true,
-        infinite: true,
-        centerPadding: "60px",
-        slidesToShow: 3,
-        speed: 500,
-        responsive: [
-            {
-                breakpoint: 600,
-                settings: {
-                  dots: false,
-                  infinite: true,
-                  speed: 500,
-                  slidesToShow: 3,
-                  slidesToScroll: 3,
-                  variableWidth: false,
-                  centerMode: false,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    infinite: true,
-                    speed: 500,
-                    dots: false,
-                    slidesToShow: 2,
-                    // slidesToScroll: 3,
-                    variableWidth: false,
-                    // centerMode: false
-                }
-            }  
-        ]
-    };
-
     return(
         <div>
-            <div className={"row vertical-xs " + props.className}>
-                <a>
+            <div className={props.isDark ? "row vertical-xs scroll-white" : "row vertical-xs"}>
+                <a href="#" className="position-relative">
                     <img src={Gambar} alt="Gambar" className="d-block w-100"/>
+                    <div className={props.isDark ? "category d-flex align-items-center category-white" : "category d-flex align-items-center"}>
+                        <div>Category <br></br>Product</div> 
+                        <div className="ml-3"><img src={props.isDark ? ArrowUpBlack : ArrowUp} alt="arrow up" /></div>
+                    </div>
                 </a>
-                <a>
+                <a href="#" className="position-relative">
                     <img src={Gambar} alt="Gambar" className="d-block w-100"/>
+                    <div className={props.isDark ? "category d-flex align-items-center category-white" : "category d-flex align-items-center"}>
+                        <div>Category <br></br>Product</div> 
+                        <div className="ml-3"><img src={props.isDark ? ArrowUpBlack : ArrowUp} alt="arrow up" /></div>
+                    </div>
                 </a>
-                <a>
+                <a href="#" className="position-relative">
                     <img src={Gambar} alt="Gambar" className="d-block w-100"/>
+                    <div className={props.isDark ? "category d-flex align-items-center category-white" : "category d-flex align-items-center"}>
+                        <div>Category <br></br>Product</div> 
+                        <div className="ml-3"><img src={props.isDark ? ArrowUpBlack : ArrowUp} alt="arrow up" /></div>
+                    </div>
                 </a>
-                <a>
+                <a href="#" className="position-relative">
                     <img src={Gambar} alt="Gambar" className="d-block w-100"/>
+                    <div className={props.isDark ? "category d-flex align-items-center category-white" : "category d-flex align-items-center"}>
+                        <div>Category <br></br>Product</div> 
+                        <div className="ml-3"><img src={props.isDark ? ArrowUpBlack : ArrowUp} alt="arrow up" /></div>
+                    </div>
                 </a>
-                <a>
+                <a href="#" className="position-relative">
                     <img src={Gambar} alt="Gambar" className="d-block w-100"/>
+                    <div className={props.isDark ? "category d-flex align-items-center category-white" : "category d-flex align-items-center"}>
+                        <div>Category <br></br>Product</div> 
+                        <div className="ml-3"><img src={props.isDark ? ArrowUpBlack : ArrowUp} alt="arrow up" /></div>
+                    </div>
                 </a>
-                <a>
+                <a href="#" className="position-relative">
                     <img src={Gambar} alt="Gambar" className="d-block w-100"/>
+                    <div className={props.isDark ? "category d-flex align-items-center category-white" : "category d-flex align-items-center"}>
+                        <div>Category <br></br>Product</div> 
+                        <div className="ml-3"><img src={props.isDark ? ArrowUpBlack : ArrowUp} alt="arrow up" /></div>
+                    </div>
                 </a>
-                <a>
+                <a href="#" className="position-relative">
                     <img src={Gambar} alt="Gambar" className="d-block w-100"/>
+                    <div className={props.isDark ? "category d-flex align-items-center category-white" : "category d-flex align-items-center"}>
+                        <div>Category <br></br>Product</div> 
+                        <div className="ml-3"><img src={props.isDark ? ArrowUpBlack : ArrowUp} alt="arrow up" /></div>
+                    </div>
                 </a>
-                <a>
+                <a href="#" className="position-relative">
                     <img src={Gambar} alt="Gambar" className="d-block w-100"/>
+                    <div className={props.isDark ? "category d-flex align-items-center category-white" : "category d-flex align-items-center"}>
+                        <div>Category <br></br>Product</div> 
+                        <div className="ml-3"><img src={props.isDark ? ArrowUpBlack : ArrowUp} alt="arrow up" /></div>
+                    </div>
                 </a>
-                <a>
+                <a href="#" className="position-relative">
                     <img src={Gambar} alt="Gambar" className="d-block w-100"/>
+                    <div className={props.isDark ? "category d-flex align-items-center category-white" : "category d-flex align-items-center"}>
+                        <div>Category <br></br>Product</div> 
+                        <div className="ml-3"><img src={props.isDark ? ArrowUpBlack : ArrowUp} alt="arrow up" /></div>
+                    </div>
                 </a>
             </div>
         </div>

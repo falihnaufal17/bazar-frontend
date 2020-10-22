@@ -5,6 +5,7 @@ import joinIcon from '../assets/icons/JOIN.svg';
 
 const Sliders = lazy(() => import('../components/Sliders'));
 const PopularCategory = lazy(() => import('../components/PopularCategory'));
+const Brands = lazy(() => import('../components/Brands'));
 
 const Home = (props) => {
     const data = [
@@ -29,15 +30,14 @@ const Home = (props) => {
             <section id="section-jumbotron">
                 <div className="container">
                         <div className="row align-items-center">
-                            <div className="col col-md-6 col-lg-5 order-2 order-md-1">
+                            <div className="col-12 col-md-6 col-lg-5 order-2 order-md-1">
                                 <div class="jumbotron">
-                                    <h1 class="display-4">Bazar collection</h1>
-                                    <p class="lead">let your self be concuered by the elegance of the summer collection of fashion</p>
+                                    <h1 class="display-4 mb-5">Bazar<br></br>Your gateway to all things fashion</h1>
                                     <a class="btn btn-primary btn-lg" href="#" role="button">Join Now <img src={joinIcon} alt="join-icon" /></a>
                                 </div>
                             </div>
                             <div className="col col-md-6 col-lg-7 order-1 order-md-2">
-                                <Sliders>
+                                {/* <Sliders>
                                     {
                                         data.map((item, key) => {
                                             return(
@@ -47,29 +47,58 @@ const Home = (props) => {
                                             )
                                         })
                                     }
-                                </Sliders>
+                                </Sliders> */}
                             </div>
                         </div>
                 </div>
             </section>
-            <section className="container" id="section-popular-category">
-                <div className="row align-items-center mb-5">
-                    <div className="col"><div className="head-line-primary rotate-min-180"/></div>
-                    <div className="col-auto"><h2>Popular Category</h2></div>
-                    <div className="col"><div className="head-line-primary"/></div>
-                </div>
+            <section id="section-popular-category">
+                <h2>Trending Now</h2>
                 <PopularCategory />
             </section>
-            <section className="bg-dark" id="section-popular-category">
+            <section id="section-discover">
                 <div className="container">
-                    <div className="row align-items-center mb-5">
-                        <div className="col"><div className="head-line-secondary rotate-min-180"/></div>
-                        <div className="col-auto"><h2 className="text-white">Popular Category</h2></div>
-                        <div className="col"><div className="head-line-secondary"/></div>
+                    <div className="row">
+                        <div className="col-12 col-md-12 col-lg-4">
+                            <div className="position-relative">
+                                <h2>Discover</h2>
+                                <div className="line-discover"></div>
+                            </div>
+                            <p>Browse thousands of curated, real-time U.S.-sold fashion brands across multiple categories</p>
+                            <p>Add products to your wishlist to track promotions and receive notifications</p>
+                        </div>
+                        <div className="col-12 col-md-12 col-lg-4">
+                            <div className="position-relative">
+                                <h2>Shop</h2>
+                                <div className="line-shop"></div>
+                            </div>
+                            <p>Add products to your cart when ready and complete your purchase</p>
+                            <p>Pay with your local credit/debit card. You don’t need an international bank account for this!</p>
+                            <p>And YES! We will handle shipping, taxes, & duties for you because you don’t have to.</p>
+                        </div>
+                        <div className="col-12 col-md-12 col-lg-4">
+                            <div className="position-relative">
+                                <h2>Love & Repeat</h2>
+                                <div className="line-love"></div>
+                            </div>
+                            <p>Enjoy your new look!</p>
+                            <p>Be on the lookout for new arrivals</p>
+                            <p>Spread the word about Bazar to your family, friends, and loved ones.</p>
+                        </div>
                     </div>
-                    <PopularCategory className="scroll-white" />
                 </div>
             </section>
+            <section className="bg-dark" id="section-popular-category">
+                <div>
+                    <h2 className="text-white">In Vogue</h2>
+                    <PopularCategory isDark={true} />
+                </div>
+            </section>
+            {/* <section>
+                <div className="container">
+                    <Brands />
+                </div>
+            </section> */}
         </div>
     )
 }
