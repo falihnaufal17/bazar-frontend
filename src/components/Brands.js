@@ -14,23 +14,49 @@ const Brands = props => {
         slidesToShow: 3,
         centerPadding: "60px",
         speed: 500,
-        dots: false
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                  dots: false,
+                  infinite: true,
+                  speed: 500,
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  variableWidth: false,
+                  centerMode: false,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    infinite: true,
+                    speed: 500,
+                    dots: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: false,
+                    centerMode: false,
+                }
+            }  
+        ]
     };
     return(
         <Slider {...settings}>
-            <div className="card d-flex">
+            <div>
                 <img src={AcneStudios} alt="ACNE STUDIOS" className="d-block" />
             </div>
-            <div className="card d-flex">
+            <div>
                 <img src={Gucci} alt="GUCCI" className="d-block" />
             </div>
-            <div className="card d-flex">
+            <div>
                 <img src={Nike} alt="NIKE" className="d-block" />
             </div>
-            <div className="card d-flex">
+            <div>
                 <img src={Ssense} alt="SSENSE" className="d-block" />
             </div>
-            <div className="card d-flex">
+            <div>
                 <img src={Yoox} alt="YOOX" className="d-block" />
             </div>
         </Slider>

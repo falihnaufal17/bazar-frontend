@@ -26,7 +26,7 @@ const Home = (props) => {
         }
     ]
     return(
-        <div>
+        <Suspense fallback="">
             <section id="section-jumbotron">
                 <div className="container">
                         <div className="row align-items-center">
@@ -94,12 +94,12 @@ const Home = (props) => {
                     <PopularCategory isDark={true} />
                 </div>
             </section>
-            {/* <section>
+            <section id="brands">
                 <div className="container">
                     <Brands />
                 </div>
-            </section> */}
-        </div>
+            </section>
+        </Suspense>
     )
 }
 
