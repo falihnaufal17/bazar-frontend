@@ -344,3 +344,10 @@ footer{
         transform: rotate(-180deg);
     }
 }
+
+.float-to-top{
+    position: fixed;
+    bottom: 112px;
+    right: 24px;
+    cursor: pointer;
+}

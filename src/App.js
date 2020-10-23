@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 const Container = lazy(()=>import('./pages/Container'));
 const Navbar = lazy(()=>import('./components/Navbar'));
 const Footer = lazy(()=>import('./components/Footer'));
+const FloatButtonToTop = lazy(() => import('./components/FloatButtonToTop'))
 
 function App(props) {
   return (
@@ -13,6 +14,7 @@ function App(props) {
       <Navbar/>
       <Container {...props} />
       <Footer />
+      <FloatButtonToTop />
     </Suspense>
   );
 }
