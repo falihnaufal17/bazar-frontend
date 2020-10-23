@@ -350,4 +350,12 @@ footer{
     bottom: 112px;
     right: 24px;
     cursor: pointer;
+    &.hides{
+        opacity: 0;
+        transition: 500ms all;
+    }
+    &.shows{
+        opacity: 1;
+        transition: 500ms all;
+    }
 }
