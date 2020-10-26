@@ -182,6 +182,12 @@
             width: 135px;
             margin:auto;
             transition: 500ms all;
+            &.slick-arrow{
+                width: auto;
+                transition: none;
+                top: 35%;
+                height: auto;
+            }
         }
         .slick-slide{
             &.slick-active{

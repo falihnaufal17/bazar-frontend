@@ -5,8 +5,27 @@ import Gucci from '../assets/logos/GUCCI.svg';
 import Nike from '../assets/logos/NIKE.svg';
 import Ssense from '../assets/logos/SSENSE.svg';
 import Yoox from '../assets/logos/YOOX.svg';
+import ArrowRight from '../assets/icons/ARROW RIGHT.svg';
+import ArrowLeft from '../assets/icons/ARROW LEFT.svg';
 
 const Brands = props => {
+    const ArrowNext = (props) => {
+        const { className, style, onClick } = props;
+        return(
+            // <div onClick={onClick} style={{...style}} className={className}>
+                <img src={ArrowRight} alt="next" onClick={onClick} style={{...style}} className={className} />
+            /* </div> */
+        )
+    }
+    const ArrowPrev = (props) => {
+        const { className, style, onClick } = props;
+        return(
+            // <div onClick={onClick} style={{...style}} className={className}>
+                <img src={ArrowLeft} alt="prev" onClick={onClick} style={{...style}} className={className} />
+            // </div>
+        )
+    }
+
     const settings = {
         className: "center",
         centerMode: true,
@@ -15,6 +34,8 @@ const Brands = props => {
         centerPadding: "10px",
         speed: 500,
         dots: false,
+        nextArrow: <ArrowNext />,
+        prevArrow: <ArrowPrev />,
         responsive: [
             {
                 breakpoint: 600,
