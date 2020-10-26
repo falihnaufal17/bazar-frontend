@@ -163,10 +163,36 @@
 }
 
 #brands{
+    padding: 65px 0;
+    height: 400px;
+    h2{
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+        margin-bottom: 59px;
+    }
     .slick-slider{
         @media screen and (max-width: 768px) {
             .slick-arrow{
                 display: none !important;
+            }
+        }
+        img{
+            width: 135px;
+            margin:auto;
+            transition: 500ms all;
+        }
+        .slick-slide{
+            &.slick-active{
+                &.slick-center{
+                    &.slick-current{
+                        img{
+                            width: 193px !important;
+                            transition: 500ms all;
+                        }
+                    }
+                }   
             }
         }
     }

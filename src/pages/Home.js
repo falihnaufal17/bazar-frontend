@@ -96,6 +96,7 @@ const Home = (props) => {
             </section>
             <section id="brands">
                 <div className="container">
+                    <h2>Brands We Love</h2>
                     <Brands />
                 </div>
             </section>

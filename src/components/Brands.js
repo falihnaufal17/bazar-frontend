@@ -11,8 +11,8 @@ const Brands = props => {
         className: "center",
         centerMode: true,
         infinite: true,
-        slidesToShow: 3,
-        centerPadding: "60px",
+        slidesToShow: 5,
+        centerPadding: "10px",
         speed: 500,
         dots: false,
         responsive: [
@@ -44,6 +44,21 @@ const Brands = props => {
     };
     return(
         <Slider {...settings}>
+            <div>
+                <img src={AcneStudios} alt="ACNE STUDIOS" className="d-block" />
+            </div>
+            <div>
+                <img src={Gucci} alt="GUCCI" className="d-block" />
+            </div>
+            <div>
+                <img src={Nike} alt="NIKE" className="d-block" />
+            </div>
+            <div>
+                <img src={Ssense} alt="SSENSE" className="d-block" />
+            </div>
+            <div>
+                <img src={Yoox} alt="YOOX" className="d-block" />
+            </div>
             <div>
                 <img src={AcneStudios} alt="ACNE STUDIOS" className="d-block" />
             </div>
