@@ -57,28 +57,28 @@ const Navbar = (props) => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav m-auto">
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Women {/* <span className="sr-only">(current)</span> */}</a>
+                            <a className="nav-link" href="/products">Women {/* <span className="sr-only">(current)</span> */}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Men</a>
+                            <a className="nav-link" href="/products">Men</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Shoes</a>
+                            <a className="nav-link" href="/products">Shoes</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Bags</a>
+                            <a className="nav-link" href="/products">Bags</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Accessories</a>
+                            <a className="nav-link" href="/products">Accessories</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Beauty</a>
+                            <a className="nav-link" href="/products">Beauty</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Kids</a>
+                            <a className="nav-link" href="/products">Kids</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">On Sale</a>
+                            <a className="nav-link" href="/products">On Sale</a>
                         </li>
                     </ul>
                 </div>
