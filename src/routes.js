@@ -16,7 +16,12 @@ export default [
         exact: true
     },
     {
-        path: '/products',
+        path: '/products/:menu',
+        component: Products,
+        exact: true
+    },
+    {
+        path: '/products/:menu/:category',
         component: Products,
         exact: true
     }

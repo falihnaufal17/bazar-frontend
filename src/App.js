@@ -11,7 +11,6 @@ const FloatButtonToTop = lazy(() => import('./components/FloatButtonToTop'))
 function App(props) {
   return (
     <Suspense fallback="">
-        <Navbar/>
         <Container {...props} />
         <Footer />
         <FloatButtonToTop />

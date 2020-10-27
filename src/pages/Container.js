@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import routes from '../routes'
 import { Route, Switch } from 'react-router-dom'
 import ItemRoute from './ItemRoute';
+const Navbar = lazy(()=>import('../components/Navbar'));
 
 const Container = p => {
     return(
@@ -17,7 +18,12 @@ const Container = p => {
                                 exact
                                 path={item.path}
                                 render={p => {
-                                    return <ItemRoute component={<Page {...p} />} />
+                                    return (
+                                        <>
+                                            <Navbar {...p}/>
+                                            <ItemRoute component={<Page {...p} />} />
+                                        </>
+                                    )
                                 }}
                             />
                         )
