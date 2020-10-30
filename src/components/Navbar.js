@@ -56,33 +56,210 @@ const Navbar = (props) => {
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav m-auto">
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Women {/* <span className="sr-only">(current)</span> */}</a>
+                        <li className="nav-item px-4 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="WomenDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Women {/* <span className="sr-only">(current)</span> */}</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
+                            <div class="dropdown-divider"></div>
+                            <div class="d-md-flex align-items-start justify-content-start">
+                            <div>
+                            <div class="dropdown-header">Women's Clothing</div>
+                        <a class="dropdown-item" href="#">Activewear & Yoga</a>
+                        <a class="dropdown-item" href="#">Denim & Jeans</a>
+                        <a class="dropdown-item" href="#">Dresses</a>
+                        <a class="dropdown-item" href="#">Jackets</a>
+                        <a class="dropdown-item" href="#">Jumpsuits & Rompers</a>
+                        <a class="dropdown-item" href="#">Outerwear & Coats</a>
+                        <a class="dropdown-item" href="#">Pants</a>
+                        <a class="dropdown-item" href="#">Shirts & Tops</a>
+                        </div>   
+
+                        <div>  
+                        <a class="dropdown-item" href="#">Shorts</a>
+                        <a class="dropdown-item" href="#">Skirts</a>
+                        <a class="dropdown-item" href="#">Sleepwear</a>
+                        <a class="dropdown-item" href="#">Sweaters</a>
+                        <a class="dropdown-item" href="#">Swimear</a>
+                        <a class="dropdown-item" href="#">Sweets & Hoodies</a>
+                        <a class="dropdown-item" href="#">Petite</a>
+                        <a class="dropdown-item" href="#">Plus</a>
+                        <a class="dropdown-item" href="#">Shop All Clothing</a>
+                        </div>
+                        </div>
+                        </div>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Men</a>
+                        
+                        <li className="nav-item px-4 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="WomenDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Men {/* <span className="sr-only">(current)</span> */}</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
+                                
+                            <div class="dropdown-header">Men Clothing</div>
+                        <a class="dropdown-item" href="#">Activewear</a>
+                        <a class="dropdown-item" href="#">Denim & Jeans</a>
+                        <a class="dropdown-item" href="#">Outerwear & Coats</a>
+                        <a class="dropdown-item" href="#">Pants</a>
+                        <a class="dropdown-item" href="#">Shirt & Tops</a>
+                        </div>   
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Shoes</a>
+
+                        <li className="nav-item px-4 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="WomenDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shoes {/* <span className="sr-only">(current)</span> */}</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
+                            <div class="dropdown-divider"></div>
+                            <div class="d-md-flex align-items-start justify-content-start">
+                            <div>
+                            <div class="dropdown-header">Women's Shoes</div>
+                        <a class="dropdown-item" href="#">Athletic & Sneakers</a>
+                        <a class="dropdown-item" href="#">Boots & Booties</a>
+                        <a class="dropdown-item" href="#">Clogs & Mules</a>
+                        <a class="dropdown-item" href="#">Comfort</a>
+                        <a class="dropdown-item" href="#">Flats</a>
+                        <a class="dropdown-item" href="#">Heels</a>
+                        <a class="dropdown-item" href="#">Loafers</a>
+                        <a class="dropdown-item" href="#">Pumps</a>
+                        <a class="dropdown-item" href="#">Sandals</a>
+                        </div>  
+                         
+                        <div>  
+                        <div class="dropdown-header">Men's Shoes</div>
+                        <a class="dropdown-item" href="#">Athletic & Sneakers</a>
+                        <a class="dropdown-item" href="#">Boots & Booties</a>
+                        <a class="dropdown-item" href="#">Clogs & Mules</a>
+                        <a class="dropdown-item" href="#">Boots</a>
+                        <a class="dropdown-item" href="#">Dress Shoes</a>
+                        <a class="dropdown-item" href="#">Loafers</a>
+                        <a class="dropdown-item" href="#">Sandals</a>
+                        <a class="dropdown-item" href="#">Slippers</a>
+                        </div>
+                        </div>
+                        </div>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Bags</a>
+                    
+                        <li className="nav-item px-4 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="WomenDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bags {/* <span className="sr-only">(current)</span> */}</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
+                            <div class="dropdown-divider"></div>
+                            <div class="d-md-flex align-items-start justify-content-start">
+                            <div>
+                            <div class="dropdown-header">Women's Bag's</div>
+                        <a class="dropdown-item" href="#">Backpacks</a>
+                        <a class="dropdown-item" href="#">Clutches</a>
+                        <a class="dropdown-item" href="#">Handbags</a>
+                        <a class="dropdown-item" href="#">Shoulder Bags</a>
+                        <a class="dropdown-item" href="#">Walllet</a>
+                        <a class="dropdown-item" href="#">Shop all Bags</a>
+                        </div>   
+                        <div>
+                        <div class="dropdown-header">Men's Bag's</div>
+                        <a class="dropdown-item" href="#">Businnes Bags</a>
+                        <a class="dropdown-item" href="#">Backpacks</a>
+                        <a class="dropdown-item" href="#">Gym Bags</a>
+                        <a class="dropdown-item" href="#">Mesengger</a>
+    
+                        <a class="dropdown-item" href="#">Shop All Bags</a>
+                        </div> 
+                        </div>
+                        </div>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Accessories</a>
+
+                        <li className="nav-item px-4 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="WomenDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accessories{/* <span className="sr-only">(current)</span> */}</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
+                            <div class="dropdown-divider"></div>
+                            <div class="d-md-flex align-items-start justify-content-start">
+                            <div>
+                            <div class="dropdown-header">Women's Accessories</div>
+                        <a class="dropdown-item" href="#">Belts</a>
+                        <a class="dropdown-item" href="#">Everywear</a>
+                        <a class="dropdown-item" href="#">GLoves</a>
+                        <a class="dropdown-item" href="#">Hats</a>
+                        <a class="dropdown-item" href="#">jewlrey</a>
+                        <a class="dropdown-item" href="#">Scarves</a>
+                        <a class="dropdown-item" href="#">Watches</a>
+                        <a class="dropdown-item" href="#">Shop All Accessories</a>
+                        </div>   
+                        <div>
+                        <div class="dropdown-header">Men's Accessories</div>
+                        <a class="dropdown-item" href="#">Belts</a>
+                        <a class="dropdown-item" href="#">Everywear</a>
+                        <a class="dropdown-item" href="#">GLoves</a>
+                        <a class="dropdown-item" href="#">Hats</a>
+                        <a class="dropdown-item" href="#">Ties</a>
+                        <a class="dropdown-item" href="#">Wallets</a>
+                        <a class="dropdown-item" href="#">Watches</a>
+                        <a class="dropdown-item" href="#">Shop All Accessories</a>
+                        </div> 
+                        </div>
+                        </div>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Beauty</a>
+
+                        <li className="nav-item px-4 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="WomenDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Beauty{/* <span className="sr-only">(current)</span> */}</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
+                            <div class="dropdown-header">Coming Soon</div>
+                        </div>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Kids</a>
+                        <li className="nav-item px-4 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="WomenDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kids{/* <span className="sr-only">(current)</span> */}</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
+                            <div class="dropdown-divider"></div>
+                            <div class="d-md-flex align-items-start justify-content-start">
+                            <div>
+                            <div class="dropdown-header">Girls</div>
+                        <a class="dropdown-item" href="#">Dresses</a>
+                        <a class="dropdown-item" href="#">Outerwear & Coats</a>
+                        <a class="dropdown-item" href="#">Pants</a>
+                        <a class="dropdown-item" href="#">Shoes</a>
+                        <a class="dropdown-item" href="#">Skirts & Skorts</a>
+                        <a class="dropdown-item" href="#">Tops</a>
+                        <a class="dropdown-item" href="#">Shop All</a>
+                        </div>   
+                        <div>
+                        <div class="dropdown-header">Boys</div>
+                        <a class="dropdown-item" href="#">Outerwear & Coats</a>
+                        <a class="dropdown-item" href="#">Pants</a>
+                        <a class="dropdown-item" href="#">Shoes</a>
+                        <a class="dropdown-item" href="#">Shorts</a>
+                        <a class="dropdown-item" href="#">Sweaters</a>
+                        <a class="dropdown-item" href="#">Tops</a>
+                        <a class="dropdown-item" href="#">Shop All</a>
+                        </div>
+                        </div>
+                        </div>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">On Sale</a>
+
+                        <li className="nav-item px-4 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="WomenDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">On Sale{/* <span className="sr-only">(current)</span> */}</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
+                            <div class="dropdown-divider"></div>
+                            <div class="d-md-flex align-items-start justify-content-start">
+                            <div>
+                            <div class="dropdown-header">Women Sale</div>
+                        <a class="dropdown-item" href="#">Clohting </a>
+                        <a class="dropdown-item" href="#">Shoes</a>
+                        <a class="dropdown-item" href="#">Accessories</a>
+                        <a class="dropdown-item" href="#">Bags</a>
+                        </div>   
+                        <div>
+                        <div class="dropdown-header">Boys</div>
+                        <a class="dropdown-item" href="#">Clohting </a>
+                        <a class="dropdown-item" href="#">Shoes</a>
+                        <a class="dropdown-item" href="#">Accessories</a>
+                        <a class="dropdown-item" href="#">Bags</a>
+                        </div>
+                        <div>
+                        <div class="dropdown-header">Kids Sale</div>
+                        <a class="dropdown-item" href="#">Girl Clohting </a>
+                        <a class="dropdown-item" href="#">Girl Shoes</a>
+                        <a class="dropdown-item" href="#">Boy Clothing</a>
+                        <a class="dropdown-item" href="#">Boy Shoes</a>
+                        </div>
+                        </div>
+                        </div>
                         </li>
                     </ul>
                 </div>
             </div>
+            
         </nav>
     )
 }
