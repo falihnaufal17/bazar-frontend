@@ -5,6 +5,35 @@
         color: $primary;
         text-decoration: none;
     }
+    .nav-item{
+        position: relative;
+        .active{
+            background-color: #000;
+            width: 25px;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 24%;
+            &#men{
+                left: 30%;
+            }
+            &#shoes{
+                left: 26%;
+            }
+            &#bags{
+                left: 29%;
+            }
+            &#accessories{
+                left: 17%;
+            }
+            &#kids{
+                left: 31%;
+            }
+            &#on-sale{
+                left: 23%;
+            }
+        }
+    }
     .navbar-toggler{
         img{
             width: 13px;

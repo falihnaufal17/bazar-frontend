@@ -255,6 +255,37 @@ const Navbar = (props) => {
                         </div>
                         </div>
                         </div>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/products/women">Women</a>
+                            {props.match.params.menu == 'women' ? (<div className="active" />) : ''}
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/products/men">Men</a>
+                            {props.match.params.menu == 'men' ? (<div className="active" id="men" />) : ''}
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/products/shoes">Shoes</a>
+                            {props.match.params.menu == 'shoes' ? (<div className="active" id="shoes" />) : ''}
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/products/bags">Bags</a>
+                            {props.match.params.menu == 'bags' ? (<div className="active" id="bags" />) : ''}
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/products/accessories">Accessories</a>
+                            {props.match.params.menu == 'accessories' ? (<div className="active" id="accessories" />) : ''}
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/products/beauty">Beauty</a>
+                            {props.match.params.menu == 'beauty' ? (<div className="active" id="beauty" />) : ''}
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/products/kids">Kids</a>
+                            {props.match.params.menu == 'kids' ? (<div className="active" id="kids" />) : ''}
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/products/on-sale">On Sale</a>
+                            {props.match.params.menu == 'on-sale' ? (<div className="active" id="on-sale" />) : ''}
                         </li>
                     </ul>
                 </div>
