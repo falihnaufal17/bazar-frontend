@@ -11,10 +11,10 @@ const Navbar = (props) => {
         <nav className="navbar navbar-expand-lg">
             <div className="container">
                 <div className="row align-items-center">
-                    <div className="col-auto col-lg order-2 order-md-2 order-lg-1">
-                        <a className="navbar-brand" href="/">Bazar</a>
+                    <div className="col col-lg order-2 order-md-2 order-lg-1">
+                        <a className="navbar-brand mr-0" href="/">Bazar</a>
                     </div>
-                    <div className="col col-md col-lg-auto order-5 order-md-4 order-lg-2">
+                    <div className="col-12 col-md col-lg-auto order-6 order-md-4 order-lg-2">
                         <div className="input-group">
                             <input className="form-control" type="text" placeholder="What are you looking for?" aria-label="Search" />
                             <div className="input-group-prepend">
@@ -26,7 +26,7 @@ const Navbar = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-auto order-4 order-md-4 order-lg-4">
+                    <div className="col order-3 order-md-4 order-lg-4">
                         <div className="valign">
                             <div className="inner">
                                 <a href="#" className="btn-login">
@@ -42,12 +42,12 @@ const Navbar = (props) => {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="col-auto order-4 order-md-5 order-lg-5">
+                    {/* <div className="col-2 order-4 order-md-5 order-lg-5">
                         <a href="#">
                             <img src={favorite} alt="favorite" />
                         </a>
                     </div> */}
-                    <div className="col-auto order-4 order-md-5 order-lg-5">
+                    <div className="col-auto order-5 order-md-5 order-lg-5">
                         <a href="#">
                             <div className="position-relative">
                                 <img src={BasketIcon} alt="basket-icon" />
