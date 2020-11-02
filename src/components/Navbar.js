@@ -56,25 +56,25 @@ const Navbar = (props) => {
                                     <div className="dropdown-header">Women's Clothing</div>
                                     <div className="row">
                                         <div className="col-12 col-md-4">
-                                            <a className="dropdown-item" href="#">Activewear & Yoga</a>
-                                            <a className="dropdown-item" href="#">Denim & Jeans</a>
-                                            <a className="dropdown-item" href="#">Dresses</a>
-                                            <a className="dropdown-item" href="#">Jackets</a>
-                                            <a className="dropdown-item" href="#">Jumpsuits & Rompers</a>
-                                            <a className="dropdown-item" href="#">Outerwear & Coats</a>
-                                            <a className="dropdown-item" href="#">Pants</a>
-                                            <a className="dropdown-item" href="#">Shirts & Tops</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/activewear-&-yoga">Activewear & Yoga</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/denim-&-jeans">Denim & Jeans</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/dresses">Dresses</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/jackets">Jackets</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/jumpsuits-&-rompers">Jumpsuits & Rompers</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/outwear-&-coats">Outerwear & Coats</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/pants">Pants</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/shirts-&-tops">Shirts & Tops</a>
                                         </div>
                                         <div className="col-12 col-md-4">
-                                            <a className="dropdown-item" href="#">Shorts</a>
-                                            <a className="dropdown-item" href="#">Skirts</a>
-                                            <a className="dropdown-item" href="#">Sleepwear</a>
-                                            <a className="dropdown-item" href="#">Sweaters</a>
-                                            <a className="dropdown-item" href="#">Swimear</a>
-                                            <a className="dropdown-item" href="#">Sweets & Hoodies</a>
-                                            <a className="dropdown-item" href="#">Petite</a>
-                                            <a className="dropdown-item" href="#">Plus</a>
-                                            <a className="dropdown-item" href="#">Shop All Clothing</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/shorts">Shorts</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/skirts">Skirts</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/sleepwear">Sleepwear</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/sweaters">Sweaters</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/swimear">Swimear</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/sweets-&-hoodies">Sweets & Hoodies</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/petite">Petite</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/plus">Plus</a>
+                                            <a className="dropdown-item" href="/products/women-clothing/shol-all-clothing">Shop All Clothing</a>
                                         </div>
                                     </div>
                                 </div>
@@ -88,11 +88,11 @@ const Navbar = (props) => {
                                     <div className="dropdown-header">Men Clothing</div>
                                     <div className="row">
                                         <div className="col-12">
-                                            <a className="dropdown-item" href="#">Activewear</a>
-                                            <a className="dropdown-item" href="#">Denim & Jeans</a>
-                                            <a className="dropdown-item" href="#">Outerwear & Coats</a>
-                                            <a className="dropdown-item" href="#">Pants</a>
-                                            <a className="dropdown-item" href="#">Shirt & Tops</a>
+                                            <a className="dropdown-item" href="/products/men-clothing/activewear">Activewear</a>
+                                            <a className="dropdown-item" href="/products/men-clothing/denim-&-jeans">Denim & Jeans</a>
+                                            <a className="dropdown-item" href="/products/men-clothing/outerwear-&-coats">Outerwear & Coats</a>
+                                            <a className="dropdown-item" href="/products/men-clothing/pants">Pants</a>
+                                            <a className="dropdown-item" href="/products/men-clothing/shirt-&-tops">Shirt & Tops</a>
                                         </div>
                                     </div>
                                 </div>
@@ -106,26 +106,26 @@ const Navbar = (props) => {
                                     <div className="row">
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Women's Shoes</div>
-                                            <a className="dropdown-item" href="#">Athletic & Sneakers</a>
-                                            <a className="dropdown-item" href="#">Boots & Booties</a>
-                                            <a className="dropdown-item" href="#">Clogs & Mules</a>
-                                            <a className="dropdown-item" href="#">Comfort</a>
-                                            <a className="dropdown-item" href="#">Flats</a>
-                                            <a className="dropdown-item" href="#">Heels</a>
-                                            <a className="dropdown-item" href="#">Loafers</a>
-                                            <a className="dropdown-item" href="#">Pumps</a>
-                                            <a className="dropdown-item" href="#">Sandals</a>
+                                            <a className="dropdown-item" href="/products/women-shoes/athletic-&-sneakers">Athletic & Sneakers</a>
+                                            <a className="dropdown-item" href="/products/women-shoes/boots-&-booties">Boots & Booties</a>
+                                            <a className="dropdown-item" href="/products/women-shoes/clogs-&-mules">Clogs & Mules</a>
+                                            <a className="dropdown-item" href="/products/women-shoes/comfort">Comfort</a>
+                                            <a className="dropdown-item" href="/products/women-shoes/flats">Flats</a>
+                                            <a className="dropdown-item" href="/products/women-shoes/heels">Heels</a>
+                                            <a className="dropdown-item" href="/products/women-shoes/loafers">Loafers</a>
+                                            <a className="dropdown-item" href="/products/women-shoes/pumps">Pumps</a>
+                                            <a className="dropdown-item" href="/products/women-shoes/sandals">Sandals</a>
                                         </div>
                                         <div className="col-12 col-md-4">  
                                             <div className="dropdown-header">Men's Shoes</div>
-                                            <a className="dropdown-item" href="#">Athletic & Sneakers</a>
-                                            <a className="dropdown-item" href="#">Boots & Booties</a>
-                                            <a className="dropdown-item" href="#">Clogs & Mules</a>
-                                            <a className="dropdown-item" href="#">Boots</a>
-                                            <a className="dropdown-item" href="#">Dress Shoes</a>
-                                            <a className="dropdown-item" href="#">Loafers</a>
-                                            <a className="dropdown-item" href="#">Sandals</a>
-                                            <a className="dropdown-item" href="#">Slippers</a>
+                                            <a className="dropdown-item" href="/products/men-shoes/ahtletic-&-sneakers">Athletic & Sneakers</a>
+                                            <a className="dropdown-item" href="/products/men-shoes/boots-&-booties">Boots & Booties</a>
+                                            <a className="dropdown-item" href="/products/men-shoes/clogs-&-mules">Clogs & Mules</a>
+                                            <a className="dropdown-item" href="/products/men-shoes/boots">Boots</a>
+                                            <a className="dropdown-item" href="/products/men-shoes/dress-shoes">Dress Shoes</a>
+                                            <a className="dropdown-item" href="/products/men-shoes/loafers">Loafers</a>
+                                            <a className="dropdown-item" href="/products/men-shoes/sandals">Sandals</a>
+                                            <a className="dropdown-item" href="/products/men-shoes/slippers">Slippers</a>
                                         </div>
                                     </div>
                                 </div>
@@ -139,20 +139,20 @@ const Navbar = (props) => {
                                     <div className="row">
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Women's Bag's</div>
-                                            <a className="dropdown-item" href="#">Backpacks</a>
-                                            <a className="dropdown-item" href="#">Clutches</a>
-                                            <a className="dropdown-item" href="#">Handbags</a>
-                                            <a className="dropdown-item" href="#">Shoulder Bags</a>
-                                            <a className="dropdown-item" href="#">Walllet</a>
-                                            <a className="dropdown-item" href="#">Shop all Bags</a>
+                                            <a className="dropdown-item" href="/products/women-bags/backpacks">Backpacks</a>
+                                            <a className="dropdown-item" href="/products/women-bags/clutches">Clutches</a>
+                                            <a className="dropdown-item" href="/products/women-bags/handbags">Handbags</a>
+                                            <a className="dropdown-item" href="/products/women-bags/shoulder-bags">Shoulder Bags</a>
+                                            <a className="dropdown-item" href="/products/women-bags/walllet">Walllet</a>
+                                            <a className="dropdown-item" href="/products/women-bags/shop-all-bags">Shop all Bags</a>
                                         </div>   
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Men's Bag's</div>
-                                            <a className="dropdown-item" href="#">Businnes Bags</a>
-                                            <a className="dropdown-item" href="#">Backpacks</a>
-                                            <a className="dropdown-item" href="#">Gym Bags</a>
-                                            <a className="dropdown-item" href="#">Mesengger</a>
-                                            <a className="dropdown-item" href="#">Shop All Bags</a>
+                                            <a className="dropdown-item" href="/products/men-bags/businnes-bags">Businnes Bags</a>
+                                            <a className="dropdown-item" href="/products/men-bags/backpacks">Backpacks</a>
+                                            <a className="dropdown-item" href="/products/men-bags/gym-bags">Gym Bags</a>
+                                            <a className="dropdown-item" href="/products/men-bags/messengger">Mesengger</a>
+                                            <a className="dropdown-item" href="/products/men-bags/shop-all-bags">Shop All Bags</a>
                                         </div>
                                     </div>
                                 </div>
@@ -166,25 +166,25 @@ const Navbar = (props) => {
                                     <div className="row">
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Women's Accessories</div>
-                                            <a className="dropdown-item" href="#">Belts</a>
-                                            <a className="dropdown-item" href="#">Everywear</a>
-                                            <a className="dropdown-item" href="#">GLoves</a>
-                                            <a className="dropdown-item" href="#">Hats</a>
-                                            <a className="dropdown-item" href="#">jewlrey</a>
-                                            <a className="dropdown-item" href="#">Scarves</a>
-                                            <a className="dropdown-item" href="#">Watches</a>
-                                            <a className="dropdown-item" href="#">Shop All Accessories</a>
+                                            <a className="dropdown-item" href="/products/women-accessories/belts">Belts</a>
+                                            <a className="dropdown-item" href="/products/women-accessories/everywear">Everywear</a>
+                                            <a className="dropdown-item" href="/products/women-accessories/gloves">GLoves</a>
+                                            <a className="dropdown-item" href="/products/women-accessories/hats">Hats</a>
+                                            <a className="dropdown-item" href="/products/women-accessories/jewlrey">jewlrey</a>
+                                            <a className="dropdown-item" href="/products/women-accessories/scarves">Scarves</a>
+                                            <a className="dropdown-item" href="/products/women-accessories/watches">Watches</a>
+                                            <a className="dropdown-item" href="/products/women-accessories/shop-all-accessories">Shop All Accessories</a>
                                         </div>   
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Men's Accessories</div>
-                                            <a className="dropdown-item" href="#">Belts</a>
-                                            <a className="dropdown-item" href="#">Everywear</a>
-                                            <a className="dropdown-item" href="#">GLoves</a>
-                                            <a className="dropdown-item" href="#">Hats</a>
-                                            <a className="dropdown-item" href="#">Ties</a>
-                                            <a className="dropdown-item" href="#">Wallets</a>
-                                            <a className="dropdown-item" href="#">Watches</a>
-                                            <a className="dropdown-item" href="#">Shop All Accessories</a>
+                                            <a className="dropdown-item" href="/products/men-accessories/belts">Belts</a>
+                                            <a className="dropdown-item" href="/products/men-accessories/everywear">Everywear</a>
+                                            <a className="dropdown-item" href="/products/men-accessories/gloves">GLoves</a>
+                                            <a className="dropdown-item" href="/products/men-accessories/hats">Hats</a>
+                                            <a className="dropdown-item" href="/products/men-accessories/ties">Ties</a>
+                                            <a className="dropdown-item" href="/products/men-accessories/wallets">Wallets</a>
+                                            <a className="dropdown-item" href="/products/men-accessories/watches">Watches</a>
+                                            <a className="dropdown-item" href="/products/men-accessories/shop-all-accessories">Shop All Accessories</a>
                                         </div>
                                     </div>
                                 </div>
@@ -206,23 +206,23 @@ const Navbar = (props) => {
                                     <div className="row">
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Girls</div>
-                                            <a className="dropdown-item" href="#">Dresses</a>
-                                            <a className="dropdown-item" href="#">Outerwear & Coats</a>
-                                            <a className="dropdown-item" href="#">Pants</a>
-                                            <a className="dropdown-item" href="#">Shoes</a>
-                                            <a className="dropdown-item" href="#">Skirts & Skorts</a>
-                                            <a className="dropdown-item" href="#">Tops</a>
-                                            <a className="dropdown-item" href="#">Shop All</a>
+                                            <a className="dropdown-item" href="/products/girls/dresses">Dresses</a>
+                                            <a className="dropdown-item" href="/products/girls/outwear-&-coats">Outerwear & Coats</a>
+                                            <a className="dropdown-item" href="/products/girls/pants">Pants</a>
+                                            <a className="dropdown-item" href="/products/girls/shoes">Shoes</a>
+                                            <a className="dropdown-item" href="/products/girls/skirts-&-skorts">Skirts & Skorts</a>
+                                            <a className="dropdown-item" href="/products/girls/tops">Tops</a>
+                                            <a className="dropdown-item" href="/products/girls/shop-all">Shop All</a>
                                         </div>   
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Boys</div>
-                                            <a className="dropdown-item" href="#">Outerwear & Coats</a>
-                                            <a className="dropdown-item" href="#">Pants</a>
-                                            <a className="dropdown-item" href="#">Shoes</a>
-                                            <a className="dropdown-item" href="#">Shorts</a>
-                                            <a className="dropdown-item" href="#">Sweaters</a>
-                                            <a className="dropdown-item" href="#">Tops</a>
-                                            <a className="dropdown-item" href="#">Shop All</a>
+                                            <a className="dropdown-item" href="/products/boys/outerwear-&-coats">Outerwear & Coats</a>
+                                            <a className="dropdown-item" href="/products/boys/pants">Pants</a>
+                                            <a className="dropdown-item" href="/products/boys/shoes">Shoes</a>
+                                            <a className="dropdown-item" href="/products/boys/shorts">Shorts</a>
+                                            <a className="dropdown-item" href="/products/boys/sweaters">Sweaters</a>
+                                            <a className="dropdown-item" href="/products/boys/tops">Tops</a>
+                                            <a className="dropdown-item" href="/products/boys/shop-all">Shop All</a>
                                         </div>
                                     </div>
                                 </div>
@@ -236,24 +236,24 @@ const Navbar = (props) => {
                                     <div className="row">
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Women Sale</div>
-                                            <a className="dropdown-item" href="#">Clohting </a>
-                                            <a className="dropdown-item" href="#">Shoes</a>
-                                            <a className="dropdown-item" href="#">Accessories</a>
-                                            <a className="dropdown-item" href="#">Bags</a>
+                                            <a className="dropdown-item" href="/products/women-sale/clothing">Clohting </a>
+                                            <a className="dropdown-item" href="/products/women-sale/shoes">Shoes</a>
+                                            <a className="dropdown-item" href="/products/women-sale/accessories">Accessories</a>
+                                            <a className="dropdown-item" href="/products/women-sale/bags">Bags</a>
                                         </div>   
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Boys</div>
-                                            <a className="dropdown-item" href="#">Clohting </a>
-                                            <a className="dropdown-item" href="#">Shoes</a>
-                                            <a className="dropdown-item" href="#">Accessories</a>
-                                            <a className="dropdown-item" href="#">Bags</a>
+                                            <a className="dropdown-item" href="/products/boys-sale/clothing">Clohting </a>
+                                            <a className="dropdown-item" href="/products/boys-sale/shoes">Shoes</a>
+                                            <a className="dropdown-item" href="/products/boys-sale/accessories">Accessories</a>
+                                            <a className="dropdown-item" href="/products/boys-sale/bags">Bags</a>
                                         </div>
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Kids Sale</div>
-                                            <a className="dropdown-item" href="#">Girl Clohting </a>
-                                            <a className="dropdown-item" href="#">Girl Shoes</a>
-                                            <a className="dropdown-item" href="#">Boy Clothing</a>
-                                            <a className="dropdown-item" href="#">Boy Shoes</a>
+                                            <a className="dropdown-item" href="/products/kids-sale/girl-clothing">Girl Clohting </a>
+                                            <a className="dropdown-item" href="/products/kids-sale/girl-shoes">Girl Shoes</a>
+                                            <a className="dropdown-item" href="/products/kids-sale/boy-clothing">Boy Clothing</a>
+                                            <a className="dropdown-item" href="/products/kids-sale/boy-shoes">Boy Shoes</a>
                                         </div>
                                     </div>
                                 </div>
