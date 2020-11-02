@@ -56,25 +56,76 @@ const Navbar = (props) => {
                                     <div className="dropdown-header">Women's Clothing</div>
                                     <div className="row">
                                         <div className="col-12 col-md-4">
+                                            <div className="item">
                                             <a className="dropdown-item" href="/products/women-clothing/activewear-&-yoga">Activewear & Yoga</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/denim-&-jeans">Denim & Jeans</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/dresses">Dresses</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/jackets">Jackets</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/jumpsuits-&-rompers">Jumpsuits & Rompers</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/outwear-&-coats">Outerwear & Coats</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/pants">Pants</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/shirts-&-tops">Shirts & Tops</a>
+                                            {props.location.pathname == "/products/women-clothing/activewear-&-yoga" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/denim-&-jeans">Denim & Jeans</a>
+                                                {props.location.pathname == "/products/women-clothing/denim-&-jeans" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/dresses">Dresses</a>
+                                                {props.location.pathname == "/products/women-clothing/dresses" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/jackets">Jackets</a>
+                                                {props.location.pathname == "/products/women-clothing/jackets" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/jumpsuits-&-rompers">Jumpsuits & Rompers</a>
+                                                {props.location.pathname == "/products/women-clothing/jumpsuits-&-rompers" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/outwear-&-coats">Outerwear & Coats</a>
+                                                {props.location.pathname == "/products/women-clothing/outwear-&-coats" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/pants">Pants</a>
+                                                {props.location.pathname == "/products/women-clothing/pants" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/shirts-&-tops">Shirts & Tops</a>
+                                                {props.location.pathname == "/products/women-clothing/shirts-&-tops" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
                                         </div>
                                         <div className="col-12 col-md-4">
-                                            <a className="dropdown-item" href="/products/women-clothing/shorts">Shorts</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/skirts">Skirts</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/sleepwear">Sleepwear</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/sweaters">Sweaters</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/swimear">Swimear</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/sweets-&-hoodies">Sweets & Hoodies</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/petite">Petite</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/plus">Plus</a>
-                                            <a className="dropdown-item" href="/products/women-clothing/shol-all-clothing">Shop All Clothing</a>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/shorts">Shorts</a>
+                                                {props.location.pathname == "/products/women-clothing/shorts" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/skirts">Skirts</a>
+                                                {props.location.pathname == "/products/women-clothing/skirts" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/sleepwear">Sleepwear</a>
+                                                {props.location.pathname == "/products/women-clothing/sleepwear" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/sweaters">Sweaters</a>
+                                                {props.location.pathname == "/products/women-clothing/sweaters" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/swimear">Swimear</a>
+                                                {props.location.pathname == "/products/women-clothing/swimear" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/sweets-&-hoodies">Sweets & Hoodies</a>
+                                                {props.location.pathname == "/products/women-clothing/sweets-&-hoodies" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/petite">Petite</a>
+                                                {props.location.pathname == "/products/women-clothing/petite" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/plus">Plus</a>
+                                                {props.location.pathname == "/products/women-clothing/plus" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-clothing/shop-all-clothing">Shop All Clothing</a>
+                                                {props.location.pathname == "/products/women-clothing/shop-all-clothing" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -87,12 +138,27 @@ const Navbar = (props) => {
                                 <div className="container">
                                     <div className="dropdown-header">Men Clothing</div>
                                     <div className="row">
-                                        <div className="col-12">
-                                            <a className="dropdown-item" href="/products/men-clothing/activewear">Activewear</a>
-                                            <a className="dropdown-item" href="/products/men-clothing/denim-&-jeans">Denim & Jeans</a>
-                                            <a className="dropdown-item" href="/products/men-clothing/outerwear-&-coats">Outerwear & Coats</a>
-                                            <a className="dropdown-item" href="/products/men-clothing/pants">Pants</a>
-                                            <a className="dropdown-item" href="/products/men-clothing/shirt-&-tops">Shirt & Tops</a>
+                                        <div className="col-12 col-md-4">
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-clothing/activewear">Activewear</a>
+                                                {props.location.pathname == "/products/men-clothing/activewear" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-clothing/denim-&-jeans">Denim & Jeans</a>
+                                                {props.location.pathname == "/products/men-clothing/denim-&-jeans" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-clothing/outerwear-&-coats">Outerwear & Coats</a>
+                                                {props.location.pathname == "/products/men-clothing/outerwear-&-coats" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-clothing/pants">Pants</a>
+                                                {props.location.pathname == "/products/men-clothing/pants" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-clothing/shirt-&-tops">Shirt & Tops</a>
+                                                {props.location.pathname == "/products/men-clothing/shirt-&-tops" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -106,26 +172,77 @@ const Navbar = (props) => {
                                     <div className="row">
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Women's Shoes</div>
-                                            <a className="dropdown-item" href="/products/women-shoes/athletic-&-sneakers">Athletic & Sneakers</a>
-                                            <a className="dropdown-item" href="/products/women-shoes/boots-&-booties">Boots & Booties</a>
-                                            <a className="dropdown-item" href="/products/women-shoes/clogs-&-mules">Clogs & Mules</a>
-                                            <a className="dropdown-item" href="/products/women-shoes/comfort">Comfort</a>
-                                            <a className="dropdown-item" href="/products/women-shoes/flats">Flats</a>
-                                            <a className="dropdown-item" href="/products/women-shoes/heels">Heels</a>
-                                            <a className="dropdown-item" href="/products/women-shoes/loafers">Loafers</a>
-                                            <a className="dropdown-item" href="/products/women-shoes/pumps">Pumps</a>
-                                            <a className="dropdown-item" href="/products/women-shoes/sandals">Sandals</a>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-shoes/athletic-&-sneakers">Athletic & Sneakers</a>
+                                                {props.location.pathname == "/products/women-shoes/athletic-&-sneakers" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-shoes/boots-&-booties">Boots & Booties</a>
+                                                {props.location.pathname == "/products/women-shoes/boots-&-booties" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-shoes/clogs-&-mules">Clogs & Mules</a>
+                                                {props.location.pathname == "/products/women-shoes/clogs-&-mules" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-shoes/comfort">Comfort</a>
+                                                {props.location.pathname == "/products/women-shoes/comfort" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-shoes/flats">Flats</a>
+                                                {props.location.pathname == "/products/women-shoes/flats" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-shoes/heels">Heels</a>
+                                                {props.location.pathname == "/products/women-shoes/heels" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-shoes/loafers">Loafers</a>
+                                                {props.location.pathname == "/products/women-shoes/loafers" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-shoes/pumps">Pumps</a>
+                                                {props.location.pathname == "/products/women-shoes/pumps" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-shoes/sandals">Sandals</a>
+                                                {props.location.pathname == "/products/women-shoes/sandals" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
                                         </div>
                                         <div className="col-12 col-md-4">  
                                             <div className="dropdown-header">Men's Shoes</div>
-                                            <a className="dropdown-item" href="/products/men-shoes/ahtletic-&-sneakers">Athletic & Sneakers</a>
-                                            <a className="dropdown-item" href="/products/men-shoes/boots-&-booties">Boots & Booties</a>
-                                            <a className="dropdown-item" href="/products/men-shoes/clogs-&-mules">Clogs & Mules</a>
-                                            <a className="dropdown-item" href="/products/men-shoes/boots">Boots</a>
-                                            <a className="dropdown-item" href="/products/men-shoes/dress-shoes">Dress Shoes</a>
-                                            <a className="dropdown-item" href="/products/men-shoes/loafers">Loafers</a>
-                                            <a className="dropdown-item" href="/products/men-shoes/sandals">Sandals</a>
-                                            <a className="dropdown-item" href="/products/men-shoes/slippers">Slippers</a>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-shoes/ahtletic-&-sneakers">Athletic & Sneakers</a>
+                                                {props.location.pathname == "/products/men-shoes/ahtletic-&-sneakers" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-shoes/boots-&-booties">Boots & Booties</a>
+                                                {props.location.pathname == "/products/men-shoes/boots-&-booties" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-shoes/clogs-&-mules">Clogs & Mules</a>
+                                                {props.location.pathname == "/products/men-shoes/clogs-&-mules" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-shoes/boots">Boots</a>
+                                                {props.location.pathname == "/products/men-shoes/boots" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-shoes/dress-shoes">Dress Shoes</a>
+                                                {props.location.pathname == "/products/men-shoes/dress-shoes" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-shoes/loafers">Loafers</a>
+                                                {props.location.pathname == "/products/men-shoes/loafers" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-shoes/sandals">Sandals</a>
+                                                {props.location.pathname == "/products/men-shoes/loafers" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-shoes/slippers">Slippers</a>
+                                                {props.location.pathname == "/products/men-shoes/slippers" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -139,20 +256,53 @@ const Navbar = (props) => {
                                     <div className="row">
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Women's Bag's</div>
-                                            <a className="dropdown-item" href="/products/women-bags/backpacks">Backpacks</a>
-                                            <a className="dropdown-item" href="/products/women-bags/clutches">Clutches</a>
-                                            <a className="dropdown-item" href="/products/women-bags/handbags">Handbags</a>
-                                            <a className="dropdown-item" href="/products/women-bags/shoulder-bags">Shoulder Bags</a>
-                                            <a className="dropdown-item" href="/products/women-bags/walllet">Walllet</a>
-                                            <a className="dropdown-item" href="/products/women-bags/shop-all-bags">Shop all Bags</a>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-bags/backpacks">Backpacks</a>
+                                                {props.location.pathname == "/products/women-bags/backpacks" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-bags/clutches">Clutches</a>
+                                                {props.location.pathname == "/products/women-bags/clutches" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-bags/handbags">Handbags</a>
+                                                {props.location.pathname == "/products/women-bags/handbags" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-bags/shoulder-bags">Shoulder Bags</a>
+                                                {props.location.pathname == "/products/women-bags/shoulder-bags" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-bags/walllet">Walllet</a>
+                                                {props.location.pathname == "/products/women-bags/walllet" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-bags/shop-all-bags">Shop all Bags</a>
+                                                {props.location.pathname == "/products/women-bags/walllet" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
                                         </div>   
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Men's Bag's</div>
-                                            <a className="dropdown-item" href="/products/men-bags/businnes-bags">Businnes Bags</a>
-                                            <a className="dropdown-item" href="/products/men-bags/backpacks">Backpacks</a>
-                                            <a className="dropdown-item" href="/products/men-bags/gym-bags">Gym Bags</a>
-                                            <a className="dropdown-item" href="/products/men-bags/messengger">Mesengger</a>
-                                            <a className="dropdown-item" href="/products/men-bags/shop-all-bags">Shop All Bags</a>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-bags/businnes-bags">Businnes Bags</a>
+                                                {props.location.pathname == "/products/men-bags/businnes-bags" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-bags/backpacks">Backpacks</a>
+                                                {props.location.pathname == "/products/men-bags/backpacks" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-bags/gym-bags">Gym Bags</a>
+                                                {props.location.pathname == "/products/men-bags/gym-bags" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-bags/messengger">Mesengger</a>
+                                                {props.location.pathname == "/products/men-bags/messengger" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-bags/shop-all-bags">Shop All Bags</a>
+                                                {props.location.pathname == "/products/men-bags/shop-all-bags" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -166,25 +316,73 @@ const Navbar = (props) => {
                                     <div className="row">
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Women's Accessories</div>
-                                            <a className="dropdown-item" href="/products/women-accessories/belts">Belts</a>
-                                            <a className="dropdown-item" href="/products/women-accessories/everywear">Everywear</a>
-                                            <a className="dropdown-item" href="/products/women-accessories/gloves">GLoves</a>
-                                            <a className="dropdown-item" href="/products/women-accessories/hats">Hats</a>
-                                            <a className="dropdown-item" href="/products/women-accessories/jewlrey">jewlrey</a>
-                                            <a className="dropdown-item" href="/products/women-accessories/scarves">Scarves</a>
-                                            <a className="dropdown-item" href="/products/women-accessories/watches">Watches</a>
-                                            <a className="dropdown-item" href="/products/women-accessories/shop-all-accessories">Shop All Accessories</a>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-accessories/belts">Belts</a>
+                                                {props.location.pathname == "/products/women-accessories/belts" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-accessories/everywear">Everywear</a>
+                                                {props.location.pathname == "/products/women-accessories/everywear" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-accessories/gloves">GLoves</a>
+                                                {props.location.pathname == "/products/women-accessories/gloves" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-accessories/hats">Hats</a>
+                                                {props.location.pathname == "/products/women-accessories/hats" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-accessories/jewlrey">jewlrey</a>
+                                                {props.location.pathname == "/products/women-accessories/jewlrey" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-accessories/scarves">Scarves</a>
+                                                {props.location.pathname == "/products/women-accessories/scarves" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-accessories/watches">Watches</a>
+                                                {props.location.pathname == "/products/women-accessories/watches" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-accessories/shop-all-accessories">Shop All Accessories</a>
+                                                {props.location.pathname == "/products/women-accessories/shop-all-accessories" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
                                         </div>   
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Men's Accessories</div>
-                                            <a className="dropdown-item" href="/products/men-accessories/belts">Belts</a>
-                                            <a className="dropdown-item" href="/products/men-accessories/everywear">Everywear</a>
-                                            <a className="dropdown-item" href="/products/men-accessories/gloves">GLoves</a>
-                                            <a className="dropdown-item" href="/products/men-accessories/hats">Hats</a>
-                                            <a className="dropdown-item" href="/products/men-accessories/ties">Ties</a>
-                                            <a className="dropdown-item" href="/products/men-accessories/wallets">Wallets</a>
-                                            <a className="dropdown-item" href="/products/men-accessories/watches">Watches</a>
-                                            <a className="dropdown-item" href="/products/men-accessories/shop-all-accessories">Shop All Accessories</a>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-accessories/belts">Belts</a>
+                                                {props.location.pathname == "/products/men-accessories/belts" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-accessories/everywear">Everywear</a>
+                                                {props.location.pathname == "/products/men-accessories/everywear" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-accessories/gloves">GLoves</a>
+                                                {props.location.pathname == "/products/men-accessories/gloves" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-accessories/hats">Hats</a>
+                                                {props.location.pathname == "/products/men-accessories/hats" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-accessories/ties">Ties</a>
+                                                {props.location.pathname == "/products/men-accessories/ties" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-accessories/wallets">Wallets</a>
+                                                {props.location.pathname == "/products/men-accessories/wallets" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-accessories/watches">Watches</a>
+                                                {props.location.pathname == "/products/men-accessories/watches" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/men-accessories/shop-all-accessories">Shop All Accessories</a>
+                                                {props.location.pathname == "/products/men-accessories/shop-all-accessories" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -206,23 +404,65 @@ const Navbar = (props) => {
                                     <div className="row">
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Girls</div>
-                                            <a className="dropdown-item" href="/products/girls/dresses">Dresses</a>
-                                            <a className="dropdown-item" href="/products/girls/outwear-&-coats">Outerwear & Coats</a>
-                                            <a className="dropdown-item" href="/products/girls/pants">Pants</a>
-                                            <a className="dropdown-item" href="/products/girls/shoes">Shoes</a>
-                                            <a className="dropdown-item" href="/products/girls/skirts-&-skorts">Skirts & Skorts</a>
-                                            <a className="dropdown-item" href="/products/girls/tops">Tops</a>
-                                            <a className="dropdown-item" href="/products/girls/shop-all">Shop All</a>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/girls/dresses">Dresses</a>
+                                                {props.location.pathname == "/products/girls/dresses" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/girls/outwear-&-coats">Outerwear & Coats</a>
+                                                {props.location.pathname == "/products/girls/outwear-&-coats" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/girls/pants">Pants</a>
+                                                {props.location.pathname == "/products/girls/pants" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/girls/shoes">Shoes</a>
+                                                {props.location.pathname == "/products/girls/shoes" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/girls/skirts-&-skorts">Skirts & Skorts</a>
+                                                {props.location.pathname == "/products/girls/skirts-&-skorts" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/girls/tops">Tops</a>
+                                                {props.location.pathname == "/products/girls/tops" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/girls/shop-all">Shop All</a>
+                                                {props.location.pathname == "/products/girls/shop-all" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
                                         </div>   
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Boys</div>
-                                            <a className="dropdown-item" href="/products/boys/outerwear-&-coats">Outerwear & Coats</a>
-                                            <a className="dropdown-item" href="/products/boys/pants">Pants</a>
-                                            <a className="dropdown-item" href="/products/boys/shoes">Shoes</a>
-                                            <a className="dropdown-item" href="/products/boys/shorts">Shorts</a>
-                                            <a className="dropdown-item" href="/products/boys/sweaters">Sweaters</a>
-                                            <a className="dropdown-item" href="/products/boys/tops">Tops</a>
-                                            <a className="dropdown-item" href="/products/boys/shop-all">Shop All</a>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/boys/outerwear-&-coats">Outerwear & Coats</a>
+                                                {props.location.pathname == "/products/boys/outerwear-&-coats" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/boys/pants">Pants</a>
+                                                {props.location.pathname == "/products/boys/pants" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/boys/shoes">Shoes</a>
+                                                {props.location.pathname == "/products/boys/shoes" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/boys/shorts">Shorts</a>
+                                                {props.location.pathname == "/products/boys/shorts" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/boys/sweaters">Sweaters</a>
+                                                {props.location.pathname == "/products/boys/sweaters" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/boys/tops">Tops</a>
+                                                {props.location.pathname == "/products/boys/tops" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/boys/shop-all">Shop All</a>
+                                                {props.location.pathname == "/products/boys/shop-all" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -236,24 +476,60 @@ const Navbar = (props) => {
                                     <div className="row">
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Women Sale</div>
-                                            <a className="dropdown-item" href="/products/women-sale/clothing">Clohting </a>
-                                            <a className="dropdown-item" href="/products/women-sale/shoes">Shoes</a>
-                                            <a className="dropdown-item" href="/products/women-sale/accessories">Accessories</a>
-                                            <a className="dropdown-item" href="/products/women-sale/bags">Bags</a>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-sale/clothing">Clohting </a>
+                                                {props.location.pathname == "/products/women-sale/clothing" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-sale/shoes">Shoes</a>
+                                                {props.location.pathname == "/products/women-sale/shoes" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-sale/accessories">Accessories</a>
+                                                {props.location.pathname == "/products/women-sale/accessories" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/women-sale/bags">Bags</a>
+                                                {props.location.pathname == "/products/women-sale/bags" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
                                         </div>   
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Boys</div>
-                                            <a className="dropdown-item" href="/products/boys-sale/clothing">Clohting </a>
-                                            <a className="dropdown-item" href="/products/boys-sale/shoes">Shoes</a>
-                                            <a className="dropdown-item" href="/products/boys-sale/accessories">Accessories</a>
-                                            <a className="dropdown-item" href="/products/boys-sale/bags">Bags</a>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/boys-sale/clothing">Clohting </a>
+                                                {props.location.pathname == "/products/boys-sale/clothing" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/boys-sale/shoes">Shoes</a>
+                                                {props.location.pathname == "/products/boys-sale/shoes" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/boys-sale/accessories">Accessories</a>
+                                                {props.location.pathname == "/products/boys-sale/accessories" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/boys-sale/bags">Bags</a>
+                                                {props.location.pathname == "/products/boys-sale/bags" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
                                         </div>
                                         <div className="col-12 col-md-4">
                                             <div className="dropdown-header">Kids Sale</div>
-                                            <a className="dropdown-item" href="/products/kids-sale/girl-clothing">Girl Clohting </a>
-                                            <a className="dropdown-item" href="/products/kids-sale/girl-shoes">Girl Shoes</a>
-                                            <a className="dropdown-item" href="/products/kids-sale/boy-clothing">Boy Clothing</a>
-                                            <a className="dropdown-item" href="/products/kids-sale/boy-shoes">Boy Shoes</a>
+                                            <div className="item"> 
+                                                <a className="dropdown-item" href="/products/kids-sale/girl-clothing">Girl Clohting </a>
+                                                {props.location.pathname == "/products/kids-sale/girl-clothing" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/kids-sale/girl-shoes">Girl Shoes</a>
+                                                {props.location.pathname == "/products/kids-sale/girl-shoes" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/kids-sale/boy-clothing">Boy Clothing</a>
+                                                {props.location.pathname == "/products/kids-sale/boy-clothing" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
+                                            <div className="item">
+                                                <a className="dropdown-item" href="/products/kids-sale/boy-shoes">Boy Shoes</a>
+                                                {props.location.pathname == "/products/kids-sale/boy-shoes" ? <div className="active"/> : <div className="deactive"/>}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
