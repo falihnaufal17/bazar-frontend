@@ -62,7 +62,7 @@ const Footer = (props) => {
               <div className="col-auto">Terms of Service</div>
               <div className="col-auto">Privacy Policy</div>
             </div>
-            <div className="small-text text-right">Copyright © 2020 awfa. All rights reserved</div>
+            <div className="small-text text-right">Copyright © {new Date().getFullYear()} Bazar. All rights reserved</div>
           </div>
         </div>
       </div>

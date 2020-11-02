@@ -88,7 +88,7 @@ const Home = (props) => {
                     </div>
                 </div>
             </section>
-            <section className="bg-dark" id="section-popular-category">
+            <section id="section-popular-category">
                 <div>
                     <h2 className="text-white">In Vogue</h2>
                     <PopularCategory isDark={true} />

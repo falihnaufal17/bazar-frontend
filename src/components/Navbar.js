@@ -26,7 +26,7 @@ const Navbar = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="col order-3 order-md-4 order-lg-4">
+                    <div className="col-auto order-3 order-md-4 order-lg-4">
                         <div className="valign">
                             <div className="inner">
                                 <a href="#" className="btn-login">
