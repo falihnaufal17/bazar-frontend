@@ -1,6 +1,8 @@
 import React from 'react';
 import SearchIcon from '../assets/icons/SEARCH.svg';
 import SignInIcon from '../assets/icons/SIGN IN.svg';
+import profile from '../assets/icons/LOGIN ICON.svg';
+import favorite from '../assets/icons/FAVORITE ICON.svg';
 import BasketIcon from '../assets/icons/BASKET.svg';
 import Menu from '../assets/icons/MENU.svg';
 
@@ -13,9 +15,15 @@ const Navbar = (props) => {
                         <a className="navbar-brand" href="/">Bazar</a>
                     </div>
                     <div className="col col-md col-lg-auto order-5 order-md-4 order-lg-2">
-                        <div className="d-flex nav-box">
+                        <div className="input-group">
                             <input className="form-control" type="text" placeholder="What are you looking for?" aria-label="Search" />
-                            <img src={SearchIcon} alt="search-icon" />
+                            <div className="input-group-prepend">
+                                <div className="input-group-text">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0027 6.00604C10.0027 8.22 8.20974 10.0121 6.00134 10.0121C3.79294 10.0121 2 8.22 2 6.00604C2 3.79209 3.79294 2 6.00134 2C8.20974 2 10.0027 3.79209 10.0027 6.00604ZM9.69801 10.7377C8.67909 11.5361 7.39575 12.0121 6.00134 12.0121C2.68689 12.0121 0 9.32309 0 6.00604C0 2.689 2.68689 0 6.00134 0C9.31579 0 12.0027 2.689 12.0027 6.00604C12.0027 7.13635 11.6907 8.19374 11.1482 9.09665L14.0738 12.0245L12.5288 13.5707L9.69801 10.7377Z" fill="white"/>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="col-auto order-4 order-md-4 order-lg-4">
@@ -28,14 +36,22 @@ const Navbar = (props) => {
                                     </svg>
                                     <span className="login-text">Sign In</span>
                                 </a>
+                                {/* <a href="#">
+                                    <img src={profile} alt="profile" />
+                                </a> */}
                             </div>
                         </div>
                     </div>
-                    <div className="col-auto order-4 order-md-5 order-lg-4">
+                    {/* <div className="col-auto order-4 order-md-5 order-lg-5">
+                        <a href="#">
+                            <img src={favorite} alt="favorite" />
+                        </a>
+                    </div> */}
+                    <div className="col-auto order-4 order-md-5 order-lg-5">
                         <a href="#">
                             <div className="position-relative">
                                 <img src={BasketIcon} alt="basket-icon" />
-                                <div className="float-count">1</div>
+                                {/* <div className="float-count">1</div> */}
                             </div>
                         </a>
                     </div>
