@@ -24,5 +24,10 @@ export default [
         path: '/products/:menu/:category',
         component: Products,
         exact: true
-    }
+    },
+    {
+        path: '/products/:menu/:category/:subcategory',
+        component: Products,
+        exact: true
+    },
 ]
