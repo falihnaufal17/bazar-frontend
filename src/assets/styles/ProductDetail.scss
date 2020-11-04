@@ -1,0 +1,128 @@
+#detail{
+    background-color: #FAFAFA;
+    padding-top: 83px;
+    padding-bottom: 94px;
+    .product-name{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 64px;
+        margin-bottom: 25px;
+    }
+    .price{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 41px;
+        margin-bottom: 20px;
+    }
+    .label{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    .item-size{
+        width: 73px;
+        padding: 10px 0;
+        text-align: center;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 14px;
+    }
+    .flex-container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 235px;
+        .flex-items{
+            margin-right: 2.5px;
+        }
+    }
+    .description{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+    .btn-primary{
+        background-color: #000;
+        padding: 20px 45px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 14px;
+        text-decoration: none;
+        @media screen and (max-width: 768px) {
+            padding: 20px 35px; 
+        }
+    }
+    .btn-secondary{
+        @extend .btn-primary;
+        background-color: #FFF;
+        border: 2px solid #C4C4C4;
+        color: #000;
+    }
+    .input-group{
+        .input-group-append{
+            position: absolute;
+            background-color: #ffffff;
+            padding: 0;
+            height: unset;
+            top: 20%;
+            left: 60px;
+            width: 40px;
+            text-align: center;
+            color: #65a1e9;
+            z-index: 4;
+            pointer-events: none;
+        }
+        .form-control{
+            &.select{
+                width: 104px;
+                border: 1px solid #000000;
+                outline: none;
+                box-shadow: none;
+                border-radius: unset;
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 20px;
+                box-sizing: border-box;
+                padding: 10px 0 10px 29px;
+                height: auto;
+                flex: unset;
+            }
+        }
+    }
+    .row-p{
+        margin: auto -5px;
+        >*{
+            padding: 0 5px;
+        }
+    }
+    .image{
+        position: relative;
+        img{
+            width: 100%;
+        }
+    }
+    .slick-slider{
+        .slick-arrow{
+            display: none !important;
+        }
+    }
+}

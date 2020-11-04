@@ -237,9 +237,7 @@ const Products = props => {
                     {
                         dataProduct.map((item, key) => {
                             return(
-                                <div className="col-6 col-md-4 col-lg-auto" key={key}>
-                                    <ProductItem data={item} />
-                                </div>
+                                    <ProductItem data={item} key={key} />
                             )
                         })
                     }

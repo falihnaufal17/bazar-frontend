@@ -67,13 +67,7 @@
         border-radius: unset;
         border: none;
         font-weight: 600;
-        .favorite{
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            z-index: 1;
-            cursor: pointer;
-        }
+        z-index: 0;
         .image{
             position: relative;
             background-color: #fff;
@@ -89,6 +83,14 @@
                 margin-bottom: 8px;
             }
         }
+    }
+
+    .favorite{
+        position: absolute;
+        top: 10px;
+        left: 25px;
+        z-index: 1;
+        cursor: pointer;
     }
 
     .grid-list{
