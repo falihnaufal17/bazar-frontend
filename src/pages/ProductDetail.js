@@ -1,9 +1,11 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, Suspense, lazy} from 'react';
 import '../assets/styles/ProductDetail.scss';
 import detail from '../assets/images/detail-foto.svg';
 import recommendation from '../assets/images/recommendation.svg';
 import arrowDropdown from '../assets/icons/ARROW DROPDOWN.svg';
 import Slider from 'react-slick';
+
+const ProductRecommendation = lazy(()=>import('../components/ProductRecommendation'));
 
 const ProductDetail = (props) => {
     const [nav1, setNav1] = useState(null);
@@ -69,7 +71,7 @@ const ProductDetail = (props) => {
                     <div className="row">
                         <div className="col-12 col-md-12 col-lg-6">
                             <div className="row align-items-center">
-                                <div className="col-10">
+                                <div className="col-12 col-md-10">
                                     <Slider
                                         asNavFor={nav2}
                                         ref={slider => {slider1 = slider}}
@@ -85,7 +87,7 @@ const ProductDetail = (props) => {
                                         }
                                     </Slider>
                                 </div>
-                                <div className="col-2">
+                                <div className="col-12 col-md-2">
                                     <Slider
                                         asNavFor={nav1}
                                         ref={slider => (slider2 = slider)}
@@ -94,6 +96,37 @@ const ProductDetail = (props) => {
                                         focusOnSelect={true}
                                         vertical={true}
                                         verticalSwiping={true}
+                                        responsive={
+                                            [
+                                                {
+                                                    breakpoint: 600,
+                                                    settings: {
+                                                      dots: false,
+                                                      infinite: true,
+                                                      speed: 500,
+                                                      slidesToShow: images.length,
+                                                      slidesToScroll: 1,
+                                                      variableWidth: false,
+                                                      centerMode: false,
+                                                      vertical: false,
+                                                      verticalSwiping: false
+                                                    }
+                                                },
+                                                {
+                                                    breakpoint: 480,
+                                                    settings: {
+                                                        infinite: false,
+                                                        speed: 500,
+                                                        dots: false,
+                                                        slidesToShow: images.length,
+                                                        slidesToScroll: 1,
+                                                        centerMode: true,
+                                                        vertical: false,
+                                                        verticalSwiping: false
+                                                    }
+                                                }  
+                                            ]
+                                        }
                                     >
                                         {
                                             images.map((item, index) => {
@@ -152,6 +185,12 @@ const ProductDetail = (props) => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+            <section id="recommendation-section">
+                <div className="container">
+                    <h1 className="title-recommendation">RECOMMENDED FOR YOU</h1>
+                    <ProductRecommendation />
                 </div>
             </section>
         </>
