@@ -3,7 +3,7 @@ import React, { lazy } from 'react';
 const Home = lazy(()=>import('./pages/Home'));
 const ProductDetail = lazy(() => import('./pages/ProductDetail'));
 const Products = lazy(() => import('./pages/Products'));
-
+const Profile = lazy(() => import('./pages/Profile'));
 export default [
     {
         path: '/',
@@ -28,6 +28,11 @@ export default [
     {
         path: '/products/:menu/:category/:subcategory',
         component: Products,
+        exact: true
+    },
+    {
+        path: '/profile',
+        component: Profile,
         exact: true
     },
 ]
