@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {lazy, useState, Suspense} from 'react';
 import '../assets/styles/Products.scss';
 import imgProduct from '../assets/images/adidas-originals-black-3-stripes-t-shirt 1.svg';
-import ProductItem from '../components/ProductItem';
-import CapaUp from '../assets/icons/CAPA UP.svg';
+const ProductItem = lazy(()=>import('../components/ProductItem'));
+const SideBarProducts = lazy(()=>import('../components/SideBarProducts'));
 
 const Products = props => {
     const [category, setCategory] = useState(true);
@@ -195,16 +195,18 @@ const Products = props => {
     return(
         <div className="container mt-5" id="product-lists">
             <div className="row">
-                <div className="col-md-3"></div>
-                <div className="col-md-9" id="header">
+                <div className="col-lg-3"></div>
+                <div className="col-md-12 col-lg-9" id="header">
                     <div className="row align-items-center">
-                        <div className="col-12 col-md">
-                            <h1 className="title">{props.match.params.menu} | Dress</h1>
+                        <div className="col-12 col-md-12 col-lg">
+                            <h1 className="title">{props.match.params.menu.replace(/-/g, ' ')} | {props.match.params.category.replace(/-/g, ' ')}</h1>
                         </div>
                         <div className="col-6 col-md-auto">
-                            <div className="valign">
-                                <div className="inner">
+                            <div className="row align-items-center row-p">
+                                <div className="col">
                                     <lable className="title subtitle">Brands</lable>
+                                </div>
+                                <div className="col">
                                     <select className="form-control select">
                                         <option>Tory Burch</option>
                                     </select>
@@ -212,9 +214,11 @@ const Products = props => {
                             </div>
                         </div>
                         <div className="col-6 col-md-auto">
-                            <div className="valign">
-                                <div className="inner">
+                            <div className="row align-items-center row-p">
+                                <div className="col">
                                     <lable className="title subtitle">Short By</lable>
+                                </div>
+                                <div className="col">
                                     <select className="form-control select">
                                         <option>Price low - high</option>
                                     </select>
@@ -226,145 +230,14 @@ const Products = props => {
             </div>
             <div className="row">
                 <div className="col-md-3">
-                    <div className="title side-title">Select Price</div>
-                    <div className="row row-p">
-                        <div className="col">
-                            <div className="form-group">
-                                <input type="number" className="form-control" />
-                            </div>
-                            <div>Min.</div>
-                        </div>
-                        <div className="col">
-                            <div className="ellipse" />
-                        </div>
-                        <div className="col">
-                            <div className="ellipse" />
-                        </div>
-                        <div className="col">
-                            <div className="ellipse" />
-                        </div>
-                        <div className="col">
-                            <div className="ellipse" />
-                        </div>
-                        <div className="col">
-                            <div className="line" />
-                        </div>
-                        <div className="col">
-                            <div className="ellipse" />
-                        </div>
-                        <div className="col">
-                            <div className="ellipse" />
-                        </div>
-                        <div className="col">
-                            <div className="ellipse" />
-                        </div>
-                        <div className="col">
-                            <div className="ellipse" />
-                        </div>
-                        <div className="col">
-                            <div className="form-group">
-                                <input type="number" className="form-control" />
-                            </div>
-                            <div>Min.</div>
-                        </div>
-                        <div className="col">
-                            <a href="#" className="btn-set">Set</a>
-                        </div>
-                    </div>
-                    <div className="row align-items-center" id="category" onClick={() => toggleClick('category')}>
-                        <div className="col">
-                            <div className="title side-title side-sub-title">All / Women / Dress</div>
-                        </div>
-                        <div className="col-auto">
-                            {
-                                category ? (<img src={CapaUp} className="rotate-icon" alt="capa" />) : (<img src={CapaUp} className="rotate-icon down" alt="capa" />)
-                            }
-                        </div>
-                    </div>
-                    <div className="menu" id="menu">
-                        <a href="#" className="item-menu">ActiveWear</a>
-                        <a href="#" className="item-menu">Bridal</a>
-                        <a href="#" className="item-menu">Denim</a>
-                        <a href="#" className="item-menu">Dresses</a>
-                        <a href="#" className="item-menu">Intimates</a>
-                        <a href="#" className="item-menu">Jackets</a>
-                        <a href="#" className="item-menu">Jumpsuits & Rompers</a>
-                    </div>
-                    <div className="row align-items-center" id="size" onClick={() => toggleClick('size')}>
-                        <div className="col">
-                            <div className="title side-title">Size</div>
-                        </div>
-                        <div className="col-auto">
-                            {
-                                size ? (<img src={CapaUp} className="rotate-icon" alt="capa" />) : (<img src={CapaUp} className="rotate-icon down" alt="capa" />)
-                            }
-                        </div>
-                    </div>
-                    <div className="menu" id="menuSize">
-                        {
-                            sizes.map((item, key) => {
-                                return(
-                                    <div className="custom-control custom-checkbox" key={key}>
-                                        <input type="checkbox" className="custom-control-input" id={`size-${item.id}`} />
-                                        <label className="custom-control-label item-menu" for={`size-${item.id}`}>{item.size}</label>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
-                    <div className="row align-items-center" id="color" onClick={() => toggleClick('color')}>
-                        <div className="col">
-                            <div className="title side-title">Color</div>
-                        </div>
-                        <div className="col-auto">
-                            {
-                                color ? (<img src={CapaUp} className="rotate-icon" alt="capa" />) : (<img src={CapaUp} className="rotate-icon down" alt="capa" />)
-                            }
-                        </div>
-                    </div>
-                    <div className="menu" id="menuColor">
-                        {
-                            colors.map((item, key) => {
-                                return(
-                                    <div className="custom-control custom-checkbox" key={key}>
-                                        <input type="checkbox" className="custom-control-input" id={`color-${item.id}`} />
-                                        <label className="custom-control-label item-menu" for={`color-${item.id}`}>{item.color}</label>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
-                    <div className="row align-items-center" id="brand" onClick={() => toggleClick('brand')}>
-                        <div className="col">
-                            <div className="title side-title">Brand</div>
-                        </div>
-                        <div className="col-auto">
-                            {
-                                brand ? (<img src={CapaUp} className="rotate-icon" alt="capa" />) : (<img src={CapaUp} className="rotate-icon down" alt="capa" />)
-                            }
-                        </div>
-                    </div>
-                    <div className="menu" id="menuBrand">
-                        {
-                            brands.map((item, key) => {
-                                return(
-                                    <div className="custom-control custom-checkbox" key={key}>
-                                        <input type="checkbox" className="custom-control-input" id={`brand-${item.id}`} />
-                                        <label className="custom-control-label item-menu" for={`brand-${item.id}`}>{item.brand}</label>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
+                    <SideBarProducts size={size} color={color} category={category} brand={brand} sizes={sizes} colors={colors} brands={brands} toggleClick={toggleClick} />
                 </div>
                 <div className="col-md-9">
                     <div className="row grid-list">
                     {
                         dataProduct.map((item, key) => {
                             return(
-                                <div className="col-6 col-md-auto" key={key}>
-                                    <ProductItem data={item} />
-                                </div>
+                                    <ProductItem data={item} key={key} />
                             )
                         })
                     }
