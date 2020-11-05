@@ -1,12 +1,11 @@
 import React from 'react';
-import SearchIcon from '../assets/icons/SEARCH.svg';
-import SignInIcon from '../assets/icons/SIGN IN.svg';
-import profile from '../assets/icons/LOGIN ICON.svg';
-import favorite from '../assets/icons/FAVORITE ICON.svg';
 import BasketIcon from '../assets/icons/BASKET.svg';
 import Menu from '../assets/icons/MENU.svg';
 import Facebook from '../assets/icons/FACEBOOK.svg';
 import Google from '../assets/icons/GOOGLE.svg';
+import Username from '../assets/icons/USERNAME.svg';
+import Password from '../assets/icons/PASSWORD.svg';
+import Cross from '../assets/icons/CROSS.svg';
 
 const Navbar = (props) => {
     return(
@@ -33,11 +32,7 @@ const Navbar = (props) => {
                         <div className="valign">
                             <div className="inner">
                                 <a href="#" className="btn-login" data-toggle="modal" data-target="#modalLogin">
-                                    <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fillRule="evenodd" clipRule="evenodd" d="M8.38098 15H13.5H16V12.5V2.5V0H13.5H8.38098V2.5H13.5V12.5H8.38098V15Z" fill="black"/>
-                                        <path d="M8.91128 8.38775C9.20417 8.09486 9.20417 7.61999 8.91128 7.32709L4.13831 2.55412C3.84542 2.26123 3.37054 2.26123 3.07765 2.55412C2.78476 2.84701 2.78476 3.32189 3.07765 3.61478L7.32029 7.85742L3.07765 12.1001C2.78476 12.393 2.78476 12.8678 3.07765 13.1607C3.37054 13.4536 3.84542 13.4536 4.13831 13.1607L8.91128 8.38775ZM0 8.60742H8.38095V7.10742H0V8.60742Z" fill="black"/>
-                                    </svg>
-                                    <span className="login-text">Sign In</span>
+                                    Sign In
                                 </a>
                                 {/* <a href="#">
                                     <img src={profile} alt="profile" />
@@ -560,47 +555,63 @@ const Navbar = (props) => {
             </div>
             
         </nav>
-        <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Welcome To Bazar</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <form>
-      <div class="form-group">
-         <input type="username" class="form-control" id="username" placeholder="username"/>
-      </div>
-      <div class="form-group">
-    <input type="password" class="form-control" id="pwd" placeholder="Password"/>
-    </div>
-    <div class="checkbox">
-    <label><input type="checkbox"/> Remember me</label>
-    <br>
-    </br>
-    <a href="#">Forgot Password?</a>
-    </div>
-        </form>
-       
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-dark">Sign In</button>
+        <div className="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal-dialog">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                            <img src={Cross} alt="close"/>
+                        </button>
+                    </div>
+                    <div className="modal-body">
+                        <h5 className="modal-title" id="exampleModalLabel">Welcome To Bazar</h5>
+                        <form>
+                            <div className="form-group">
+                                <div className="row align-items-center mb-3">
+                                    <div className="col-auto">
+                                        <div className="valign">
+                                            <div className="inner">
+                                                <img src={Username} alt="username" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <label className="label">Username</label>
+                                    </div>
+                                </div>
+                                <input type="text" className="form-control form-custom"/>
+                            </div>
+                            <div className="form-group">
+                                <div className="row align-items-center mb-3">
+                                    <div className="col-auto">
+                                        <div className="valign">
+                                            <div className="inner">
+                                                <img src={Password} alt="Password" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <label className="label">Password</label>
+                                    </div>
+                                </div>
+                                <input type="password" className="form-control form-custom"/>
+                            </div>
+                            <div className="custom-control custom-switch mb-3">
+                                <input type="checkbox" className="custom-control-input" id="rememberMe" />
+                                <label className="custom-control-label small-text mb-0" for="rememberMe">Remember Me</label>
+                            </div>
+                            <button type="button" className="btn btn-dark w-100">Sign In</button>
+                        </form>
+                        <a href="#" className="small-text disable-text">Forgot Password</a> <span className="small-text disable-text">|</span> <a href="#" className="small-text disable-text">Sign Up</a>
+                        <div className="small-text text-center">or sign in with</div>
+                        <div className="d-flex">
+                            <button type="button" className="btn btn-facebook w-100"><img src={Facebook} alt="Facebook" /> Facebook</button>
+                            <button type="button" className="btn btn-google w-100"><img src={Google} alt="Google" /> Google</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <br></br>
-     <a href="#">Forgot Password</a> | <a href="#">Sign Up</a>
-     </div>
-     <div class="auth">or sign in with</div>
-     <button type="button" class="btn btn-primary"> <img src={Facebook} alt="Facebook" />Facebook</button>
-     <button type="button" class="btn "> <img src={Google} alt="Google" />Google</button>
-    </div>
-  </div>
-</div>
-
-        
       </>
     )
 }
