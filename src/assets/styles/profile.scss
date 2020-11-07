@@ -1,5 +1,375 @@
-.box{
-    background-color: black;
-    color:white;
-    text-align: center;
+#section-profile{
+    background-color: #E5E5E5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    .box{
+        background: #000000;
+        padding: 33px 0;
+        margin-bottom: 83px;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+        h1{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 34px;
+            line-height: 40px;
+            text-align: center;
+            letter-spacing: 0.31em;
+            color: #FFFFFF;
+        }
+        a{
+            text-decoration: none;
+        }
+        .dropdown{
+            position: static !important;
+            .dropdown-menu{
+                width: 100%;
+                left: 0;
+                border-radius: unset;
+                border: unset;
+                margin: unset;
+                padding-bottom: 22px;
+                background-color: #000;
+                &.show{
+                    transform: translate3d(0, 207px, 0px) !important;
+                }
+                .dropdown-item{
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: #FFF;
+                    text-align: center;
+                    letter-spacing: 0.31em;
+                    padding-bottom: 30px;
+                    &:hover{
+                        background-color: unset;
+                    }
+                }
+            }
+        }
+    }
+    
+    #pills-tab{
+        &.vertical-xs{
+            padding: unset;
+            padding-top: unset;
+            &::-webkit-scrollbar {
+                height: unset;
+            }
+            
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: unset;
+                border-bottom: unset;
+            }
+            
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: unset; 
+            }
+            >*{
+                margin-bottom: unset;
+                width: auto;
+            }
+        }
+        .nav-item{
+            .nav-link{
+                font-style: normal;
+                font-weight: bold;
+                font-size: 17px;
+                line-height: 23px;
+                color: #E1E1E1;
+                &.active{
+                    color: #000;
+                    background-color: unset;
+                    border-radius: unset;
+                    border-bottom: 5px solid #000;
+                    border-bottom-right-radius: 2.5px;
+                    border-bottom-left-radius: 2.5px;
+                }
+            }
+        }
+    }
+    .tab-content{
+        .card-content{
+            background-color: #FFF;
+            box-shadow: 0px 0px 10px rgba(191, 191, 191, 0.25);
+            border-radius: 5px;
+            padding: 36px 184px;
+            margin-bottom: 32px;
+            @media screen and (max-width: 768px) {
+                margin-right: -15px !important;
+                margin-left: -15px !important;
+                padding-right: 15px !important;
+                padding-left: 15px !important;
+                border-radius: unset;
+            }
+            &.cc{
+                padding: 41px 59px;
+            }
+        }
+        .label{
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 20px;
+        }
+        .custom-form{
+            background: #FAFAFA;
+            border: 1px solid #E1E1E1;
+            padding: 7px 21px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 20px;
+            height: unset;
+            box-shadow: unset;
+            border-radius: unset;
+            &::placeholder{
+                font-size: 10px;
+                line-height: 25px;
+                color: #E1E1E1
+            }
+        }
+        .custom-radio{
+            .custom-control-label{
+                &::before{
+                    border: 2px solid #C4C4C4;
+                    width: 22px;
+                    height: 22px;
+                    top: 0;
+                }
+                &.label{
+                    font-weight: normal;
+                }
+            }
+            .custom-control-input{
+                &:checked ~ .custom-control-label{
+                    &::after{
+                        background: #000;
+                        border-radius: 100%;
+                        width: 14px;
+                        height: 14px;
+                        background-image: unset;
+                        top: 4px;
+                        left: -20px;
+                        box-shadow: unset;
+                    }
+                    &::before{
+                        background-color: #FFF;
+                        border: 2px solid #000;
+                    }
+                    &.label{
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        .input-group{
+            .custom-form{
+                padding-left: 0;
+                border-left: unset;
+            }
+            .input-group-prepend{
+                .input-group-text{
+                    background-color: #FAFAFA;
+                    border: 1px solid #E1E1E1;
+                }
+            }
+        }
+        .custom-checkbox{
+            margin-bottom: 40px;
+            .custom-control-label{
+                font-weight: bold;
+                font-size: 9px;
+                line-height: 12px;
+
+                &::before{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: unset;
+                    border: 2px solid #C4C4C4;
+                    box-shadow: unset;
+                    top: 0;
+                }
+                &::after{
+                    top: 2px;
+                    left: -22px;
+                }
+
+                &.sameAddress{
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 10px;
+                    line-height: 14px;
+                    color: #E1E1E1;
+                }
+            }
+            .custom-control-input{
+                &:checked ~ .custom-control-label{
+                    &::after{
+                        background-image: url(../icons/CHECKED.svg);
+                    }
+                    &::before{
+                        background-color: #FFF;
+                        border: 3px solid #000;
+                    }
+                    &.sameAddress{
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+    .btn-cancel{
+        background-color: #E1E1E1;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 25px;
+        color: #000;
+        padding: 8px 50px;
+        text-align: center;
+        width: 100%;
+        border: unset;
+        text-transform: uppercase;
+        outline: unset;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 20px;   
+        }
+    }
+    .btn-save{
+        @extend .btn-cancel;
+        color: #FFF;
+        background-color: #000;
+    }
+    .cards{
+        &:hover{
+            .edit{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                z-index: 90;
+                background: rgba(0, 0, 0, 0.9);
+                border-radius: 10px;
+                a{
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 10px;
+                    line-height: 14px;
+                    color: #FFF;
+                    text-align: center;
+                }
+            }
+        }
+        .edit{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            display: none;
+            z-index: 100;
+        }
+        .delete{
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            z-index: 100;
+        }
+        .credit-card{
+            position: relative;
+            height: 100%;
+            line-height: normal;
+            img{
+                width: 100%;
+            }
+            .detail-card{
+                &:hover{
+                    background: rgba(0, 0, 0, 0.9);
+                }
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 22px 28px;
+                .label-card{
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #FFF;
+                }
+                .value-card{
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 20px;
+                    color: #FFF;
+                }
+                .card-number{
+                    font-family: Orbitron;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 20px;
+                    line-height: 25px;
+                    color: #FFF;
+                    letter-spacing: 3px;
+                }
+                img{
+                    width: unset;
+                }
+            }
+        }
+    }
+    .hline{
+        background-color: #E1E1E1;
+        width: 100%;
+        height: 1px;
+        margin-bottom: 1rem;
+    }
+    .cards-address{
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        padding: 34px 28px;
+        .delete{
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            z-index: 100;
+        }
+        .address-title{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 16px;
+            border-bottom: 1px solid #000000;
+            padding-bottom: 13px;
+            margin-bottom: 13px;
+
+            &.address-subtitle{
+                font-weight: 600;
+                border-bottom: unset;
+                padding-bottom: unset;
+                margin-bottom: unset;
+            }
+        }
+        .address{
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #000000;
+            margin-bottom: 26px;
+        }
+    }
 }

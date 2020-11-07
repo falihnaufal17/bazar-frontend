@@ -31,7 +31,7 @@ export default [
         exact: true
     },
     {
-        path: '/profile',
+        path: '/profile/my-profile',
         component: Profile,
         exact: true
     },
