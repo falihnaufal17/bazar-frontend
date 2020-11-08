@@ -4,6 +4,7 @@ const Home = lazy(()=>import('./pages/Home'));
 const ProductDetail = lazy(() => import('./pages/ProductDetail'));
 const Products = lazy(() => import('./pages/Products'));
 const Profile = lazy(() => import('./pages/Profile'));
+const Cart = lazy(() => import('./pages/Cart'));
 export default [
     {
         path: '/',
@@ -33,6 +34,11 @@ export default [
     {
         path: '/profile/my-profile',
         component: Profile,
+        exact: true
+    },
+    {
+        path: '/bags',
+        component: Cart,
         exact: true
     },
 ]

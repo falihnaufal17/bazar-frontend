@@ -46,7 +46,7 @@ const Navbar = (props) => {
                         </a>
                     </div> */}
                     <div className="col-auto order-5 order-md-5 order-lg-5">
-                        <a href="#">
+                        <a href="/bags">
                             <div className="position-relative">
                                 <img src={BasketIcon} alt="basket-icon" />
                                 {/* <div className="float-count">1</div> */}
