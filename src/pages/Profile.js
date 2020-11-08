@@ -1,4 +1,4 @@
-import React, {lazy, Suspense} from 'react';
+import React, {lazy, Suspense, useRef} from 'react';
 import mastercard from '../assets/icons/MASTERC.svg';
 import visa from '../assets/icons/VISA.svg';
 import jcb from '../assets/icons/JCB.svg';
@@ -9,6 +9,7 @@ const CCList = lazy(() => import('../components/CCList'));
 const AddressList = lazy(() => import('../components/AddressList'));
 
 const Profile = (props) => {
+  let formEdit = useRef(null);
   let dataCard = [
     {
       id: 1,
@@ -50,6 +51,14 @@ const Profile = (props) => {
       state: 'United State'
     },
   ]
+  const openModify = () => {
+    formEdit.current.classList.add('d-block')
+    formEdit.current.classList.remove('d-none')
+  }
+  const closeModify = () =>{
+    formEdit.current.classList.add('d-none')
+    formEdit.current.classList.remove('d-block')  
+  }
      return (
        <Suspense fallback={<div/>}>
          <div id="section-profile">
@@ -80,14 +89,67 @@ const Profile = (props) => {
             </ul>
             <div className="tab-content" id="pills-tabContent">
               <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                <div className="card-content">
-                  <div className="form-group">
-                    <label className="label">First Name</label>
-                    <input type="text" className="form-control custom-form" placeholder="Steven"/>
+                <div className="card-content card-profile">
+                  <div className="fullname">STEVEN GERRAD</div>
+                  <div className="hline"></div>
+                  <div className="row align-items-center justify-content-between">
+                    <div className="col-12 col-md">
+                      <div className="field mb-3">Gender</div>
+                    </div>
+                    <div className="col-12 col-md">
+                      <div className="value mb-3">Man</div>
+                    </div>
                   </div>
-                  <div className="form-group">
-                    <label className="label">Last Name</label>
-                    <input type="text" className="form-control custom-form" placeholder="Gerrad"/>
+                  <div className="row">
+                    <div className="col-12 col-md">
+                      <div className="field mb-3">Email</div>
+                    </div>
+                    <div className="col-12 col-md">
+                      <div className="value mb-3">stevengerrad@gmail.com</div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-12 col-md">
+                      <div className="field mb-3">Birth of date</div>
+                    </div>
+                    <div className="col-12 col-md">
+                      <div className="value mb-3">12/12/97</div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-12 col-md">
+                      <div className="field mb-3">Phone Number</div>
+                    </div>
+                    <div className="col-12 col-md">
+                      <div className="value mb-3">+62 812345678</div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-12 col-md">
+                      <div className="field mb-3">Password</div>
+                    </div>
+                    <div className="col text-right password">
+                      <div><input type="password" className="value mb-3 password" id="d-password" value="password" disabled/></div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <button className="btn-modify" onClick={() => openModify()}>MODIFY</button>
+                  </div>
+                </div>
+                <div className="card-content d-none" ref={formEdit} id="form-edit">
+                  <div className="row">
+                    <div className="col">
+                      <div className="form-group">
+                        <label className="label">First Name</label>
+                        <input type="text" className="form-control custom-form" placeholder="Steven"/>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div className="form-group">
+                        <label className="label">Last Name</label>
+                        <input type="text" className="form-control custom-form" placeholder="Gerrad"/>
+                      </div>
+                    </div>
                   </div>
                   <div className="form-group">
                     <label className="label">Email</label>
@@ -138,7 +200,7 @@ const Profile = (props) => {
                   </div>
                   <div className="row justify-content-center">
                     <div className="col-12 col-md-auto">
-                      <button className="btn-cancel" type={'reset'}>Cancel</button>
+                      <button className="btn-cancel" type={'reset'} onClick={() => closeModify()}>Cancel</button>
                     </div>
                     <div className="col-12 col-md-auto">
                       <button className="btn-save">Save</button>

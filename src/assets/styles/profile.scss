@@ -110,6 +110,10 @@
             &.cc{
                 padding: 41px 59px;
             }
+            &.card-profile{
+                padding-right: 258px;
+                padding-left: 258px;
+            }
         }
         .label{
             font-weight: 600;
@@ -371,5 +375,54 @@
             color: #000000;
             margin-bottom: 26px;
         }
+    }
+    .fullname{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 34px;
+        text-align: center;
+        color: #000;
+        margin-bottom: 25px;
+    }
+    .field{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000;
+    }
+    .value{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000;
+        text-align: right;
+        @media screen and (max-width: 768px) {
+            text-align: left;
+        }
+    }
+    .password{
+        @media screen and (max-width: 768px) {
+            text-align: left !important;
+        }
+    }
+    #d-password{
+        background-color: unset;
+        border: unset;
+    }
+    .btn-modify{
+        background-color: #E1E1E1;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 25px;
+        color: #000;
+        padding: 8px 50px;
+        text-align: center;
+        border: unset;
+        text-transform: uppercase;
+        outline: unset;
     }
 }
