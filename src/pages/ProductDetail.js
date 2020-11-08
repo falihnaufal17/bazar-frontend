@@ -49,21 +49,28 @@ const ProductDetail = (props) => {
             image: detail
         }
     ]
-    const settings = {
-        customPaging: function(i) {
-            return (
-            <a className="position-relative" id={i}>
-                <img src={`${detail}`} className="w-100" />
-            </a>
-            );
+    const dataColor = [
+        {
+            id: 1,
+            color: '#6DE734'
         },
-        dots: true,
-        dotsClass: "slick-dots slick-thumb",
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
+        {
+            id: 2,
+            color: '#FFF'
+        },
+        {
+            id: 3,
+            color: '#000'
+        },
+        {
+            id: 4,
+            color: '#FF0000'
+        },
+        {
+            id: 5,
+            color: '#00FF00'
+        },
+    ]
     return(
         <>
             <section id="detail">
@@ -145,32 +152,52 @@ const ProductDetail = (props) => {
                             <h1 className="product-name">Adidas LOTTA VOLKOVA</h1>
                             <h2 className="price">$635</h2>
                             <div className="form-group">
-                                <label className="label">Size</label>
+                                <label className="label">Color</label>
                                 <div className="flex-container">
                                     {
-                                        sizeData.map((d, i) => {
+                                        dataColor.map((d, i) => {
                                             return(
                                                 <div className="flex-items" key={i}>
-                                                    <div className="item-size">{d.size}</div>
+                                                    <div className="item-color" style={{backgroundColor: d.color}} />
                                                 </div>
                                             )
                                         })
                                     }
                                 </div>
                             </div>
-                            <div className="form-group">
-                                <label className="label">Quantity</label>
-                                <div className="input-group">
-                                    <div className="input-group-append">
-                                        <div className="valign">
-                                            <div className="inner">
-                                                <img src={arrowDropdown} alt="dropdown" />
-                                            </div>
+                            <div className="row">
+                                <div className="col-12 col-md">
+                                    <div className="form-group">
+                                        <label className="label">Size</label>
+                                        <div className="flex-container">
+                                            {
+                                                sizeData.map((d, i) => {
+                                                    return(
+                                                        <div className="flex-items" key={i}>
+                                                            <div className="item-size">{d.size}</div>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
                                         </div>
                                     </div>
-                                    <select className="form-control select">
-                                        <option value={1}>1</option>
-                                    </select>
+                                </div>
+                                <div className="col-12 col-md">
+                                    <div className="form-group">
+                                        <label className="label">Quantity</label>
+                                        <div className="input-group">
+                                            <div className="input-group-append">
+                                                <div className="valign">
+                                                    <div className="inner">
+                                                        <img src={arrowDropdown} alt="dropdown" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <select className="form-control select">
+                                                <option value={1}>1</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <label className="label">About The Brand</label>
