@@ -65,12 +65,6 @@ const Profile = (props) => {
     formEdit.current.classList.remove('d-block')  
   }
      return (
-<<<<<<< HEAD
-         <>
-             <div className="box"> 
-                  <h1> MY PROFILE</h1>
-                  
-=======
        <Suspense fallback={<div/>}>
          <div id="section-profile">
           <div className="box">
@@ -84,7 +78,6 @@ const Profile = (props) => {
                 <a class="dropdown-item" href="#">MY PROFILE</a>
                 <a class="dropdown-item" href="#">CUSTOMER CARE</a>
               </div>
->>>>>>> af4b73ba45794a1764f5a9628c6fd73151073492
             </div>
           </div>
           <div className="container">
