@@ -14,7 +14,19 @@ const ProductItem = props => {
                 <div className="card-body">
                     <div className="category">{props.data.category}</div>
                     <div className="product-name">{props.data.product_name}</div>
-                    <div className="price">${props.data.price}</div>
+                    <div className="price mb-2">${props.data.price}</div>
+                    <div className="row row-color">
+                        {props.data.color.map((d, i) => {
+                            return(
+                                <div className="col-auto" key={i}>
+                                    <div className="item-color" style={{backgroundColor: d.color}}/>
+                                    {
+                                        d.color == '#000' ? (<div className="line-active"/>) : (<div/>)
+                                    }
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
             </a>
         </div>

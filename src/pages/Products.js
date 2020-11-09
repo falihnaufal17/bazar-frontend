@@ -74,56 +74,168 @@ const Products = props => {
             category: 'Dress',
             product_name: 'Alexander McQueen',
             price: 635,
-            image: imgProduct
+            image: imgProduct,
+            color: [
+                {
+                    id: 1,
+                    color: '#000'
+                },
+                {
+                    id: 2,
+                    color: '#D7D7D7'
+                },
+                {
+                    id: 3,
+                    color: '#9FD668'
+                }
+            ]
         },
         {
             id: 2,
             category: 'Dress',
             product_name: 'Alexander McQueen',
             price: 635,
-            image: imgProduct
+            image: imgProduct,
+            color: [
+                {
+                    id: 1,
+                    color: '#000'
+                },
+                {
+                    id: 2,
+                    color: '#D7D7D7'
+                },
+                {
+                    id: 3,
+                    color: '#9FD668'
+                }
+            ]
         },
         {
             id: 3,
             category: 'Dress',
             product_name: 'Alexander McQueen',
             price: 635,
-            image: imgProduct
+            image: imgProduct,
+            color: [
+                {
+                    id: 1,
+                    color: '#000'
+                },
+                {
+                    id: 2,
+                    color: '#D7D7D7'
+                },
+                {
+                    id: 3,
+                    color: '#9FD668'
+                }
+            ]
         },
         {
             id: 4,
             category: 'Dress',
             product_name: 'Alexander McQueen',
             price: 635,
-            image: imgProduct
+            image: imgProduct,
+            color: [
+                {
+                    id: 1,
+                    color: '#000'
+                },
+                {
+                    id: 2,
+                    color: '#D7D7D7'
+                },
+                {
+                    id: 3,
+                    color: '#9FD668'
+                }
+            ]
         },
         {
             id: 5,
             category: 'Dress',
             product_name: 'Alexander McQueen',
             price: 635,
-            image: imgProduct
+            image: imgProduct,
+            color: [
+                {
+                    id: 1,
+                    color: '#000'
+                },
+                {
+                    id: 2,
+                    color: '#D7D7D7'
+                },
+                {
+                    id: 3,
+                    color: '#9FD668'
+                }
+            ]
         },
         {
             id: 6,
             category: 'Dress',
             product_name: 'Alexander McQueen',
             price: 635,
-            image: imgProduct
+            image: imgProduct,
+            color: [
+                {
+                    id: 1,
+                    color: '#000'
+                },
+                {
+                    id: 2,
+                    color: '#D7D7D7'
+                },
+                {
+                    id: 3,
+                    color: '#9FD668'
+                }
+            ]
         },
         {
             id: 7,
             category: 'Dress',
             product_name: 'Alexander McQueen',
             price: 635,
-            image: imgProduct
+            image: imgProduct,
+            color: [
+                {
+                    id: 1,
+                    color: '#000'
+                },
+                {
+                    id: 2,
+                    color: '#D7D7D7'
+                },
+                {
+                    id: 3,
+                    color: '#9FD668'
+                }
+            ]
         },
         {
             id: 8,
             category: 'Dress',
             product_name: 'Alexander McQueen',
             price: 635,
-            image: imgProduct
+            image: imgProduct,
+            color: [
+                {
+                    id: 1,
+                    color: '#000'
+                },
+                {
+                    id: 2,
+                    color: '#D7D7D7'
+                },
+                {
+                    id: 3,
+                    color: '#9FD668'
+                }
+            ]
         },
     ];
     const sizes = [
