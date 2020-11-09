@@ -5,7 +5,7 @@ import '../assets/styles/profile.scss'
 const Profile = (props) => {
      return (
          <>
-             <div className="box">
+             <div className="box"> 
                   <h1> MY PROFILE</h1>
                   
             </div>
