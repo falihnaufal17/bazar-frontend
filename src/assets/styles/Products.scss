@@ -199,4 +199,21 @@
     #side-bar{
         padding-bottom: 365px;
     }
+    .item-color{
+        width: 23px;
+        height: 23px;
+        margin-bottom: 4px;
+        cursor: pointer;
+    }
+    .line-active{
+        background-color: #000;
+        width: 100%;
+        height: 1px;
+    }
+    .row-color{
+        margin: auto -5px;
+        >*{
+            padding: 0 5px;
+        }
+    }
 }
