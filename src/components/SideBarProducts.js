@@ -19,7 +19,7 @@ const SideBarProducts = (props) => {
     console.log(data);
 
     return(
-        <>
+        <div id="side-bar">
             <div className="title side-title">Select Price</div>
             <div className="row row-p mb-3">
                 <div className="col text-center">
@@ -110,7 +110,7 @@ const SideBarProducts = (props) => {
                     }
                 </div>
             </div>
-            <div className="menu" id="menuBrand">
+            <div className="menu mb-4" id="menuBrand">
                 {
                     props.brands.map((item, key) => {
                         return(
@@ -122,7 +122,11 @@ const SideBarProducts = (props) => {
                     })
                 }
             </div>
-        </>
+            <div className="hline" />
+            <div className="title side-title">Top Deals</div>
+            <a href="#" className="top-deals">20% off & under</a>
+            <a href="#" className="top-deals">20% off & higher</a>
+        </div>
     )
 }
 
