@@ -175,11 +175,19 @@
             .custom-form{
                 padding-left: 0;
                 border-left: unset;
+                &.secret{
+                    border-left: 1px solid #E1E1E1;
+                    border-right: unset;
+                    padding-left: 21px;
+                }
             }
             .input-group-prepend{
                 .input-group-text{
                     background-color: #FAFAFA;
                     border: 1px solid #E1E1E1;
+                    &.secret-group{
+                        border-left: unset;
+                    }
                 }
             }
         }

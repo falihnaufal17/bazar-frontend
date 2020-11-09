@@ -1,4 +1,4 @@
-import React, {lazy, Suspense, useRef} from 'react';
+import React, {lazy, Suspense, useRef, useState} from 'react';
 import mastercard from '../assets/icons/MASTERC.svg';
 import visa from '../assets/icons/VISA.svg';
 import jcb from '../assets/icons/JCB.svg';
@@ -10,6 +10,11 @@ const AddressList = lazy(() => import('../components/AddressList'));
 
 const Profile = (props) => {
   let formEdit = useRef(null);
+  let cPass = useRef(null);
+  const [cp, isCp] = useState(false)
+  const [isCurr, setIsCurr] = useState(false);
+  const [isNew, setIsNew] = useState(false);
+  const [isConfirm, setIsConfirm] = useState(false);
   let dataCard = [
     {
       id: 1,
@@ -137,6 +142,7 @@ const Profile = (props) => {
                   </div>
                 </div>
                 <div className="card-content d-none" ref={formEdit} id="form-edit">
+                  <div className="fullname text-left">YOUR DETAIL</div>
                   <div className="row">
                     <div className="col">
                       <div className="form-group">
@@ -150,14 +156,6 @@ const Profile = (props) => {
                         <input type="text" className="form-control custom-form" placeholder="Gerrad"/>
                       </div>
                     </div>
-                  </div>
-                  <div className="form-group">
-                    <label className="label">Email</label>
-                    <input type="text" className="form-control custom-form" placeholder="example@gmail.com"/>
-                  </div>
-                  <div className="form-group">
-                    <label className="label">Password</label>
-                    <input type="text" className="form-control custom-form" placeholder="password"/>
                   </div>
                   <div className="form-group">
                     <label className="label">Gender </label>
@@ -193,6 +191,62 @@ const Profile = (props) => {
                       </div>
                       <input type="tel" className="form-control custom-form" placeholder="+62"/>
                     </div>
+                  </div>
+                    <div ref={cPass}>
+                      <div className="fullname text-left">SIGN IN DETAILS</div>
+                      <div className="form-group">
+                        <label className="label">Email</label>
+                        <input type="email" className="form-control custom-form" placeholder="example@gmail.com"/>
+                      </div>
+                      <div className="custom-control custom-checkbox">
+                        <input type="checkbox" className="custom-control-input" id="cp" checked={cp} onChange={()=>isCp(!cp)} />
+                        <label className="custom-control-label" htmlFor="cp">Change Password</label>
+                      </div>
+                    {
+                      cp ? (
+                        <div>
+                          <div className="form-group">
+                            <label className="label">Current Password</label>
+                            <div className="input-group mb-2">
+                              <input type={isCurr ? 'text' : 'password'} className="form-control secret custom-form" placeholder="password"/>
+                              <div className="input-group-prepend">
+                                <a href="#" className="input-group-text secret-group" onClick={(e) => {e.preventDefault(); setIsCurr(!isCurr)}}>
+                                  <img src={eye} alt="eye"/>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="row">
+                            <div className="col-12 col-md">
+                              <div className="form-group">
+                                <label className="label">New Password</label>
+                                <div className="input-group mb-2">
+                                  <input type={isNew ? "text" : "password"} className="form-control secret custom-form" placeholder="password"/>
+                                  <div className="input-group-prepend">
+                                    <a href="#" className="input-group-text secret-group" onClick={(e) => {e.preventDefault(); setIsNew(!isNew)}}>
+                                      <img src={eye} alt="eye"/>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-12 col-md">
+                              <div className="form-group">
+                                <label className="label">Confirm New Password</label>
+                                <div className="input-group mb-2">
+                                  <input type={isConfirm ? "text" : "password"} className="form-control secret custom-form" placeholder="password"/>
+                                  <div className="input-group-prepend">
+                                    <a href="#" className="input-group-text secret-group" onClick={(e) => {e.preventDefault(); setIsConfirm(!isConfirm)}}>
+                                      <img src={eye} alt="eye"/>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ) : (<div/>)
+                    }
                   </div>
                   <div className="custom-control custom-checkbox">
                     <input type="checkbox" className="custom-control-input" id="pp" />
