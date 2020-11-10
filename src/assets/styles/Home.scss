@@ -1,51 +1,5 @@
 @import './variables';
 
-#section-jumbotron{ // id = section-jumbotron
-    position: relative;
-    background-image: url('../images/bg-jumbotron.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 93px 0 202px;
-    .slick-slider{
-        @media screen and (max-width: 768px) {
-            .slick-arrow{
-                display: none !important;
-            }
-        }
-    }
-    
-    .jumbotron{
-        background-color: transparent;
-        padding: 0;
-        margin-bottom: 0;
-        .display-4{
-            font-style: normal;
-            font-weight: normal;
-            font-size: 47px;
-            line-height: 62,65px;
-            color: #FFF;
-        }
-        .lead{
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 200.18%;
-            color: #FFF;
-        }
-        .btn-primary{
-            background-color: $secondary;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 19px;
-            color: $primary;
-            border: none;
-        }
-    }
-}
-
 #section-discover{ // id=section-discover
     position: relative;
     background-color: #000;
@@ -112,6 +66,12 @@
             .slick-arrow{
                 display: none !important;
             }
+        }
+    }
+    &.mt-5{
+        margin-top: 650px !important;
+        @media screen and (max-width: 768px) {
+            margin-top: 0 !important;
         }
     }
 
@@ -205,5 +165,80 @@
                 }   
             }
         }
+    }
+}
+
+.carousel{
+    .carousel-caption{
+        top: 20%;
+        right: unset;
+        left: 0;
+        margin-left: 125px;
+        h5{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 67px;
+            color: #000;
+            margin-bottom: 33px;
+        }
+        .btn-primary{
+            background: #FFFFFF;
+            box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px;
+            color: $primary;
+            border: none;
+            border-radius: 0;
+            padding: 11px 8px;
+        }
+    }
+    .carousel-indicators{
+        right: unset;
+        top: unset;
+        margin-left: 125px;
+        margin-right: unset;
+        margin-bottom: 94px;
+        @media screen and (max-width: 768px){
+            margin-left: 0;
+            margin-right: unset;
+            margin-bottom: 0;
+        }
+        li{
+            box-sizing: content-box;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            width: 30px;
+            text-align: center;
+            margin-right: 3px;
+            margin-left: 3px;
+            cursor: pointer;
+            background-color: transparent;
+            opacity: .5;
+            transition: opacity .6s ease;
+            text-indent: unset;
+            height: unset;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            font-size: 10px;
+            line-height: 14px;
+            padding: 8px;
+            &.active{
+                opacity: 1;
+                background-color: #FF9920;
+                color: #FFF;
+            }
+        }
+    }
+}
+#section-banner{
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    @media screen and (max-width: 768px) {
+        position: relative;
     }
 }

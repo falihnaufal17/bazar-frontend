@@ -2,6 +2,10 @@ import React, {Suspense, lazy} from 'react';
 import '../assets/styles/Home.scss';
 import bannerimage from '../assets/images/banner-item.png';
 import joinIcon from '../assets/icons/JOIN.svg';
+import SECTION1 from '../assets/images/SECTION 1.png';
+import SECTION2 from '../assets/images/SECTION 2.png';
+import SECTION3 from '../assets/images/SECTION 3.png';
+import SECTION4 from '../assets/images/SECTION 4.png';
 
 const Sliders = lazy(() => import('../components/Sliders'));
 const PopularCategory = lazy(() => import('../components/PopularCategory'));
@@ -25,34 +29,80 @@ const Home = (props) => {
             image: bannerimage
         }
     ]
+    const dataBanner = [
+        {
+            id: 1,
+            text: 'Bazar Your gateway to all things fashion',
+            image: SECTION1
+        },
+        {
+            id: 2,
+            text: 'Bazar The next Big things',
+            image: SECTION2
+        },
+        {
+            id: 3,
+            text: 'Bazar Your gateway to all things fashion',
+            image: SECTION3
+        },
+        {
+            id: 1,
+            text: 'Bazar The next Big things',
+            image: SECTION4
+        },
+    ]
     return(
         <Suspense fallback="">
-            <section id="section-jumbotron">
-                <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-12 col-md-6 col-lg-5 order-2 order-md-1">
-                                <div class="jumbotron">
-                                    <h1 class="display-4 mb-5">Bazar<br></br>Your gateway to all things fashion</h1>
-                                    <a class="btn btn-primary btn-lg" href="#" role="button">Join Now <img src={joinIcon} alt="join-icon" /></a>
-                                </div>
-                            </div>
-                            <div className="col col-md-6 col-lg-7 order-1 order-md-2">
-                                {/* <Sliders>
-                                    {
-                                        data.map((item, key) => {
-                                            return(
-                                                <div key={key}>
-                                                    <img src={item.image} className="d-block w-100" alt={item.title} />
+            <section id="section-banner">
+                <div id="carouselExampleCaptions" data-pause="false" data-interval="6000" className="carousel slide" data-ride="carousel">
+                    <ol className="carousel-indicators">
+                        {
+                            dataBanner.map((data, index) => {
+                                let itemClass = '';
+                                if(index === 0) itemClass = ' active';
+                                return(
+                                <li data-target="#carouselExampleCaptions" data-slide-to={index} className={itemClass}>0{index+1}</li>
+                                )
+                            })
+                        }
+                    </ol>
+                    <div className="carousel-inner">
+                        {
+                            dataBanner.map((data, index) => {
+                                let itemClass = 'carousel-item';
+                                if(index === 0) itemClass = itemClass + ' active';
+                                return (
+                                    <div className={itemClass} key={index}>
+                                        <img src={data.image} className="d-block w-100" alt={data.text} />
+                                        <div className="carousel-caption d-none d-md-block text-left">
+                                            <div className="row align-items-center">
+                                                <div className="col-12 col-md-6 col-lg-5 order-2 order-md-1">
+                                                    <h5>{data.text}</h5>
+                                                    <a className="btn btn-primary btn-lg" href="#">Join Now <img src={joinIcon} alt="join-icon" /></a>
                                                 </div>
-                                            )
-                                        })
-                                    }
-                                </Sliders> */}
-                            </div>
-                        </div>
+                                                <div className="col col-md-6 col-lg-7 order-1 order-md-2">
+                                                    {/* <Sliders>
+                                                        {
+                                                            data.map((item, key) => {
+                                                                return(
+                                                                    <div key={key}>
+                                                                        <img src={item.image} className="d-block w-100" alt={item.title} />
+                                                                    </div>
+                                                                )
+                                                            })
+                                                        }
+                                                    </Sliders> */}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
                 </div>
             </section>
-            <section id="section-popular-category">
+            <section id="section-popular-category" className="mt-5">
                 <h2>Trending Now</h2>
                 <PopularCategory />
             </section>
