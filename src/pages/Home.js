@@ -73,7 +73,7 @@ const Home = (props) => {
                                 if(index === 0) itemClass = itemClass + ' active';
                                 return (
                                     <div className={itemClass} key={index}>
-                                        <img src={data.image} className="d-block" alt={data.text} />
+                                        <img src={data.image} className="d-block w-100" alt={data.text} />
                                         <div className="carousel-caption d-none d-md-block text-left">
                                             <div className="row align-items-center">
                                                 <div className="col-12 col-md-6 col-lg-5 order-2 order-md-1">

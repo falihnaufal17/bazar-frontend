@@ -237,6 +237,8 @@
 #section-banner{
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 0;
     @media screen and (max-width: 768px) {
         position: relative;
