@@ -1,7 +1,14 @@
 @import './assets/styles/_variables.scss';
 
 .navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 3;
+    @media screen and (max-width: 768px) {
+        position: relative;
+    }
     a{
         color: $primary;
         text-decoration: none;

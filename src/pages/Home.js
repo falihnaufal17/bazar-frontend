@@ -102,7 +102,7 @@ const Home = (props) => {
                     </div>
                 </div>
             </section>
-            <section id="section-popular-category" className="mt-5">
+            <section id="section-popular-category">
                 <h2>Trending Now</h2>
                 <PopularCategory />
             </section>
