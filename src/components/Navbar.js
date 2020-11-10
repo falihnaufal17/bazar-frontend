@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import BasketIcon from '../assets/icons/BASKET.svg';
 import Menu from '../assets/icons/MENU.svg';
 import Facebook from '../assets/icons/FACEBOOK.svg';
@@ -9,6 +9,16 @@ import Cross from '../assets/icons/CROSS.svg';
 
 const Navbar = (props) => {
     let bg = useRef(null);
+    let nav = useRef(null);
+    useEffect(() => {
+        if(props.location.pathname == '/'){
+            bg.current.style.position = 'absolute';
+            bg.current.style.top = 0;
+            bg.current.style.left = 0;
+            bg.current.style.right = 0;
+            bg.current.style.zIndex = 3;
+        }
+    }, [])
     let [isOpen, setIsOpen] = useState(false)
     let [isOpen2, setIsOpen2] = useState(false)
     let [isOpen3, setIsOpen3] = useState(false)
