@@ -19,6 +19,11 @@ export default [
         exact: true
     },
     {
+        path: '/products',
+        component: Products,
+        exact: true
+    },
+    {
         path: '/products/:menu',
         component: Products,
         exact: true
@@ -39,12 +44,12 @@ export default [
         exact: true
     },
     {
-        path: '/paymentselection',
+        path: '/payment',
         component: Paymentselection,
         exact: true,
     },
     {
-        path: '/MyWhislist',
+        path: '/profile/my-wishlist',
         component: MyWhislist,
         exact: true,
 	},

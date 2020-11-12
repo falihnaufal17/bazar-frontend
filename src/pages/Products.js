@@ -88,7 +88,8 @@ const Products = props => {
                     id: 3,
                     color: '#9FD668'
                 }
-            ]
+            ],
+            stock: 1
         },
         {
             id: 2,
@@ -109,7 +110,8 @@ const Products = props => {
                     id: 3,
                     color: '#9FD668'
                 }
-            ]
+            ],
+            stock: 1
         },
         {
             id: 3,
@@ -130,7 +132,8 @@ const Products = props => {
                     id: 3,
                     color: '#9FD668'
                 }
-            ]
+            ],
+            stock: 1
         },
         {
             id: 4,
@@ -151,7 +154,8 @@ const Products = props => {
                     id: 3,
                     color: '#9FD668'
                 }
-            ]
+            ],
+            stock: 1
         },
         {
             id: 5,
@@ -172,7 +176,8 @@ const Products = props => {
                     id: 3,
                     color: '#9FD668'
                 }
-            ]
+            ],
+            stock: 1
         },
         {
             id: 6,
@@ -193,7 +198,8 @@ const Products = props => {
                     id: 3,
                     color: '#9FD668'
                 }
-            ]
+            ],
+            stock: 1
         },
         {
             id: 7,
@@ -214,7 +220,8 @@ const Products = props => {
                     id: 3,
                     color: '#9FD668'
                 }
-            ]
+            ],
+            stock: 1
         },
         {
             id: 8,
@@ -235,7 +242,8 @@ const Products = props => {
                     id: 3,
                     color: '#9FD668'
                 }
-            ]
+            ],
+            stock: 1
         },
     ];
     const sizes = [
@@ -349,7 +357,9 @@ const Products = props => {
                     {
                         dataProduct.map((item, key) => {
                             return(
+                                <div className="col-6 col-md-4 col-lg-auto position-relative" key={key}>
                                     <ProductItem data={item} key={key} />
+                                </div>
                             )
                         })
                     }
