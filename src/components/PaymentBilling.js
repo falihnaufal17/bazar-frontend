@@ -14,7 +14,7 @@ const PaymentBilling = props => {
                     <div className="col">
                         <div className="title mb-0">PAYMENT</div>
                     </div>
-                    <div className="col">
+                    <div className="col-12 col-md-12 col-lg order-3 order-md-3 order-lg-2">
                         <div className="row align-items-center">
                             <div className="col-auto">
                                 <img src={visa} alt="visa"/>
@@ -27,12 +27,12 @@ const PaymentBilling = props => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-auto">
+                    <div className="col-auto order-2 order-md-2 order-lg-3">
                         <div className="subtitle pointer-event">modify <img src={Arrow} alt="arrow" /></div>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-9">
+                    <div className="col-12 col-md-9">
                         <CreditCard cardNumber="1234567890123456" cardHolder="VALENTINO ROSSI" cardExpires="11/20" />
                     </div>
                 </div>

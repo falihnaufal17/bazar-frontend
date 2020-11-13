@@ -22,14 +22,24 @@
         padding: 37px 127px;
         border-radius: unset;
         margin-bottom: 32px;
+        @media screen and (max-width: 768px) {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
         &.card-shipping{
             padding: 34px 28px;
             border: 1px solid #000;
             margin-bottom: 30px;
-            width: 345px;
+            max-width: 345px;
+            @media screen and (max-width: 768px) {
+                margin-right: auto;
+                margin-left: auto;
+            }
         }
         &.card-left{
-            padding: 38px;
+            padding: 20px;
         }
     }
     .hline-black{

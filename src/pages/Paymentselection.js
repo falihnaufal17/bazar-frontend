@@ -94,10 +94,10 @@ const Paymentselection = (props) => {
       <section id="section-payment">
         <div class="container">
           <div className="row">
-            <div className="col-12 col-md-8">
+            <div className="col-12 col-md-9">
               <PaymentMain />
             </div>
-            <div className="col-12 col-md-4">
+            <div className="col-12 col-md-3">
               <PaymentLeft dataCart={dataCart}/>
             </div>
           </div>
