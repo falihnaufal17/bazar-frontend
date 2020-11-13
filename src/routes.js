@@ -7,6 +7,7 @@ const Profile = lazy(() => import('./pages/Profile'));
 const Paymentselection = lazy(() => import('./pages/Paymentselection'));
 const MyWhislist = lazy(() => import('./pages/MyWhislist'));
 const Cart = lazy(() => import('./pages/Cart'));
+const Loginpage = lazy(() => import('./pages/LoginPage'));
 export default [
     {
         path: '/',
@@ -56,6 +57,11 @@ export default [
 	{
         path: '/bags',
         component: Cart,
+        exact: true
+    },
+    {
+        path: '/loginpage',
+        component: Loginpage,
         exact: true
     },
 ]
