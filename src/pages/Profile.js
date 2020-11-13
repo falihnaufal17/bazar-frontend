@@ -74,8 +74,8 @@ const Profile = (props) => {
               </a>
               <div class="dropdown-menu" aria-labelledby="dropdownProfile">
                 <a class="dropdown-item" href="#">MY ORDERS</a>
-                <a class="dropdown-item" href="#">MY WISHLIST</a>
-                <a class="dropdown-item" href="#">MY PROFILE</a>
+                <a class="dropdown-item" href="/profile/my-wishlist">MY WISHLIST</a>
+                <a class="dropdown-item" href="/profile/my-profile">MY PROFILE</a>
                 <a class="dropdown-item" href="#">CUSTOMER CARE</a>
               </div>
             </div>

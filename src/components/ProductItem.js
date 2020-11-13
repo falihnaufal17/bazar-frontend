@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Favorite from '../assets/icons/HEART SOLID 2.svg';
+import FavoriteActive from '../assets/icons/FAVORITE ACTIVE.svg';
 
 const ProductItem = props => {
+    const [isFavorite, setIsFavorite] = useState(props.data.isFavorite)
+    const [stock, setStock] = useState(0 | props.data.stock)
+
+    const _redirect = () => {
+        if(stock > 0){
+            window.location.href = '/product/detail';
+        }else{
+            return false;
+        }
+    }
+
     return(
-        <div className="col-6 col-md-4 col-lg-auto position-relative" key={props.key}>
-            <div className="favorite" onClick={() => console.log('favorite kuu')}>
-                <img src={Favorite} alt="favorite-icon" />
+        <>
+            <div className="favorite" onClick={() => setIsFavorite(!isFavorite)}>
+                <img src={isFavorite ? FavoriteActive : Favorite} alt="favorite-icon" />
             </div>
-            <a href="/product/detail" className="card card-product">
+            <div onClick={() => _redirect()} className="card card-product">
                 <div className="image">
+                    <div className={stock > 0 ? "" : 'disabled'}>
+                    </div>
                     <img src={props.data.image} className="card-img-top" alt={props.data.product_name} />
                 </div>
                 <div className="card-body">
@@ -28,8 +42,8 @@ const ProductItem = props => {
                         })}
                     </div>
                 </div>
-            </a>
-        </div>
+            </div>
+        </>
     )
 }
 
