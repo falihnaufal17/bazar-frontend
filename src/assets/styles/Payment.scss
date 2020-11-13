@@ -28,6 +28,9 @@
             margin-bottom: 30px;
             width: 345px;
         }
+        &.card-left{
+            padding: 38px;
+        }
     }
     .hline-black{
         width: 100%;
@@ -117,5 +120,50 @@
             line-height: 25px;
             color: #E1E1E1
         }
+    }
+    .item{
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 14px;
+        color: #000;
+        margin-bottom: 5px;
+    }
+    .item-child{
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px;
+        color: #939393;
+        margin-bottom: 5px;
+    }
+    .image{
+        position: relative;
+        text-align: center;
+    }
+    .scrollable{
+        height: 500px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+            width: 4px;
+            border-radius: 2px;
+        }
+        
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #E1E1E1;
+            border-bottom: 2px solid rgb(133, 131, 131);
+            border-radius: 2px;
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #000000; 
+            border-radius: 2px;
+        }
+    }
+    .rotate-90{
+        transform: rotate(180deg);
     }
 }
