@@ -176,4 +176,73 @@
     .rotate-90{
         transform: rotate(180deg);
     }
+
+    .label{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000;
+        margin-bottom: 10px;
+        &.detail{
+            font-weight: normal;
+            color: #939393;
+        }
+        &.detail-delivery{
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+        &.italic{
+            font-style: italic !important;
+        }
+    }
+    .for{
+        display: block;
+        margin-bottom: 15px;
+    }
+    .custom-radio{
+        .custom-control-label{
+            &::before{
+                border: 2px solid #C4C4C4;
+                width: 22px;
+                height: 22px;
+                top: 0;
+            }
+            &.label{
+                font-weight: normal;
+            }
+        }
+        .custom-control-input{
+            &:checked ~ .custom-control-label{
+                &::after{
+                    background: #000;
+                    border-radius: 100%;
+                    width: 14px;
+                    height: 14px;
+                    background-image: unset;
+                    top: 4px;
+                    left: -20px;
+                    box-shadow: unset;
+                }
+                &::before{
+                    background-color: #FFF;
+                    border: 2px solid #000;
+                }
+                &.label{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .btn-add-address{
+        padding: 8px 0;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 25px;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid #C4C4C4;
+        color: #C4C4C4;
+    }
 }

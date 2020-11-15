@@ -3,6 +3,10 @@ import Arrow from '../assets/icons/ARROW MODIFY.svg';
 import CapaUp from '../assets/icons/CAPA UP.svg';
 
 const PaymentLeft = props => {
+
+    const redirect = () => {
+        window.location.href = '/bags'
+    }
     return(
         <div className="card card-left">
             <div className="row">
@@ -10,7 +14,7 @@ const PaymentLeft = props => {
                     <div className="title">ORDER SUMMARY</div>
                 </div>
                 <div className="col-auto">
-                    <div className="subtitle">modify <img src={Arrow} alt="arrow" /></div>
+                    <div onClick={() => redirect()} className="subtitle pointer-event">modify <img src={Arrow} alt="arrow" /></div>
                 </div>
             </div>
             <div className="hline mb-3" />
