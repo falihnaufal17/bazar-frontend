@@ -10,6 +10,9 @@ const ProductRecommendation = lazy(()=>import('../components/ProductRecommendati
 const ProductDetail = (props) => {
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
+    const [data, setData] = useState({
+        color: ''
+    })
     let slider1 = useRef(null);
     let slider2 = useRef(null);
 
@@ -52,23 +55,28 @@ const ProductDetail = (props) => {
     const dataColor = [
         {
             id: 1,
-            color: '#6DE734'
+            color: '#6DE734',
+            name: 'lightgreen'
         },
         {
             id: 2,
-            color: '#FFF'
+            color: '#FFF',
+            name: 'white'
         },
         {
             id: 3,
-            color: '#000'
+            color: '#000',
+            name: 'black'
         },
         {
             id: 4,
-            color: '#FF0000'
+            color: '#FF0000',
+            name: 'red'
         },
         {
             id: 5,
-            color: '#00FF00'
+            color: '#00FF00',
+            name: 'green'
         },
     ]
     return(
@@ -157,8 +165,18 @@ const ProductDetail = (props) => {
                                     {
                                         dataColor.map((d, i) => {
                                             return(
-                                                <div className="flex-items" key={i}>
-                                                    <div className="item-color" style={{backgroundColor: d.color}} />
+                                                <div className="flex-items color" key={i}>
+                                                    <div className="item-color" onClick={() => setData({color: d.name})} style={{backgroundColor: d.color}} />
+                                                    <label className="label text-center">{d.name}</label>
+                                                    {
+                                                        data.color == d.name ?
+                                                        (
+                                                            <div className="item-active"/>
+                                                        ):
+                                                        (
+                                                            <div/>
+                                                        )
+                                                    }
                                                 </div>
                                             )
                                         })
@@ -169,22 +187,6 @@ const ProductDetail = (props) => {
                                 <div className="col-12 col-md">
                                     <div className="form-group">
                                         <label className="label">Size</label>
-                                        <div className="flex-container">
-                                            {
-                                                sizeData.map((d, i) => {
-                                                    return(
-                                                        <div className="flex-items" key={i}>
-                                                            <div className="item-size">{d.size}</div>
-                                                        </div>
-                                                    )
-                                                })
-                                            }
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-12 col-md">
-                                    <div className="form-group">
-                                        <label className="label">Quantity</label>
                                         <div className="input-group">
                                             <div className="input-group-append">
                                                 <div className="valign">
@@ -194,6 +196,13 @@ const ProductDetail = (props) => {
                                                 </div>
                                             </div>
                                             <select className="form-control select">
+                                                {
+                                                    sizeData.map((d, i) => {
+                                                        return(
+                                                            <option value={d.size}>{d.size}</option>
+                                                        )
+                                                    })
+                                                }
                                                 <option value={1}>1</option>
                                             </select>
                                         </div>
