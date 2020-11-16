@@ -5,13 +5,20 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Container = lazy(()=>import('./pages/Container'));
 const Navbar = lazy(()=>import('./components/Navbar'));
+const NavbarBack = lazy(()=>import('./components/NavbarBack'));
 const Footer = lazy(()=>import('./components/Footer'));
 const FloatButtonToTop = lazy(() => import('./components/FloatButtonToTop'))
 
 function App(props) {
+  let navbarComp = "";
+  if(props.location.pathname == "/payment"){
+    navbarComp = <NavbarBack {...props}/>
+  }else{
+    navbarComp = <Navbar {...props}/>
+  }
   return (
     <Suspense fallback="">
-        <Navbar {...props}/>
+        {navbarComp}
         <Container {...props} />
         <Footer />
         <FloatButtonToTop />
