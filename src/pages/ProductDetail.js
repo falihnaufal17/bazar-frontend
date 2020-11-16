@@ -203,7 +203,6 @@ const ProductDetail = (props) => {
                                                         )
                                                     })
                                                 }
-                                                <option value={1}>1</option>
                                             </select>
                                         </div>
                                     </div>
