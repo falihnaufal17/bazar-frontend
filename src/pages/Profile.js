@@ -83,17 +83,17 @@ const Profile = (props) => {
           <div className="container">
             <ul className="nav nav-pills vertical-xs" id="pills-tab" role="tablist">
               <li className="nav-item" role="presentation">
-                <a className="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">YOUR PROFILE</a>
+                <a className="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="true">YOUR PROFILE</a>
               </li>
               <li className="nav-item" role="presentation">
-                <a className="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">CREDIT CARD</a>
+                <a className="nav-link" id="pills-creditcard-tab" data-toggle="pill" href="#pills-creditcard" role="tab" aria-controls="pills-creditcard" aria-selected="false">CREDIT CARD</a>
               </li>
               <li className="nav-item" role="presentation">
-                <a className="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">SHIPPING ADDRESS</a>
+                <a className="nav-link" id="pills-address-tab" data-toggle="pill" href="#pills-address" role="tab" aria-controls="pills-address" aria-selected="false">ADDRESS</a>
               </li>
             </ul>
             <div className="tab-content" id="pills-tabContent">
-              <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <div className="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                 <div className="card-content card-profile">
                   <div className="fullname">STEVEN GERRAD</div>
                   <div className="hline"></div>
@@ -262,7 +262,7 @@ const Profile = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <div className="tab-pane fade" id="pills-creditcard" role="tabpanel" aria-labelledby="pills-creditcard-tab">
                 <div className="card-content">
                   <div className="row align-items-center justify-content-between mb-4">
                     <div className="col-12 col-md">
@@ -345,7 +345,7 @@ const Profile = (props) => {
                     </div>
                   </div>
               </div>
-              <div className="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+              <div className="tab-pane fade" id="pills-address" role="tabpanel" aria-labelledby="pills-address-tab">
                 <div className="card-content">
                     <div className="form-group">
                       <label className="label">Address</label>

@@ -38,7 +38,7 @@ const SummaryBags = props => {
                     <div className="label">$28.75</div>
                 </div>
             </div>
-            <a href="#" className="btn-primary">PROCEED TO CHECKOUT</a>
+            <a href="/payment" className="btn-primary">PROCEED TO CHECKOUT</a>
             <a href="#" className="btn-secondary">CONTINUE TO SHOPPING</a>
         </div>
     )
