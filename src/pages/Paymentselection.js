@@ -1,9 +1,10 @@
-import React, {Suspense, lazy} from 'react';
+import React, {Suspense, lazy, useState} from 'react';
 import Cart1 from '../assets/images/CART-1.svg';
 import Cart2 from '../assets/images/CART-2.svg';
 
 import '../assets/styles/Payment.scss'
 const PaymentMain = lazy(() => import('../components/PaymentMain'));
+const PaymentMainGuest = lazy(() => import('../components/PaymentMainGuest'));
 const PaymentLeft = lazy(() => import('../components/PaymentLeft'));
 
 const Paymentselection = (props) => {
@@ -89,13 +90,22 @@ const Paymentselection = (props) => {
     color: 'Pink-charcoal'
   }
   ]
+  const [token, setToken] = useState(null)
   return (
     <Suspense fallback={<div/>}>
       <section id="section-payment">
         <div class="container">
           <div className="row">
             <div className="col-12 col-md-9">
-              <PaymentMain />
+              {
+                token != null ?
+                (
+                  <PaymentMain {...props}/>
+                ):
+                (
+                  <PaymentMainGuest {...props} token={token} />
+                )
+              }
             </div>
             <div className="col-12 col-md-3">
               <PaymentLeft dataCart={dataCart}/>

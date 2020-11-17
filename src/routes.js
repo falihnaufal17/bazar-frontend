@@ -8,7 +8,11 @@ const Paymentselection = lazy(() => import('./pages/Paymentselection'));
 const MyWhislist = lazy(() => import('./pages/MyWhislist'));
 const Cart = lazy(() => import('./pages/Cart'));
 const Loginpage = lazy(() => import('./pages/LoginPage'));
+<<<<<<< HEAD
 const RegisterPage = lazy(() => import('./pages/RegisterPage'));
+=======
+const Sizepage = lazy(() => import('./pages/SizePage'));
+>>>>>>> 24e28ef73aeeaa51d833d6a1b5f0a560c9400bbe
 export default [
     {
         path: '/',
@@ -66,8 +70,13 @@ export default [
         exact: true
     },
     {
+<<<<<<< HEAD
         path: '/RegisterPage',
         component: RegisterPage,
+=======
+        path: '/sizepage',
+        component: Sizepage,
+>>>>>>> 24e28ef73aeeaa51d833d6a1b5f0a560c9400bbe
         exact: true
     },
 ]
