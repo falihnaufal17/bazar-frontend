@@ -144,7 +144,7 @@ const Navbar = (props) => {
                     <div className="col-auto order-3 order-md-4 order-lg-4">
                         <div className="valign">
                             <div className="inner">
-                                <a href="#" className="btn-login" data-toggle="modal" data-target="#modalLogin">
+                                <a href="/login" className="btn-login">
                                     Sign In
                                 </a>
                                 {/* <a href="#">
@@ -668,63 +668,6 @@ const Navbar = (props) => {
             </div>
             
         </nav>
-        <div className="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                            <img src={Cross} alt="close"/>
-                        </button>
-                    </div>
-                    <div className="modal-body">
-                        <h5 className="modal-title" id="exampleModalLabel">Welcome To Bazar</h5>
-                        <form>
-                            <div className="form-group">
-                                <div className="row align-items-center mb-3">
-                                    <div className="col-auto">
-                                        <div className="valign">
-                                            <div className="inner">
-                                                <img src={Username} alt="username" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <label className="label">Username</label>
-                                    </div>
-                                </div>
-                                <input type="text" className="form-control form-custom"/>
-                            </div>
-                            <div className="form-group">
-                                <div className="row align-items-center mb-3">
-                                    <div className="col-auto">
-                                        <div className="valign">
-                                            <div className="inner">
-                                                <img src={Password} alt="Password" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <label className="label">Password</label>
-                                    </div>
-                                </div>
-                                <input type="password" className="form-control form-custom"/>
-                            </div>
-                            <div className="custom-control custom-switch mb-3">
-                                <input type="checkbox" className="custom-control-input" id="rememberMe" />
-                                <label className="custom-control-label small-text mb-0" for="rememberMe">Remember Me</label>
-                            </div>
-                            <button type="button" className="btn btn-dark w-100">Sign In</button>
-                        </form>
-                        <a href="#" className="small-text disable-text">Forgot Password</a> <span className="small-text disable-text">|</span> <a href="#" className="small-text disable-text">Sign Up</a>
-                        <div className="small-text text-center">or sign in with</div>
-                        <div className="d-flex">
-                            <button type="button" className="btn btn-facebook w-100"><img src={Facebook} alt="Facebook" /> Facebook</button>
-                            <button type="button" className="btn btn-google w-100"><img src={Google} alt="Google" /> Google</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
       </>
     )
 }

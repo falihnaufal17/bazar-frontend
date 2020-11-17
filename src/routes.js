@@ -61,7 +61,7 @@ export default [
         exact: true
     },
     {
-        path: '/loginpage',
+        path: '/login',
         component: Loginpage,
         exact: true
     },
