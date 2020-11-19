@@ -1,29 +1,32 @@
-#section-profile{
-    background-color: #E5E5E5;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    .box{
+#section-profile {
+    background-color: #e5e5e5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    padding-bottom: 20px;
+    .box {
         background: #000000;
         padding: 33px 0;
         margin-bottom: 83px;
         @media screen and (max-width: 768px) {
             margin-bottom: 20px;
         }
-        h1{
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        h1 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                "Helvetica Neue", sans-serif;
             font-style: normal;
             font-weight: normal;
             font-size: 34px;
             line-height: 40px;
             text-align: center;
             letter-spacing: 0.31em;
-            color: #FFFFFF;
+            color: #ffffff;
         }
-        a{
+        a {
             text-decoration: none;
         }
-        .dropdown{
+        .dropdown {
             position: static !important;
-            .dropdown-menu{
+            .dropdown-menu {
                 width: 100%;
                 left: 0;
                 border-radius: unset;
@@ -31,58 +34,59 @@
                 margin: unset;
                 padding-bottom: 22px;
                 background-color: #000;
-                &.show{
+                &.show {
                     transform: translate3d(0, 207px, 0px) !important;
                 }
-                .dropdown-item{
-                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                .dropdown-item {
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+                        "Open Sans", "Helvetica Neue", sans-serif;
                     font-style: normal;
                     font-weight: normal;
                     font-size: 15px;
                     line-height: 18px;
-                    color: #FFF;
+                    color: #fff;
                     text-align: center;
                     letter-spacing: 0.31em;
                     padding-bottom: 30px;
-                    &:hover{
+                    &:hover {
                         background-color: unset;
                     }
                 }
             }
         }
     }
-    
-    #pills-tab{
-        &.vertical-xs{
+
+    #pills-tab {
+        &.vertical-xs {
             padding: unset;
             padding-top: unset;
             &::-webkit-scrollbar {
                 height: unset;
             }
-            
+
             /* Track */
             &::-webkit-scrollbar-track {
                 background: unset;
                 border-bottom: unset;
             }
-            
+
             /* Handle */
             &::-webkit-scrollbar-thumb {
-                background: unset; 
+                background: unset;
             }
-            >*{
+            > * {
                 margin-bottom: unset;
                 width: auto;
             }
         }
-        .nav-item{
-            .nav-link{
+        .nav-item {
+            .nav-link {
                 font-style: normal;
                 font-weight: bold;
                 font-size: 17px;
                 line-height: 23px;
-                color: #E1E1E1;
-                &.active{
+                color: #e1e1e1;
+                &.active {
                     color: #000;
                     background-color: unset;
                     border-radius: unset;
@@ -93,9 +97,9 @@
             }
         }
     }
-    .tab-content{
-        .card-content{
-            background-color: #FFF;
+    .tab-content {
+        .card-content {
+            background-color: #fff;
             box-shadow: 0px 0px 10px rgba(191, 191, 191, 0.25);
             border-radius: 5px;
             padding: 36px 184px;
@@ -107,22 +111,22 @@
                 padding-left: 15px !important;
                 border-radius: unset;
             }
-            &.cc{
+            &.cc {
                 padding: 41px 59px;
             }
-            &.card-profile{
+            &.card-profile {
                 padding-right: 258px;
                 padding-left: 258px;
             }
         }
-        .label{
+        .label {
             font-weight: 600;
             font-size: 15px;
             line-height: 20px;
         }
-        .custom-form{
-            background: #FAFAFA;
-            border: 1px solid #E1E1E1;
+        .custom-form {
+            background: #fafafa;
+            border: 1px solid #e1e1e1;
             padding: 7px 21px;
             font-style: normal;
             font-weight: 600;
@@ -131,27 +135,27 @@
             height: unset;
             box-shadow: unset;
             border-radius: unset;
-            &::placeholder{
+            &::placeholder {
                 font-size: 10px;
                 line-height: 25px;
-                color: #E1E1E1
+                color: #e1e1e1;
             }
         }
-        .custom-radio{
-            .custom-control-label{
-                &::before{
-                    border: 2px solid #C4C4C4;
+        .custom-radio {
+            .custom-control-label {
+                &::before {
+                    border: 2px solid #c4c4c4;
                     width: 22px;
                     height: 22px;
                     top: 0;
                 }
-                &.label{
+                &.label {
                     font-weight: normal;
                 }
             }
-            .custom-control-input{
-                &:checked ~ .custom-control-label{
-                    &::after{
+            .custom-control-input {
+                &:checked ~ .custom-control-label {
+                    &::after {
                         background: #000;
                         border-radius: 100%;
                         width: 14px;
@@ -161,82 +165,82 @@
                         left: -20px;
                         box-shadow: unset;
                     }
-                    &::before{
-                        background-color: #FFF;
+                    &::before {
+                        background-color: #fff;
                         border: 2px solid #000;
                     }
-                    &.label{
+                    &.label {
                         font-weight: 600;
                     }
                 }
             }
         }
-        .input-group{
-            .custom-form{
+        .input-group {
+            .custom-form {
                 padding-left: 0;
                 border-left: unset;
-                &.secret{
-                    border-left: 1px solid #E1E1E1;
+                &.secret {
+                    border-left: 1px solid #e1e1e1;
                     border-right: unset;
                     padding-left: 21px;
                 }
             }
-            .input-group-prepend{
-                .input-group-text{
-                    background-color: #FAFAFA;
-                    border: 1px solid #E1E1E1;
-                    &.secret-group{
+            .input-group-prepend {
+                .input-group-text {
+                    background-color: #fafafa;
+                    border: 1px solid #e1e1e1;
+                    &.secret-group {
                         border-left: unset;
                     }
                 }
             }
         }
-        .custom-checkbox{
+        .custom-checkbox {
             margin-bottom: 40px;
-            .custom-control-label{
+            .custom-control-label {
                 font-weight: bold;
                 font-size: 9px;
                 line-height: 12px;
 
-                &::before{
+                &::before {
                     width: 20px;
                     height: 20px;
                     border-radius: unset;
-                    border: 2px solid #C4C4C4;
+                    border: 2px solid #c4c4c4;
                     box-shadow: unset;
                     top: 0;
                 }
-                &::after{
+                &::after {
                     top: 2px;
                     left: -22px;
                 }
 
-                &.sameAddress{
+                &.sameAddress {
                     font-style: normal;
                     font-weight: 600;
                     font-size: 10px;
                     line-height: 14px;
-                    color: #E1E1E1;
+                    color: #e1e1e1;
                 }
             }
-            .custom-control-input{
-                &:checked ~ .custom-control-label{
-                    &::after{
+            .custom-control-input {
+                &:checked ~ .custom-control-label {
+                    &::after {
                         background-image: url(../icons/CHECKED.svg);
                     }
-                    &::before{
-                        background-color: #FFF;
+                    &::before {
+                        background-color: #fff;
                         border: 3px solid #000;
                     }
-                    &.sameAddress{
+                    &.sameAddress {
                         color: #000;
                     }
                 }
             }
         }
     }
-    .btn-cancel{
-        background-color: #E1E1E1;
+    .btn-cancel {
+        background-color: #e1e1e1;
         font-style: normal;
         font-weight: bold;
         font-size: 13px;
@@ -249,34 +253,41 @@
         text-transform: uppercase;
         outline: unset;
         @media screen and (max-width: 768px) {
-            margin-bottom: 20px;   
+            margin-bottom: 20px;
         }
     }
-    .btn-save{
+    .btn-save {
         @extend .btn-cancel;
-        color: #FFF;
+        color: #fff;
         background-color: #000;
     }
-    .cards{
-        &:hover{
-            .edit{
+    .cards {
+        &:hover {
+            .edit {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 z-index: 90;
                 background: rgba(0, 0, 0, 0.9);
                 border-radius: 10px;
-                a{
+                max-width: 85%;
+                a {
                     text-decoration: none;
                     font-weight: 600;
                     font-size: 10px;
                     line-height: 14px;
-                    color: #FFF;
+                    color: #fff;
                     text-align: center;
                 }
             }
+
+            @media only screen and (max-width: 768px) {
+                .edit {
+                    max-width: 100%;
+                }
+            }
         }
-        .edit{
+        .edit {
             position: absolute;
             top: 0px;
             left: 0px;
@@ -285,21 +296,22 @@
             display: none;
             z-index: 100;
         }
-        .delete{
+        .delete {
             position: absolute;
             top: -10px;
             left: -10px;
             z-index: 100;
         }
-        .credit-card{
+        .credit-card {
             position: relative;
             height: 100%;
             line-height: normal;
-            img{
+            max-width: 85%;
+            img {
                 width: 100%;
             }
-            .detail-card{
-                &:hover{
+            .detail-card {
+                &:hover {
                     background: rgba(0, 0, 0, 0.9);
                 }
                 position: absolute;
@@ -311,54 +323,61 @@
                 flex-direction: column;
                 justify-content: space-between;
                 padding: 22px 28px;
-                .label-card{
+                .label-card {
                     font-style: normal;
                     font-weight: normal;
                     font-size: 12px;
                     line-height: 16px;
-                    color: #FFF;
+                    color: #fff;
                 }
-                .value-card{
+                .value-card {
                     font-style: normal;
                     font-weight: bold;
                     font-size: 15px;
                     line-height: 20px;
-                    color: #FFF;
+                    color: #fff;
                 }
-                .card-number{
+                .card-number {
                     font-family: Orbitron;
                     font-style: normal;
                     font-weight: normal;
                     font-size: 20px;
                     line-height: 25px;
-                    color: #FFF;
+                    color: #fff;
                     letter-spacing: 3px;
                 }
-                img{
+                img {
                     width: unset;
                 }
             }
         }
+
+        @media only screen and (max-width: 768px) {
+            .credit-card {
+                max-width: 100%;
+            }
+        }
     }
-    .hline{
-        background-color: #E1E1E1;
+    .hline {
+        background-color: #e1e1e1;
         width: 100%;
         height: 1px;
         margin-bottom: 1rem;
     }
-    .cards-address{
-        background: #FFFFFF;
+    .cards-address {
+        background: #ffffff;
         border: 1px solid #000000;
         box-sizing: border-box;
         padding: 34px 28px;
-        .delete{
+        .delete {
             position: absolute;
             top: -10px;
             left: -10px;
             z-index: 100;
         }
-        .address-title{
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        .address-title {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                "Helvetica Neue", sans-serif;
             font-style: normal;
             font-weight: bold;
             font-size: 12px;
@@ -367,14 +386,14 @@
             padding-bottom: 13px;
             margin-bottom: 13px;
 
-            &.address-subtitle{
+            &.address-subtitle {
                 font-weight: 600;
                 border-bottom: unset;
                 padding-bottom: unset;
                 margin-bottom: unset;
             }
         }
-        .address{
+        .address {
             font-family: Open Sans;
             font-style: normal;
             font-weight: normal;
@@ -384,7 +403,7 @@
             margin-bottom: 26px;
         }
     }
-    .fullname{
+    .fullname {
         font-style: normal;
         font-weight: bold;
         font-size: 25px;
@@ -393,14 +412,14 @@
         color: #000;
         margin-bottom: 25px;
     }
-    .field{
+    .field {
         font-style: normal;
         font-weight: normal;
         font-size: 15px;
         line-height: 20px;
         color: #000;
     }
-    .value{
+    .value {
         font-style: normal;
         font-weight: bold;
         font-size: 15px;
@@ -411,17 +430,17 @@
             text-align: left;
         }
     }
-    .password{
+    .password {
         @media screen and (max-width: 768px) {
             text-align: left !important;
         }
     }
-    #d-password{
+    #d-password {
         background-color: unset;
         border: unset;
     }
-    .btn-modify{
-        background-color: #E1E1E1;
+    .btn-modify {
+        background-color: #e1e1e1;
         font-style: normal;
         font-weight: bold;
         font-size: 13px;
