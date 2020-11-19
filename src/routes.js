@@ -68,7 +68,7 @@ export default [
         exact: true
     },
     {
-        path: '/RegisterPage',
+        path: '/register',
         component: RegisterPage,
         exact: true
     },
