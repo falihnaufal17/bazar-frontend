@@ -48,7 +48,7 @@ const Loginpage= (props) => {
               </div>
             <a href="#" className="small-text disable-text">Forgot Password</a>
             <div className="small-text text-center">ARE YOU NEW TO BAZAR?</div>
-            <a href="#" className="btn-light text-center">REGISTER NOW</a>
+            <a href="/register" className="btn-light text-center">REGISTER NOW</a>
           </div>
         </div>
       </div>

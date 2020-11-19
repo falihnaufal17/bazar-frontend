@@ -73,12 +73,12 @@ export default [
         exact: true
     },
     {
-        path: '/sizepage',
+        path: '/profile/my-size',
         component: Sizepage,
         exact: true
     },
     {
-        path: '/CustomerCare',
+        path: '/customer-care',
         component: CustomerCare,
         exact: true
     }

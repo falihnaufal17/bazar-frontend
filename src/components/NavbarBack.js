@@ -1,11 +1,7 @@
 import React from 'react';
-import BasketIcon from '../assets/icons/BASKET.svg';
-import Menu from '../assets/icons/MENU.svg';
-import Facebook from '../assets/icons/FACEBOOK.svg';
-import Google from '../assets/icons/GOOGLE.svg';
-import Username from '../assets/icons/USERNAME.svg';
-import Password from '../assets/icons/PASSWORD.svg';
-import Cross from '../assets/icons/CROSS.svg';
+import MAIL from '../assets/icons/ICON MAIL.svg';
+import PHONE from '../assets/icons/ICON PHONE.svg';
+import LIVECHAT from '../assets/icons/ICON LIVE CHAT.svg';
 
 const NavbarBack = (props) => {
     const goBack = () => {
@@ -32,10 +28,11 @@ const NavbarBack = (props) => {
                                     Help
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item item-help" href="#"><img src={MAIL} alt="mail" /> Email</a>
+                                        <a class="dropdown-item item-help" href="#"><img src={PHONE} alt="phone" /> (+1) 21234567</a>
+                                        <a class="dropdown-item item-help" href="#"><img src={LIVECHAT} alt="live chat" /> Live Chat</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <a class="dropdown-item item-help disabled" href="#">M-F 9am-9pm Sydney Time</a>
                                     </div>
                                 </li>
                             </ul>

@@ -73,10 +73,11 @@ const Profile = (props) => {
                 <h1>MY PROFILE</h1>
               </a>
               <div class="dropdown-menu" aria-labelledby="dropdownProfile">
+                <a className="dropdown-item" href="/profile/my-size">MY SIZE</a>
                 <a class="dropdown-item" href="#">MY ORDERS</a>
                 <a class="dropdown-item" href="/profile/my-wishlist">MY WISHLIST</a>
                 <a class="dropdown-item" href="/profile/my-profile">MY PROFILE</a>
-                <a class="dropdown-item" href="#">CUSTOMER CARE</a>
+                <a class="dropdown-item" href="/customer-care">CUSTOMER CARE</a>
               </div>
             </div>
           </div>
