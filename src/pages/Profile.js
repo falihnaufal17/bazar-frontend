@@ -390,8 +390,10 @@ const Profile = (props) => {
 
                 <div className="custom-control custom-checkbox">
                   <input type="checkbox" className="custom-control-input" id="terms" />
-                  <label className="custom-control-label" htmlFor="terms">I would like to receive the newsletter with the latest news and promotions. Consult our Privacy Policy for further information.</label>
+                  <label className="custom-control-label" htmlFor="terms">Save as preferred card.</label>
                 </div>
+                <div className="hline" />
+                <p className="caution-text">The personal data that you have provided will be used by BAZAR to expedite your purchasing process. The telephone number you enter may be used to provide you with information regarding the shipping of your order. The data processors are: The personnel responsible for managing the Bazar service and the IT systems. Please consult the Privacy Policy for further information about your rights.</p>
                 <div className="row justify-content-center">
                   <div className="col-12 col-md-auto">
                     <button className="btn-cancel" type={'reset'}>Cancel</button>
@@ -416,18 +418,28 @@ const Profile = (props) => {
               </div>
             </div>
             <div className="tab-pane fade" id="pills-address" role="tabpanel" aria-labelledby="pills-address-tab">
-              <div className="card-content">
-                <div className="form-group">
-                  <label className="label">Address</label>
-                  <textarea className="form-control custom-form" placeholder="Your Address" rows={5}></textarea>
-                </div>
+              <div className="card-content shipping-content">
+
                 <div className="row">
                   <div className="col">
                     <div className="form-group">
-                      <label className="label">ZIP Code</label>
-                      <input type="password" className="form-control custom-form" placeholder="" />
+                      <label className="label">First Name</label>
+                      <input type="text" className="form-control custom-form" placeholder="Steven" />
                     </div>
                   </div>
+                  <div className="col">
+                    <div className="form-group">
+                      <label className="label">Last Name</label>
+                      <input type="text" className="form-control custom-form" placeholder="Gerrad" />
+                    </div>
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="label">Address</label>
+                  <input type="text" className="form-control custom-form" placeholder="Address" />
+                </div>
+
+                <div className="row">
                   <div className="col">
                     <div className="form-group">
                       <label className="label">State</label>
@@ -438,45 +450,52 @@ const Profile = (props) => {
                       </select>
                     </div>
                   </div>
-                </div>
-                <div className="hline" />
-                <div className="row mb-3">
-                  <div className="col-12 col-md">
-                    <div className="label">BILLING ADDRESS</div>
-                  </div>
-                  <div className="col-12 col-md-auto">
-                    <div className="custom-control custom-checkbox mb-0">
-                      <input type="checkbox" className="custom-control-input" id="sameAddress" />
-                      <label className="custom-control-label sameAddress" htmlFor="sameAddress">Billing Address is the same as the shipping address</label>
+                  <div className="col">
+                    <div className="form-group">
+                      <label className="label">Province</label>
+                      <select className="form-control custom-form" name="state">
+                        <option value="-">-</option>
+                        <option value="indonesia">Indonesia</option>
+                      </select>
                     </div>
                   </div>
-                </div>
-                <div className="form-group">
-                  <label className="label">Address</label>
-                  <textarea className="form-control custom-form" placeholder="Your Address" rows={5}></textarea>
                 </div>
                 <div className="row">
                   <div className="col">
                     <div className="form-group">
-                      <label className="label">ZIP Code</label>
-                      <input type="password" className="form-control custom-form" placeholder="" />
+                      <label className="label">City</label>
+                      <select className="form-control custom-form" name="city">
+                        <option value="bandung">Bandung</option>
+                      </select>
                     </div>
                   </div>
                   <div className="col">
                     <div className="form-group">
-                      <label className="label">State</label>
-                      <select className="form-control custom-form">
-                        <option>Indonesia</option>
-                        <option>United State</option>
-                        <option>Egypt</option>
-                      </select>
+                      <label className="label">ZIP</label>
+                      <input type="tel" className="form-control custom-form" placeholder="ZIP" name="postal_code" />
                     </div>
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="label">Phone Number</label>
+                  <div className="input-group mb-2 mr-sm-2">
+                    <div className="input-group-prepend">
+                      <div className="input-group-text">
+                        <svg width="28" height="17" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="17" fill="white" />
+                          <rect width="28" height="9" fill="#FF0000" />
+                        </svg>
+                      </div>
+                    </div>
+                    <input type="tel" className="form-control custom-form" placeholder="+62" />
                   </div>
                 </div>
                 <div className="custom-control custom-checkbox">
                   <input type="checkbox" className="custom-control-input" id="termsAddress" />
-                  <label className="custom-control-label" htmlFor="termsAddress">I would like to receive the newsletter with the latest news and promotions. Consult our Privacy Policy for further information.</label>
+                  <label className="custom-control-label" htmlFor="termsAddress">Save your preferred shipping address</label>
                 </div>
+                <div className="hline" />
+                <p className="caution-text">The personal data that you have provided will be used by BAZAR to expedite your purchasing process. The telephone number you enter may be used to provide you with information regarding the shipping of your order. The data processors are: The personnel responsible for managing the Bazar service and the IT systems. Please consult the Privacy Policy for further information about your rights.</p>
                 <div className="row justify-content-center">
                   <div className="col-12 col-md-auto">
                     <button className="btn-cancel" type={'reset'}>Cancel</button>
