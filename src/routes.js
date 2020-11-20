@@ -84,7 +84,7 @@ export default [
         exact: true
     },
     {
-        path: '/myorder',
+        path: '/profile/my-order',
         component: MyOrder,
         exact: true
     },

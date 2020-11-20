@@ -295,7 +295,7 @@ const MyWhislist = (props) => {
             </a>
             <div className="dropdown-menu" aria-labelledby="dropdownProfile">
                 <a className="dropdown-item" href="/profile/my-size">MY SIZE</a>
-                <a className="dropdown-item" href="#">MY ORDERS</a>
+                <a className="dropdown-item" href="/profile/my-order">MY ORDERS</a>
                 <a className="dropdown-item" href="/profile/my-wishlist">MY WISHLIST</a>
                 <a className="dropdown-item" href="/profile/my-profile">MY PROFILE</a>
                 <a class="dropdown-item" href="/customer-care">CUSTOMER CARE</a>
