@@ -1,25 +1,26 @@
-import React, {useState, useEffect, useRef, Suspense, lazy} from 'react';
+import React, { useState, useEffect, useRef, Suspense, lazy } from 'react';
 import '../assets/styles/ProductDetail.scss';
 import detail from '../assets/images/detail-foto.svg';
 import recommendation from '../assets/images/recommendation.svg';
 import arrowDropdown from '../assets/icons/ARROW DROPDOWN.svg';
 import Slider from 'react-slick';
 
-const ProductRecommendation = lazy(()=>import('../components/ProductRecommendation'));
+const ProductRecommendation = lazy(() => import('../components/ProductRecommendation'));
 
 const ProductDetail = (props) => {
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
     const [data, setData] = useState({
         color: ''
-    })
+    });
+    const [modals, setModals] = useState(0);
     let slider1 = useRef(null);
     let slider2 = useRef(null);
 
-    useEffect(()=>{
+    useEffect(() => {
         setNav1(slider1)
         setNav2(slider2)
-    },[])
+    }, [])
 
     const sizeData = [
         {
@@ -79,7 +80,7 @@ const ProductDetail = (props) => {
             name: 'green'
         },
     ]
-    return(
+    return (
         <>
             <section id="detail">
                 <div className="container">
@@ -89,19 +90,32 @@ const ProductDetail = (props) => {
                                 <div className="col-12 col-md-10">
                                     <Slider
                                         asNavFor={nav2}
-                                        ref={slider => {slider1 = slider}}
+                                        ref={slider => { slider1 = slider }}
                                     >
                                         {
                                             images.map((item, index) => {
-                                                return(
+                                                return (
                                                     <div className="image">
-                                                        <img src={item.image} id={index} alt={`item-${index}`} />
+                                                        <img src={item.image} id={index} alt={`item-${index}`} type="button" data-toggle="modal" data-target="#exampleModal" onClick={() => setModals(<img src={item.image} id={index} alt={`item-${index}`} />)} />
                                                     </div>
                                                 )
                                             })
                                         }
                                     </Slider>
                                 </div>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">{modals}</div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div className="col-12 col-md-2">
                                     <Slider
                                         asNavFor={nav1}
@@ -116,15 +130,15 @@ const ProductDetail = (props) => {
                                                 {
                                                     breakpoint: 600,
                                                     settings: {
-                                                      dots: false,
-                                                      infinite: true,
-                                                      speed: 500,
-                                                      slidesToShow: images.length,
-                                                      slidesToScroll: 1,
-                                                      variableWidth: false,
-                                                      centerMode: false,
-                                                      vertical: false,
-                                                      verticalSwiping: false
+                                                        dots: false,
+                                                        infinite: true,
+                                                        speed: 500,
+                                                        slidesToShow: images.length,
+                                                        slidesToScroll: 1,
+                                                        variableWidth: false,
+                                                        centerMode: false,
+                                                        vertical: false,
+                                                        verticalSwiping: false
                                                     }
                                                 },
                                                 {
@@ -139,13 +153,13 @@ const ProductDetail = (props) => {
                                                         vertical: false,
                                                         verticalSwiping: false
                                                     }
-                                                }  
+                                                }
                                             ]
                                         }
                                     >
                                         {
                                             images.map((item, index) => {
-                                                return(
+                                                return (
                                                     <div className="image">
                                                         <img src={item.image} id={index} alt={`item-${index}`} />
                                                     </div>
@@ -164,18 +178,18 @@ const ProductDetail = (props) => {
                                 <div className="flex-container">
                                     {
                                         dataColor.map((d, i) => {
-                                            return(
+                                            return (
                                                 <div className="flex-items color" key={i}>
-                                                    <div className="item-color" onClick={() => setData({color: d.name})} style={{backgroundColor: d.color}} />
+                                                    <div className="item-color" onClick={() => setData({ color: d.name })} style={{ backgroundColor: d.color }} />
                                                     <label className="label text-center">{d.name}</label>
                                                     {
                                                         data.color == d.name ?
-                                                        (
-                                                            <div className="item-active"/>
-                                                        ):
-                                                        (
-                                                            <div/>
-                                                        )
+                                                            (
+                                                                <div className="item-active" />
+                                                            ) :
+                                                            (
+                                                                <div />
+                                                            )
                                                     }
                                                 </div>
                                             )
@@ -198,7 +212,7 @@ const ProductDetail = (props) => {
                                             <select className="form-control select">
                                                 {
                                                     sizeData.map((d, i) => {
-                                                        return(
+                                                        return (
                                                             <option value={d.size}>{d.size}</option>
                                                         )
                                                     })

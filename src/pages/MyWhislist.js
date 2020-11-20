@@ -294,10 +294,11 @@ const MyWhislist = (props) => {
               <h1>MY WISHLIST</h1>
             </a>
             <div className="dropdown-menu" aria-labelledby="dropdownProfile">
-              <a className="dropdown-item" href="#">MY ORDERS</a>
-              <a className="dropdown-item" href="/profile/my-wishlist">MY WISHLIST</a>
-              <a className="dropdown-item" href="/profile/my-profile">MY PROFILE</a>
-              <a className="dropdown-item" href="#">CUSTOMER CARE</a>
+                <a className="dropdown-item" href="/profile/my-size">MY SIZE</a>
+                <a className="dropdown-item" href="#">MY ORDERS</a>
+                <a className="dropdown-item" href="/profile/my-wishlist">MY WISHLIST</a>
+                <a className="dropdown-item" href="/profile/my-profile">MY PROFILE</a>
+                <a class="dropdown-item" href="/customer-care">CUSTOMER CARE</a>
             </div>
           </div>
         </div>

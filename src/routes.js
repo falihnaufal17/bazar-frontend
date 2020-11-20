@@ -1,6 +1,6 @@
 import React, { lazy } from 'react';
 
-const Home = lazy(()=>import('./pages/Home'));
+const Home = lazy(() => import('./pages/Home'));
 const ProductDetail = lazy(() => import('./pages/ProductDetail'));
 const Products = lazy(() => import('./pages/Products'));
 const Profile = lazy(() => import('./pages/Profile'));
@@ -11,6 +11,11 @@ const Loginpage = lazy(() => import('./pages/LoginPage'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage'));
 const Sizepage = lazy(() => import('./pages/SizePage'));
 const loginbeforecheckout = lazy(() => import('./pages/loginbeforecheckout'));
+const Loginpage = lazy(() => import('./pages/LoginPage'))
+const RegisterPage = lazy(() => import('./pages/RegisterPage'));
+const Sizepage = lazy(() => import('./pages/SizePage'));
+const CustomerCare = lazy(() => import('./pages/CustomerCare'));
+const MyOrder = lazy(() => import('./pages/MyOrder'));
 export default [
     {
         path: '/',
@@ -56,14 +61,14 @@ export default [
         path: '/profile/my-wishlist',
         component: MyWhislist,
         exact: true,
-	},
-	{
+    },
+    {
         path: '/bags',
         component: Cart,
         exact: true
     },
     {
-        path: '/loginpage',
+        path: '/login',
         component: Loginpage,
         exact: true
     },
@@ -74,12 +79,28 @@ export default [
     },
     {
         path: '/sizepage',
+        path: '/register',
+        component: RegisterPage,
+        exact: true
+    },
+    {
+        path: '/profile/my-size',
         component: Sizepage,
         exact: true
     },
     {
         path: '/loginbeforecheckout',
         component: loginbeforecheckout,
+        exact: true
+    },
+    {
+        path: '/customer-care',
+        component: CustomerCare,
+        exact: true
+    },
+    {
+        path: '/myorder',
+        component: MyOrder,
         exact: true
     },
 ]

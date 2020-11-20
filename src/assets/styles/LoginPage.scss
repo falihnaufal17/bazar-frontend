@@ -1,5 +1,90 @@
-.container .card .Register {
-    border: 2px solid black;
-    margin-left: 25px;
-    margin-right: 25px;
+#login{
+    background-color: #fafafa;
+    padding: 8px 0 67px;;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    .card{
+        padding: 30px;
+        border: none;
+        box-shadow: none;
+        margin: 0 auto;
+        float: none;
+        max-width: 438px;
+        @media screen and (max-width: 768px) {
+            margin: auto -15px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .title{
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 27px;
+        margin-bottom: 44px;
+        font-family: Playfair Display;
+    }
+    .custom-switch{
+        .custom-control-label{
+            &::before{
+                top: 0;
+                background-color: #C4C4C4;
+            }
+            &::after{
+                top: 2px;
+                background-color: #F4F4F4;
+            }
+        }
+        .custom-control-input{
+            &:checked ~ .custom-control-label{
+                &::before{
+                    background-color: #007bff;
+                }
+            }
+        }
+    }
+    .form-custom{
+        border: none;
+        border-bottom: 1.5px solid #C4C4C4;
+        border-radius: unset;
+        box-shadow: unset;
+        height: 0;
+        font-size: 14px;
+        line-height: 19px;
+        padding: 10px 0;
+    }
+    .label{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #C4C4C4;
+        margin-bottom: 0;
+    }
+    .small-text{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 9px;
+        line-height: 12px;
+        color: #000;
+        margin-bottom: 13px;
+        &.disable-text{
+            color: #C4C4C4;
+        }
+    }
+    .btn-dark{
+        background-color: #000;
+        border-radius: unset;
+        box-shadow: unset;
+        outline: unset;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 18px;
+        padding: 10px 0;
+        margin-bottom: 19px;
+        width: 100%;
+    }
+    .btn-light{
+        @extend .btn-dark;
+        background-color: #E1E1E1;
+        color: #000;
+    }
 }

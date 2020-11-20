@@ -1,0 +1,149 @@
+#register{
+    background-color: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 50px 232px;
+    @media screen and (max-width: 1125px) {
+        padding: 0;
+    }
+    .card{
+        padding: 36px 257px;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+
+        @media screen and (max-width: 1125px) {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: auto -15px
+        }
+    }
+    .custom-form{
+        background: #FAFAFA;
+        border: 1px solid #E1E1E1;
+        padding: 7px 21px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        height: unset;
+        box-shadow: unset;
+        border-radius: unset;
+        &::placeholder{
+            font-size: 10px;
+            line-height: 25px;
+            color: #E1E1E1
+        }
+    }
+    .custom-radio{
+        .custom-control-label{
+            &::before{
+                border: 2px solid #C4C4C4;
+                width: 22px;
+                height: 22px;
+                top: 0;
+            }
+            &.label{
+                font-weight: normal;
+            }
+        }
+        .custom-control-input{
+            &:checked ~ .custom-control-label{
+                &::after{
+                    background: #000;
+                    border-radius: 100%;
+                    width: 14px;
+                    height: 14px;
+                    background-image: unset;
+                    top: 4px;
+                    left: -20px;
+                    box-shadow: unset;
+                }
+                &::before{
+                    background-color: #FFF;
+                    border: 2px solid #000;
+                }
+                &.label{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .input-group{
+        .custom-form{
+            padding-left: 0;
+            border-left: unset;
+            &.secret{
+                border-left: 1px solid #E1E1E1;
+                border-right: unset;
+                padding-left: 21px;
+            }
+        }
+        .input-group-prepend{
+            .input-group-text{
+                background-color: #FAFAFA;
+                border: 1px solid #E1E1E1;
+                &.secret-group{
+                    border-left: unset;
+                }
+            }
+        }
+    }
+    .custom-checkbox{
+        margin-bottom: 40px;
+        .custom-control-label{
+            font-weight: bold;
+            font-size: 9px;
+            line-height: 12px;
+
+            &::before{
+                width: 20px;
+                height: 20px;
+                border-radius: unset;
+                border: 2px solid #C4C4C4;
+                box-shadow: unset;
+                top: 0;
+            }
+            &::after{
+                top: 2px;
+                left: -22px;
+            }
+
+            &.sameAddress{
+                font-style: normal;
+                font-weight: 600;
+                font-size: 10px;
+                line-height: 14px;
+                color: #E1E1E1;
+            }
+        }
+        .custom-control-input{
+            &:checked ~ .custom-control-label{
+                &::after{
+                    background-image: url(../icons/CHECKED.svg);
+                }
+                &::before{
+                    background-color: #FFF;
+                    border: 3px solid #000;
+                }
+                &.sameAddress{
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    .btn-primary{
+        background-color: #000;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 25px;
+        color: #fff;
+        padding: 8px 50px;
+        text-align: center;
+        width: 100%;
+        border: unset;
+        text-transform: uppercase;
+        outline: unset;
+    }
+}
