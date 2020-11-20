@@ -11,6 +11,7 @@ const Loginpage = lazy(() => import('./pages/LoginPage'))
 const RegisterPage = lazy(() => import('./pages/RegisterPage'));
 const Sizepage = lazy(() => import('./pages/SizePage'));
 const CustomerCare = lazy(() => import('./pages/CustomerCare'));
+const MyOrder = lazy(() => import('./pages/MyOrder'));
 export default [
     {
         path: '/',
@@ -81,5 +82,10 @@ export default [
         path: '/customer-care',
         component: CustomerCare,
         exact: true
-    }
+    },
+    {
+        path: '/myorder',
+        component: MyOrder,
+        exact: true
+    },
 ]
