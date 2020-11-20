@@ -107,7 +107,7 @@ const Sizepage= (props) => {
                   <div className="box">
                         <div className="dropdown">
                               <a href="#" id="dropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <h1>MY WISHLIST</h1>
+                                    <h1>MY SIZE</h1>
                               </a>
                               <div className="dropdown-menu" aria-labelledby="dropdownProfile">
                                     <a className="dropdown-item" href="/profile/my-size">MY SIZE</a>
@@ -143,7 +143,7 @@ const Sizepage= (props) => {
                               </div>
                               <div className="form-group">
                                     <div className="row">
-                                          <div className="col-4">
+                                          <div className="col-12 col-md-4">
                                                 <label className="label">WEAR</label>
                                                 <select className="form-control custom-form" name="wear">
                                                       <option value="top-wear">TOP WEAR</option>

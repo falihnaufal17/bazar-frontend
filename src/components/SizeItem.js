@@ -4,7 +4,7 @@ import Delete from '../assets/icons/DELETE.svg';
 
 const SizeItem = (props) => {
     return(
-        <div className="card card-list">
+        <div className="card card-list mb-3">
             <a href="#" className="delete" onClick={() => props.deleteSize()}>
                 <img src={Delete} alt="delete"/>
             </a>

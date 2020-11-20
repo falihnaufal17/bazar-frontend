@@ -54,6 +54,8 @@
         }
     }
     .card{
+        border-radius: unset;
+        box-shadow: unset;
         &.card-content {
             background-color: #fff;
             box-shadow: 0px 0px 10px rgba(191, 191, 191, 0.25);
@@ -70,6 +72,10 @@
         }
         &.size-list{
             padding: 41px 160px;
+            @media screen and (max-width: 768px) {
+                padding: 15px;
+                margin: auto -15px;
+            }
         }
         &.card-list{
             padding: 20px;
