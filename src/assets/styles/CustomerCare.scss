@@ -1,0 +1,84 @@
+#customer-care {
+    background: #fafafa;
+}
+
+.formbox {
+    padding-top: 50px;
+    padding-bottom: 67px;
+}
+
+.container .box {
+    background: #ffffff;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    padding-left: 53px;
+    padding-right: 53px;
+}
+
+.container .box h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #616161;
+}
+
+.required_notification {
+    color: #d45252;
+    margin: 5px 0 0 0;
+    display: inline;
+    float: right;
+    font-size: 10px;
+}
+
+form label {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #c4c4c4;
+}
+
+form .second {
+    padding-top: 20px;
+}
+
+form .second p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+}
+
+form .form-group input {
+    border-radius: 0;
+    color: #e1e1e1;
+}
+
+form .form-group textarea {
+    border-radius: 0;
+}
+
+.btn {
+    background: black;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: right;
+    margin-top: 37px;
+}
+
+.box .content-right {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.box .content-right p {
+    text-align: justify;
+    line-height: 25px;
+    color: #c4c4c4;
+}

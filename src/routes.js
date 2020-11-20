@@ -1,14 +1,16 @@
 import React, { lazy } from 'react';
 
-const Home = lazy(()=>import('./pages/Home'));
+const Home = lazy(() => import('./pages/Home'));
 const ProductDetail = lazy(() => import('./pages/ProductDetail'));
 const Products = lazy(() => import('./pages/Products'));
 const Profile = lazy(() => import('./pages/Profile'));
 const Paymentselection = lazy(() => import('./pages/Paymentselection'));
 const MyWhislist = lazy(() => import('./pages/MyWhislist'));
 const Cart = lazy(() => import('./pages/Cart'));
-const Loginpage = lazy(() => import('./pages/LoginPage'));
+const Loginpage = lazy(() => import('./pages/LoginPage'))
+const RegisterPage = lazy(() => import('./pages/RegisterPage'));
 const Sizepage = lazy(() => import('./pages/SizePage'));
+const CustomerCare = lazy(() => import('./pages/CustomerCare'));
 export default [
     {
         path: '/',
@@ -54,20 +56,30 @@ export default [
         path: '/profile/my-wishlist',
         component: MyWhislist,
         exact: true,
-	},
-	{
+    },
+    {
         path: '/bags',
         component: Cart,
         exact: true
     },
     {
-        path: '/loginpage',
+        path: '/login',
         component: Loginpage,
         exact: true
     },
     {
-        path: '/sizepage',
+        path: '/register',
+        component: RegisterPage,
+        exact: true
+    },
+    {
+        path: '/profile/my-size',
         component: Sizepage,
         exact: true
     },
+    {
+        path: '/customer-care',
+        component: CustomerCare,
+        exact: true
+    }
 ]
