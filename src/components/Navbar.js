@@ -1,15 +1,13 @@
 import React, {useEffect, useRef, useState} from 'react';
 import BasketIcon from '../assets/icons/BASKET.svg';
 import Menu from '../assets/icons/MENU.svg';
-import Facebook from '../assets/icons/FACEBOOK.svg';
-import Google from '../assets/icons/GOOGLE.svg';
-import Username from '../assets/icons/USERNAME.svg';
-import Password from '../assets/icons/PASSWORD.svg';
-import Cross from '../assets/icons/CROSS.svg';
+import favorite from '../assets/icons/FAVORITE ICON.svg';
+import profile from '../assets/icons/LOGIN ICON.svg';
 
 const Navbar = (props) => {
     let bg = useRef(null);
-    let nav = useRef(null);
+    const [token, setToken] = useState(null);
+
     useEffect(() => {
         if(props.location.pathname == '/'){
             bg.current.style.position = 'absolute';
@@ -18,6 +16,7 @@ const Navbar = (props) => {
             bg.current.style.right = 0;
             bg.current.style.zIndex = 3;
         }
+        setToken(localStorage.getItem('token'));
     }, [])
     let [isOpen, setIsOpen] = useState(false)
     let [isOpen2, setIsOpen2] = useState(false)
@@ -121,6 +120,7 @@ const Navbar = (props) => {
             bg.current.style.transition = '400ms all'
         }
     }
+
     return(
         <>
         <nav className="navbar navbar-expand-lg" ref={bg}>
@@ -144,22 +144,34 @@ const Navbar = (props) => {
                     <div className="col-auto order-3 order-md-4 order-lg-4">
                         <div className="valign">
                             <div className="inner">
-                                <a href="/login" className="btn-login">
-                                    Sign In
-                                </a>
-                                {/* <a href="#">
-                                    <img src={profile} alt="profile" />
-                                </a> */}
+                                {
+                                    token != null ?
+                                    (
+                                        <a href="/profile/my-profile">
+                                            <img src={profile} alt="profile" />
+                                        </a>
+                                    ):
+                                    (
+                                        <a href="/login" className="btn-login">
+                                            Sign In
+                                        </a>
+                                    )
+                                }
                             </div>
                         </div>
                     </div>
-                    {/* <div className="col-2 order-4 order-md-5 order-lg-5">
-                        <a href="#">
-                            <img src={favorite} alt="favorite" />
-                        </a>
-                    </div> */}
+                    {
+                        token != null ?
+                        (
+                            <div className="col-auto order-4 order-md-5 order-lg-5">
+                                <a href="/profile/my-wishlist">
+                                    <img src={favorite} alt="favorite" />
+                                </a>
+                            </div>
+                        ): ''
+                    }
                     <div className="col-auto order-5 order-md-5 order-lg-5">
-                        <a href="/bags">
+                        <a href={token != null ? "/bags" : "/login"}>
                             <div className="position-relative">
                                 <img src={BasketIcon} alt="basket-icon" />
                                 {/* <div className="float-count">1</div> */}

@@ -24,3 +24,11 @@ export const checkDigit = event => {
 
     return true;
 }
+
+export const handleChange = (e, state, setState) => {
+    let target = e.target;
+    let name = target.name;
+    let value = target.value;
+
+    setState({...state, [name]: value });
+}

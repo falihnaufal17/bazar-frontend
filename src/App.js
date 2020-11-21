@@ -2,6 +2,8 @@ import React, {Suspense, lazy} from 'react';
 import './App.scss';
 import "slick-carousel/slick/slick.scss"; 
 import "slick-carousel/slick/slick-theme.css";
+import { Provider } from 'react-redux';
+import store from './stores';
 
 const Container = lazy(()=>import('./pages/Container'));
 const Navbar = lazy(()=>import('./components/Navbar'));
@@ -17,12 +19,14 @@ function App(props) {
     navbarComp = <Navbar {...props}/>
   }
   return (
-    <Suspense fallback="">
-        {navbarComp}
-        <Container {...props} />
-        <Footer />
-        <FloatButtonToTop />
-    </Suspense>
+    <Provider store={store}>
+      <Suspense fallback={<div />}>
+          {navbarComp}
+          <Container {...props} />
+          <Footer />
+          <FloatButtonToTop />
+        </Suspense>
+    </Provider>
   );
 }
 

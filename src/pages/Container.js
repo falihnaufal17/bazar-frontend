@@ -17,6 +17,10 @@ const Container = p => {
                                 exact
                                 path={item.path}
                                 render={p => {
+                                    p = {
+                                        ...p,
+                                        apiUrl: 'http://157.245.234.53'
+                                    }
                                     return (
                                         <ItemRoute component={<Page {...p} />} />
                                     )
