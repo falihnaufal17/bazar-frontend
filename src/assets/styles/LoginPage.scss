@@ -14,6 +14,9 @@
             padding-left: 15px;
             padding-right: 15px;
         }
+        &.before-checkout{
+            max-width: 900px;
+        }
     }
     .title{
         font-size: 20px;
@@ -86,5 +89,17 @@
         @extend .btn-dark;
         background-color: #E1E1E1;
         color: #000;
+    }
+    .btn-outline-primary{
+        @extend .btn-dark;
+        background-color: #FFF;
+        color: #000;
+        border: 1px solid #000;
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .vline{
+        border-left: 1px solid #E1E1E1;
     }
 }

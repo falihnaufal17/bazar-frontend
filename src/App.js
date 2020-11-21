@@ -11,7 +11,7 @@ const FloatButtonToTop = lazy(() => import('./components/FloatButtonToTop'))
 
 function App(props) {
   let navbarComp = "";
-  if(props.location.pathname == "/payment" || props.location.pathname == "/customer-care"){
+  if(props.location.pathname == "/payment" || props.location.pathname == "/customer-care" || props.location.pathname == "/checkout/login"){
     navbarComp = <NavbarBack {...props}/>
   }else{
     navbarComp = <Navbar {...props}/>
