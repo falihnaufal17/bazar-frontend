@@ -7,6 +7,10 @@ const Profile = lazy(() => import('./pages/Profile'));
 const Paymentselection = lazy(() => import('./pages/Paymentselection'));
 const MyWhislist = lazy(() => import('./pages/MyWhislist'));
 const Cart = lazy(() => import('./pages/Cart'));
+const Loginpage = lazy(() => import('./pages/LoginPage'));
+const RegisterPage = lazy(() => import('./pages/RegisterPage'));
+const Sizepage = lazy(() => import('./pages/SizePage'));
+const loginbeforecheckout = lazy(() => import('./pages/loginbeforecheckout'));
 const Loginpage = lazy(() => import('./pages/LoginPage'))
 const RegisterPage = lazy(() => import('./pages/RegisterPage'));
 const Sizepage = lazy(() => import('./pages/SizePage'));
@@ -69,6 +73,12 @@ export default [
         exact: true
     },
     {
+        path: '/RegisterPage',
+        component: RegisterPage,
+        exact: true,
+    },
+    {
+        path: '/sizepage',
         path: '/register',
         component: RegisterPage,
         exact: true
@@ -76,6 +86,11 @@ export default [
     {
         path: '/profile/my-size',
         component: Sizepage,
+        exact: true
+    },
+    {
+        path: '/loginbeforecheckout',
+        component: loginbeforecheckout,
         exact: true
     },
     {
