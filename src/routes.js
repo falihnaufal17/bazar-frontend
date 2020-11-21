@@ -10,7 +10,7 @@ const Cart = lazy(() => import('./pages/Cart'));
 const Loginpage = lazy(() => import('./pages/LoginPage'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage'));
 const Sizepage = lazy(() => import('./pages/SizePage'));
-const LoginBeforeCheckout = lazy(() => import('./pages/LoginBeforeCheckout'));
+const LoginCheckout = lazy(() => import('./pages/LoginCheckout'));
 const CustomerCare = lazy(() => import('./pages/CustomerCare'));
 const MyOrder = lazy(() => import('./pages/MyOrder'));
 export default [
@@ -87,7 +87,7 @@ export default [
     },
     {
         path: '/checkout/login',
-        component: LoginBeforeCheckout,
+        component: LoginCheckout,
         exact: true
     },
     {

@@ -3,8 +3,7 @@ import maskgroup from '../assets/icons/MASKGROUP.svg';
 import Username from '../assets/icons/USERNAME.svg';
 import Password from '../assets/icons/PASSWORD.svg';
 import '../assets/styles/LoginPage.scss';
-
-const LoginBeforeCheckout= (props) => {
+const LoginCheckout= (props) => {
   return(
     <div id="login">
       <div className="container">
@@ -71,4 +70,4 @@ const LoginBeforeCheckout= (props) => {
   )    
 }
 
-export default LoginBeforeCheckout;
+export default LoginCheckout;
