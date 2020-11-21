@@ -50,7 +50,7 @@ export default [
         exact: true
     },
     {
-        path: '/payment',
+        path: '/checkout/payment',
         component: Paymentselection,
         exact: true,
     },

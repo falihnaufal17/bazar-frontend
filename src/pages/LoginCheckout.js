@@ -60,7 +60,7 @@ const LoginCheckout= (props) => {
                 <img src={maskgroup} alt="maskgroup"/>
               </div>
               <div className="form-group">
-                <a href="/payment" className="btn-outline-primary">CONTINUE TO CHECKOUT</a>
+                <a href="/checkout/payment" className="btn-outline-primary">CONTINUE TO CHECKOUT</a>
               </div>
             </div>
           </div>
