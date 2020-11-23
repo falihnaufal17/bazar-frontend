@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const SummaryBags = props => {
+    const [token, setToken] = useState(null);
+    useEffect(() => {
+        setToken(localStorage.getItem('token'));
+    }, null)
     return(
         <div className="main-card side-card">
             <div className="label">SUMMARY</div>
@@ -38,7 +42,7 @@ const SummaryBags = props => {
                     <div className="label">$28.75</div>
                 </div>
             </div>
-            <a href="/checkout/login" className="btn-primary">PROCEED TO CHECKOUT</a>
+            <a href={token != null ? "/checkout/payment" : "/checkout/login"} className="btn-primary">PROCEED TO CHECKOUT</a>
             <a href="#" className="btn-secondary">CONTINUE TO SHOPPING</a>
         </div>
     )

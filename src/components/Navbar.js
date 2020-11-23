@@ -3,6 +3,7 @@ import BasketIcon from '../assets/icons/BASKET.svg';
 import Menu from '../assets/icons/MENU.svg';
 import favorite from '../assets/icons/FAVORITE ICON.svg';
 import profile from '../assets/icons/LOGIN ICON.svg';
+import PADLOCK from '../assets/icons/PADLOCK.svg';
 
 const Navbar = (props) => {
     let bg = useRef(null);
@@ -121,6 +122,13 @@ const Navbar = (props) => {
         }
     }
 
+    const logout = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('profile');
+
+        window.location.href = '/'
+    }
+
     return(
         <>
         <nav className="navbar navbar-expand-lg" ref={bg}>
@@ -147,9 +155,15 @@ const Navbar = (props) => {
                                 {
                                     token != null ?
                                     (
-                                        <a href="/profile/my-profile">
-                                            <img src={profile} alt="profile" />
-                                        </a>
+                                        <div class="dropdown" id="dropdown-profile">
+                                            <a href="#" className="dropdown-toggle" id="toggle-profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <img src={profile} alt="profile" />
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="toggle-profile">
+                                                <a class="dropdown-item" href="/profile/my-profile"><img src={profile} alt="profile" /> My Account</a>
+                                                <a class="dropdown-item" href="#" onClick={() => logout()}><img src={PADLOCK} alt="padlock" /> Sign Out</a>
+                                            </div>
+                                        </div>
                                     ):
                                     (
                                         <a href="/login" className="btn-login">
