@@ -52,7 +52,7 @@ const Home = (props) => {
         },
     ]
     return(
-        <Suspense fallback="">
+        <div>
             <section id="section-banner">
                 <div id="carouselExampleCaptions" data-pause="false" data-interval="6000" className="carousel slide" data-ride="carousel">
                     <ol className="carousel-indicators">
@@ -150,7 +150,7 @@ const Home = (props) => {
                     <Brands />
                 </div>
             </section>
-        </Suspense>
+        </div>
     )
 }
 

@@ -115,4 +115,18 @@
             text-align: right;
         }
     }
+    .custom-date{
+        border: none;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 14px;
+        text-align: center;
+    }
+    .row-p{
+        margin: auto -5px;
+        > * {
+            padding: 0 5px;
+        }
+    }
 }

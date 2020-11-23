@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import kardus from '../assets/icons/KARDUS.svg';
 import '../assets/styles/MyOrders.scss';
-import $ from 'jquery';
 import HISTORYORDER from '../assets/images/HISTORY ORDER.png';
 
 const Myorder= (props) => {
@@ -41,16 +40,19 @@ const Myorder= (props) => {
           <div className="col-auto">
             <div className="card filter-date">
               <div className="row align-items-center">
-                <div className="col">
-                  <span>Transactions Date:</span>
+                <div className="col-auto">
+                  <span className="subtitle">Transactions Date:</span>
                 </div>
                 <div className="col-auto">
-                  <div className="row">
+                  <div className="row align-items-center row-p">
                     <div className="col-auto">
-                      <input type="date" name="date_start" />
+                      <input type="date" className="custom-date" name="date_start" />
                     </div>
                     <div className="col-auto">
-                      <input type="date" name="date_end" />
+                      <div className="custom-date">-</div>
+                    </div>
+                    <div className="col-auto">
+                      <input type="date" className="custom-date" name="date_end" />
                     </div>
                   </div>
                 </div>
@@ -62,14 +64,14 @@ const Myorder= (props) => {
           {
             dataOrders.map((item, key) => {
               return(
-                <div className="order-list">
+                <div className="order-list" key={key}>
                   <div className="row">
                     <div className="col-auto">
                       <div className="row">
                         {
                           item.items.map((d, i) => {
                             return(
-                              <div className="col-auto">
+                              <div className="col-auto" key={i}>
                                 <div className="position-relative">
                                   <img src={d} alt="image" />
                                 </div>
@@ -86,12 +88,15 @@ const Myorder= (props) => {
                         <div className="title font-weight-normal">{item.order_status}</div>
                       </div>
                     </div>
-                    <div className="col-auto vline">
-                      <div />
-                      <div className="title">ORDER DATE</div>
-                      <div className="title font-weight-normal mb-3">{item.order_date}</div>
-                      <div className="title">TRANSACTION CODE</div>
-                      <div className="title font-weight-normal">{item.transaction_code}</div>
+                    <div className="col-auto vline d-flex flex-column justify-content-between">
+                      <div>
+                        <div className="title">ORDER DATE</div>
+                        <div className="title font-weight-normal mb-3">{item.order_date}</div>
+                      </div>
+                      <div>
+                        <div className="title">TRANSACTION CODE</div>
+                        <div className="title font-weight-normal">{item.transaction_code}</div>
+                      </div>
                     </div>
                   </div>
                 </div>
