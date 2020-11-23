@@ -3,15 +3,15 @@ import Favorite from '../assets/icons/HEART SOLID 2.svg';
 import FavoriteActive from '../assets/icons/FAVORITE ACTIVE.svg';
 
 const ProductItem = props => {
-    const [isFavorite, setIsFavorite] = useState(props.data.isFavorite)
+    const [isFavorite, setIsFavorite] = useState(false)
     const [stock, setStock] = useState(0 | props.data.stock)
 
     const _redirect = () => {
-        if(stock > 0){
+        // if(stock > 0){
             window.location.href = '/product/detail';
-        }else{
-            return false;
-        }
+        // }else{
+            // return false;
+        // }
     }
 
     return(
@@ -23,13 +23,13 @@ const ProductItem = props => {
                 <div className="image">
                     <div className={stock > 0 ? "" : 'disabled'}>
                     </div>
-                    <img src={props.data.image} className="card-img-top" alt={props.data.product_name} />
+                    <img src={props.data.path} className="card-img-top" alt={props.data.title} />
                 </div>
                 <div className="card-body">
-                    <div className="category">{props.data.category}</div>
-                    <div className="product-name">{props.data.product_name}</div>
+                    <div className="category">{props.data.subcategory}</div>
+                    <div className="product-name">{props.data.title}</div>
                     <div className="price mb-2">${props.data.price}</div>
-                    <div className="row row-color">
+                    {/* <div className="row row-color">
                         {props.data.color.map((d, i) => {
                             return(
                                 <div className="col-auto" key={i}>
@@ -40,7 +40,7 @@ const ProductItem = props => {
                                 </div>
                             )
                         })}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-
-// CREATE FUNCTION REDUCER
-
+import {ProductsReducer} from './Products'
 
 // CALL FUNCTION REDUCER INSIDE combineReducers OBJECT
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+    ProductsReducer
+});
 
 export default rootReducer;

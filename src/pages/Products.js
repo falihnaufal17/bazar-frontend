@@ -1,5 +1,7 @@
-import React, {lazy, useState, Suspense} from 'react';
+import React, {lazy, useState, useEffect} from 'react';
 import '../assets/styles/Products.scss';
+import { connect } from 'react-redux';
+import { fetchProducts } from '../actions/Products';
 import imgProduct from '../assets/images/adidas-originals-black-3-stripes-t-shirt 1.svg';
 const ProductItem = lazy(()=>import('../components/ProductItem'));
 const SideBarProducts = lazy(()=>import('../components/SideBarProducts'));
@@ -9,6 +11,11 @@ const Products = props => {
     const [size, setSize] = useState(true);
     const [color, setColor] = useState(true);
     const [brand, setBrand] = useState(true);
+
+    useEffect(() => {
+        props.fetchProducts(props.apiUrl);
+    }, []);
+
     const toggleClick = (menu) => {
         if(menu == 'category'){
             if(category){
@@ -355,7 +362,7 @@ const Products = props => {
                 <div className="col-md-9">
                     <div className="row grid-list">
                     {
-                        dataProduct.map((item, key) => {
+                        props.products.map((item, key) => {
                             return(
                                 <div className="col-6 col-md-4 col-lg-auto position-relative" key={key}>
                                     <ProductItem data={item} key={key} />
@@ -370,4 +377,20 @@ const Products = props => {
     )
 }
 
-export default Products;
+const mapStateToProps = state => {
+    return {
+        pagination: state.ProductsReducer.pagination,
+        products: state.ProductsReducer.result,
+        isLoading: state.ProductsReducer.isLoading
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchProducts: (url, per_page, page) => {
+            dispatch(fetchProducts(url, per_page, page))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Products);
