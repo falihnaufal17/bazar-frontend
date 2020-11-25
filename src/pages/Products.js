@@ -1,4 +1,4 @@
-import React, {lazy, useState, useEffect} from 'react';
+import React, {lazy, useState, Suspense, useEffect} from 'react';
 import '../assets/styles/Products.scss';
 import { connect } from 'react-redux';
 import { fetchProducts } from '../actions/Products';
@@ -11,9 +11,13 @@ const Products = props => {
     const [size, setSize] = useState(true);
     const [color, setColor] = useState(true);
     const [brand, setBrand] = useState(true);
+    const [pagination, setPagination] = useState({
+        page: 1,
+        per_page: 20
+    })
 
     useEffect(() => {
-        props.fetchProducts(props.apiUrl);
+        props.fetchProducts(props.apiUrl, pagination.per_page, pagination.page, props.match.params.category);
     }, []);
 
     const toggleClick = (menu) => {
@@ -387,8 +391,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchProducts: (url, per_page, page) => {
-            dispatch(fetchProducts(url, per_page, page))
+        fetchProducts: (url, per_page, page, subcategory) => {
+            dispatch(fetchProducts(url, per_page, page, subcategory))
         }
     }
 }

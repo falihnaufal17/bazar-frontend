@@ -6,9 +6,9 @@ const ProductItem = props => {
     const [isFavorite, setIsFavorite] = useState(false)
     const [stock, setStock] = useState(0 | props.data.stock)
 
-    const _redirect = () => {
+    const _redirect = (id) => {
         // if(stock > 0){
-            window.location.href = '/product/detail';
+            window.location.href = '/product/detail/' + id;
         // }else{
             // return false;
         // }
@@ -19,7 +19,7 @@ const ProductItem = props => {
             <div className="favorite" onClick={() => setIsFavorite(!isFavorite)}>
                 <img src={isFavorite ? FavoriteActive : Favorite} alt="favorite-icon" />
             </div>
-            <div onClick={() => _redirect()} className="card card-product">
+            <div onClick={() => _redirect(props.data.id)} className="card card-product">
                 <div className="image">
                     <div className={stock > 0 ? "" : 'disabled'}>
                     </div>

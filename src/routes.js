@@ -20,7 +20,7 @@ export default [
         exact: true
     },
     {
-        path: '/product/detail',
+        path: '/product/detail/:product_id',
         component: ProductDetail,
         exact: true
     },
