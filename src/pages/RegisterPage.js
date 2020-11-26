@@ -70,7 +70,7 @@ const RegisterPage = (props) => {
           </div>
           <div className="form-group">
             <label className="label">Date of Birth</label>
-            <input required type="date" name="date_of_birth" className="form-control custom-form" onChange={(e) => handleChange(e, data, setData)}/>
+            <input required type="date" name="date_of_birth" className="form-control custom-form" onChange={(e) => { console.log(e.target.value); handleChange(e, data, setData)}}/>
           </div>
           <div className="form-group">
             <label className="label">Gender </label>
@@ -127,11 +127,11 @@ const RegisterPage = (props) => {
           </div>
           <div className="custom-control custom-checkbox">
             <input required type="checkbox" name="terms" value={data.terms} onChange={(e) => handleChange(e, data, setData)} className="custom-control-input" id="terms" />
-            <label className="custom-control-label" htmlFor="terms">I declare that I have read and accept the MYOOX Terms and Conditions of Use</label>
+            <label className="custom-control-label" htmlFor="terms">I declare that I have read and accept the BAZAR Terms and Conditions of Use</label>
           </div>
           <div className="custom-control custom-checkbox">
             <input required type="checkbox" name="newsletter" value={data.newsletter} onChange={(e) => handleChange(e, data, setData)} className="custom-control-input" id="newsletter" />
-            <label className="custom-control-label" htmlFor="newsletter">I de would like to receive the newsletter with the latest news and promotions. Consult our Privacy Policy for further information.clare that I have read and accept the MYOOX Terms and Conditions of Use</label>
+            <label className="custom-control-label" htmlFor="newsletter">I de would like to receive the newsletter with the latest news and promotions. Consult our Privacy Policy for further information.clare that I have read and accept the BAZAR Terms and Conditions of Use</label>
           </div>
           <button className="btn-primary">REGISTER</button>
         </form>

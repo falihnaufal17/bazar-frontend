@@ -1,9 +1,12 @@
-import React, { lazy, Suspense, useRef, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import mastercard from '../assets/icons/MASTERC.svg';
 import visa from '../assets/icons/VISA.svg';
 import jcb from '../assets/icons/JCB.svg';
 import eye from '../assets/icons/EYE.svg';
-import '../assets/styles/profile.scss'
+import '../assets/styles/profile.scss';
+import { connect } from 'react-redux';
+import { fetchProfile } from '../actions/Users'
+import { handleChange } from '../helpers';
 
 const CCList = lazy(() => import('../components/CCList'));
 const AddressList = lazy(() => import('../components/AddressList'));
@@ -15,6 +18,34 @@ const Profile = (props) => {
   const [isCurr, setIsCurr] = useState(false);
   const [isNew, setIsNew] = useState(false);
   const [isConfirm, setIsConfirm] = useState(false);
+  const [data, setData] = useState({
+    first_name: props.user.first_name,
+    last_name: props.user.last_name,
+    gender: props.user.gender,
+    date_of_birth: props.user.date_of_birth,
+    phone: props.user.phone,
+    email: props.user.email
+  })
+
+  useEffect(() => {
+    const getProfile = () => {
+      props.fetchProfile(props.apiUrl, Number(JSON.parse(localStorage.getItem('profile')).id))
+    }
+
+    getProfile();
+  },[])
+
+  useEffect(() => {
+    setData({
+      first_name: props.user.first_name,
+      last_name: props.user.last_name,
+      gender: props.user.gender,
+      date_of_birth: props.user.date_of_birth,
+      phone: props.user.phone,
+      email: props.user.email
+    })
+  }, [props.user])
+
   let dataCard = [
     {
       id: 1,
@@ -96,14 +127,14 @@ const Profile = (props) => {
           <div className="tab-content" id="pills-tabContent">
             <div className="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
               <div className="card-content card-profile">
-                <div className="fullname">STEVEN GERRAD</div>
+                <div className="fullname">{props.user.first_name} {props.user.last_name}</div>
                 <div className="hline"></div>
                 <div className="row align-items-center justify-content-between">
                   <div className="col-12 col-md">
                     <div className="field mb-3">Gender</div>
                   </div>
                   <div className="col-12 col-md">
-                    <div className="value mb-3">Man</div>
+                    <div className="value mb-3">{props.user.gender}</div>
                   </div>
                 </div>
                 <div className="row">
@@ -111,7 +142,7 @@ const Profile = (props) => {
                     <div className="field mb-3">Email</div>
                   </div>
                   <div className="col-12 col-md">
-                    <div className="value mb-3">stevengerrad@gmail.com</div>
+                    <div className="value mb-3">{props.user.email}</div>
                   </div>
                 </div>
                 <div className="row">
@@ -119,7 +150,7 @@ const Profile = (props) => {
                     <div className="field mb-3">Birth of date</div>
                   </div>
                   <div className="col-12 col-md">
-                    <div className="value mb-3">12/12/97</div>
+                    <div className="value mb-3">{props.user.date_of_birth}</div>
                   </div>
                 </div>
                 <div className="row">
@@ -127,7 +158,7 @@ const Profile = (props) => {
                     <div className="field mb-3">Phone Number</div>
                   </div>
                   <div className="col-12 col-md">
-                    <div className="value mb-3">+62 812345678</div>
+                    <div className="value mb-3">{props.user.phone}</div>
                   </div>
                 </div>
                 <div className="row">
@@ -135,7 +166,7 @@ const Profile = (props) => {
                     <div className="field mb-3">Password</div>
                   </div>
                   <div className="col text-right password">
-                    <div><input type="password" className="value mb-3 password" id="d-password" value="password" disabled /></div>
+                    <div><input type="password" className="value mb-3 password" id="d-password" defaultValue="password" disabled /></div>
                   </div>
                 </div>
                 <div className="text-center">
@@ -148,13 +179,13 @@ const Profile = (props) => {
                   <div className="col">
                     <div className="form-group">
                       <label className="label">First Name</label>
-                      <input type="text" className="form-control custom-form" placeholder="Steven" />
+                      <input type="text" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.first_name} className="form-control custom-form" placeholder="Steven" />
                     </div>
                   </div>
                   <div className="col">
                     <div className="form-group">
                       <label className="label">Last Name</label>
-                      <input type="text" className="form-control custom-form" placeholder="Gerrad" />
+                      <input type="text" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.last_name} className="form-control custom-form" placeholder="Gerrad" />
                     </div>
                   </div>
                 </div>
@@ -163,13 +194,13 @@ const Profile = (props) => {
                   <div className="row">
                     <div className="col-auto">
                       <div className="custom-control custom-radio">
-                        <input type="radio" id="male" name="gender" value="male" className="custom-control-input" />
+                        <input type="radio" id="male" name="gender" onChange={(e) => handleChange(e, data, setData)} defaultValue="male" className="custom-control-input" checked={data.gender == "male" ? true: false} />
                         <label className="custom-control-label label" htmlFor="male"> Male</label>
                       </div>
                     </div>
                     <div className="col-auto">
                       <div className="custom-control custom-radio">
-                        <input type="radio" id="female" name="gender" value="female" className="custom-control-input" />
+                        <input type="radio" id="female" name="gender" onChange={(e) => handleChange(e, data, setData)} defaultValue="female" className="custom-control-input" checked={data.gender == "female" ? true: false} />
                         <label className="custom-control-label label" htmlFor="female"> Female</label>
                       </div>
                     </div>
@@ -177,7 +208,7 @@ const Profile = (props) => {
                 </div>
                 <div className="form-group">
                   <label className="label">Date of Birth</label>
-                  <input type="text" className="form-control custom-form" placeholder="DD/MM/YY" />
+                  <input type="text" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.date_of_birth} className="form-control custom-form" placeholder="DD/MM/YY" />
                 </div>
                 <div className="form-group">
                   <label className="label">Phone Number</label>
@@ -190,14 +221,14 @@ const Profile = (props) => {
                         </svg>
                       </div>
                     </div>
-                    <input type="tel" className="form-control custom-form" placeholder="+62" />
+                    <input type="tel" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.phone} className="form-control custom-form" placeholder="+62" />
                   </div>
                 </div>
                 <div ref={cPass}>
                   <div className="fullname text-left">SIGN IN DETAILS</div>
                   <div className="form-group">
                     <label className="label">Email</label>
-                    <input type="email" className="form-control custom-form" placeholder="example@gmail.com" />
+                    <input type="email" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.email} className="form-control custom-form" placeholder="example@gmail.com" />
                   </div>
                   <div className="custom-control custom-checkbox">
                     <input type="checkbox" className="custom-control-input" id="cp" checked={cp} onChange={() => isCp(!cp)} />
@@ -357,8 +388,8 @@ const Profile = (props) => {
                     <div className="form-group">
                       <label className="label">Province</label>
                       <select className="form-control custom-form" name="state">
-                        <option value="-">-</option>
-                        <option value="indonesia">Indonesia</option>
+                        <option defaultValue="-">-</option>
+                        <option defaultValue="indonesia">Indonesia</option>
                       </select>
                     </div>
                   </div>
@@ -366,7 +397,7 @@ const Profile = (props) => {
                     <div className="form-group">
                       <label className="label">Province</label>
                       <select className="form-control custom-form" name="province">
-                        <option value="jawa-barat">Jawa Barat</option>
+                        <option defaultValue="jawa-barat">Jawa Barat</option>
                       </select>
                     </div>
                   </div>
@@ -376,7 +407,7 @@ const Profile = (props) => {
                     <div className="form-group">
                       <label className="label">City</label>
                       <select className="form-control custom-form" name="city">
-                        <option value="bandung">Bandung</option>
+                        <option defaultValue="bandung">Bandung</option>
                       </select>
                     </div>
                   </div>
@@ -454,8 +485,8 @@ const Profile = (props) => {
                     <div className="form-group">
                       <label className="label">Province</label>
                       <select className="form-control custom-form" name="state">
-                        <option value="-">-</option>
-                        <option value="indonesia">Indonesia</option>
+                        <option defaultValue="-">-</option>
+                        <option defaultValue="indonesia">Indonesia</option>
                       </select>
                     </div>
                   </div>
@@ -465,7 +496,7 @@ const Profile = (props) => {
                     <div className="form-group">
                       <label className="label">City</label>
                       <select className="form-control custom-form" name="city">
-                        <option value="bandung">Bandung</option>
+                        <option defaultValue="bandung">Bandung</option>
                       </select>
                     </div>
                   </div>
@@ -525,4 +556,20 @@ const Profile = (props) => {
     </Suspense>
   )
 }
-export default Profile;
+
+const mapStateToProps = state => {
+  return {
+      user: state.UserReducer.result,
+      isLoading: state.UserReducer.isLoading
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+      fetchProfile: (url, id) => {
+          dispatch(fetchProfile(url, id))
+      }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);
