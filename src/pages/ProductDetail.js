@@ -11,19 +11,22 @@ import { handleChange } from '../helpers';
 const ProductRecommendation = lazy(() => import('../components/ProductRecommendation'));
 
 const ProductDetail = (props) => {
-    let user_id = JSON.parse(localStorage.getItem('profile')).id || null;
-    let token = localStorage.getItem('token') || null;
+    let token = localStorage.getItem('token');
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
     const [modals, setModals] = useState(0);
     let slider1 = useRef(null);
     let slider2 = useRef(null);
     let modalCart = useRef(null);
+    const [userId, setUserId] = useState(null);
 
     useEffect(() => {
         setNav1(slider1)
         setNav2(slider2)
         props.fetchProductDetail(props.apiUrl, props.match.params.product_id);
+        if(JSON.parse(localStorage.getItem('profile')) != null){
+            setUserId(JSON.parse(localStorage.getItem('profile')).id)
+        }
     }, [])
 
     const [data, setData] = useState({
@@ -31,7 +34,7 @@ const ProductDetail = (props) => {
         listing_id: props.product.id,
         size: '',
         quantity: 1,
-        user_id: user_id
+        user_id: userId
     });
 
     const addToCart = () => {
