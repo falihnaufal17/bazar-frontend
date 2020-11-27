@@ -35,10 +35,11 @@
                 }
                 .modal-content{
                     height: 100%;
+                    max-width: 394px;
+                    .modal-body{
+                        padding: 0px 54px;
+                    }
                 }
-            }
-            .modal-body{
-                padding: 15px;
             }
         }
     }
@@ -256,4 +257,8 @@
     background-color: #000;
     width: 100%;
     height: 1px;
+}
+
+.image-cart{
+    border: 1px solid #C4C4C4;
 }

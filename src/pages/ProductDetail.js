@@ -54,7 +54,7 @@ const ProductDetail = (props) => {
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <div className="position-relative">
+                                <div className="position-relative image-cart">
                                     <img src={props.product.images[0].path} className="w-100" alt={props.product.images[0].path} />
                                 </div>
                                 <div className="text-center">
