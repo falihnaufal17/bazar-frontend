@@ -7,6 +7,7 @@ import '../assets/styles/profile.scss';
 import { connect } from 'react-redux';
 import { fetchProfile } from '../actions/Users'
 import { handleChange } from '../helpers';
+import axios from 'axios';
 
 const CCList = lazy(() => import('../components/CCList'));
 const AddressList = lazy(() => import('../components/AddressList'));
@@ -14,6 +15,8 @@ const AddressList = lazy(() => import('../components/AddressList'));
 const Profile = (props) => {
   let formEdit = useRef(null);
   let cPass = useRef(null);
+  let formTag = useRef(null);
+
   const [cp, isCp] = useState(false)
   const [isCurr, setIsCurr] = useState(false);
   const [isNew, setIsNew] = useState(false);
@@ -95,6 +98,19 @@ const Profile = (props) => {
     formEdit.current.classList.add('d-none')
     formEdit.current.classList.remove('d-block')
   }
+  const submitUpdate = (e) => {
+    e.preventDefault()
+    axios.patch(`${props.apiUrl}/user/update/${props.user.id}`, data)
+      .then((res) => {
+        alert(res.data.message);
+        props.fetchProfile(props.apiUrl, Number(JSON.parse(localStorage.getItem('profile')).id))
+      })
+      .catch(err => {
+        alert(err.response.message);
+        throw err;
+      })
+  }
+
   return (
     <Suspense fallback={<div />}>
       <div id="section-profile">
@@ -175,123 +191,125 @@ const Profile = (props) => {
               </div>
               <div className="card-content d-none" ref={formEdit} id="form-edit">
                 <div className="fullname text-left">YOUR DETAIL</div>
-                <div className="row">
-                  <div className="col">
-                    <div className="form-group">
-                      <label className="label">First Name</label>
-                      <input type="text" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.first_name} className="form-control custom-form" placeholder="Steven" />
-                    </div>
-                  </div>
-                  <div className="col">
-                    <div className="form-group">
-                      <label className="label">Last Name</label>
-                      <input type="text" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.last_name} className="form-control custom-form" placeholder="Gerrad" />
-                    </div>
-                  </div>
-                </div>
-                <div className="form-group">
-                  <label className="label">Gender </label>
+                <form id="form-edit-profile" method="POST" onSubmit={(e) => submitUpdate(e)}>
                   <div className="row">
-                    <div className="col-auto">
-                      <div className="custom-control custom-radio">
-                        <input type="radio" id="male" name="gender" onChange={(e) => handleChange(e, data, setData)} defaultValue="male" className="custom-control-input" checked={data.gender == "male" ? true: false} />
-                        <label className="custom-control-label label" htmlFor="male"> Male</label>
+                    <div className="col">
+                      <div className="form-group">
+                        <label className="label">First Name</label>
+                        <input type="text" name="first_name" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.first_name} className="form-control custom-form" placeholder="Steven" />
                       </div>
                     </div>
-                    <div className="col-auto">
-                      <div className="custom-control custom-radio">
-                        <input type="radio" id="female" name="gender" onChange={(e) => handleChange(e, data, setData)} defaultValue="female" className="custom-control-input" checked={data.gender == "female" ? true: false} />
-                        <label className="custom-control-label label" htmlFor="female"> Female</label>
+                    <div className="col">
+                      <div className="form-group">
+                        <label className="label">Last Name</label>
+                        <input type="text" name="last_name" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.last_name} className="form-control custom-form" placeholder="Gerrad" />
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="form-group">
-                  <label className="label">Date of Birth</label>
-                  <input type="text" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.date_of_birth} className="form-control custom-form" placeholder="DD/MM/YY" />
-                </div>
-                <div className="form-group">
-                  <label className="label">Phone Number</label>
-                  <div className="input-group mb-2 mr-sm-2">
-                    <div className="input-group-prepend">
-                      <div className="input-group-text">
-                        <svg width="28" height="17" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <rect width="28" height="17" fill="white" />
-                          <rect width="28" height="9" fill="#FF0000" />
-                        </svg>
-                      </div>
-                    </div>
-                    <input type="tel" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.phone} className="form-control custom-form" placeholder="+62" />
-                  </div>
-                </div>
-                <div ref={cPass}>
-                  <div className="fullname text-left">SIGN IN DETAILS</div>
                   <div className="form-group">
-                    <label className="label">Email</label>
-                    <input type="email" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.email} className="form-control custom-form" placeholder="example@gmail.com" />
+                    <label className="label">Gender </label>
+                    <div className="row">
+                      <div className="col-auto">
+                        <div className="custom-control custom-radio">
+                          <input type="radio" id="male" name="gender" onChange={(e) => handleChange(e, data, setData)} defaultValue="male" className="custom-control-input" checked={data.gender == "male" ? true: false} />
+                          <label className="custom-control-label label" htmlFor="male"> Male</label>
+                        </div>
+                      </div>
+                      <div className="col-auto">
+                        <div className="custom-control custom-radio">
+                          <input type="radio" id="female" name="gender" onChange={(e) => handleChange(e, data, setData)} defaultValue="female" className="custom-control-input" checked={data.gender == "female" ? true: false} />
+                          <label className="custom-control-label label" htmlFor="female"> Female</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <label className="label">Date of Birth</label>
+                    <input type="text"name="date_of_birth" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.date_of_birth} className="form-control custom-form" placeholder="DD/MM/YY" />
+                  </div>
+                  <div className="form-group">
+                    <label className="label">Phone Number</label>
+                    <div className="input-group mb-2 mr-sm-2">
+                      <div className="input-group-prepend">
+                        <div className="input-group-text">
+                          <svg width="28" height="17" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="28" height="17" fill="white" />
+                            <rect width="28" height="9" fill="#FF0000" />
+                          </svg>
+                        </div>
+                      </div>
+                      <input type="tel" name="phone" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.phone} className="form-control custom-form" placeholder="+62" />
+                    </div>
+                  </div>
+                  <div ref={cPass}>
+                    <div className="fullname text-left">SIGN IN DETAILS</div>
+                    <div className="form-group">
+                      <label className="label">Email</label>
+                      <input type="email" name="email" onChange={(e)=>handleChange(e, data, setData)} defaultValue={data.email} className="form-control custom-form" placeholder="example@gmail.com" />
+                    </div>
+                    <div className="custom-control custom-checkbox">
+                      <input type="checkbox" className="custom-control-input" id="cp" checked={cp} onChange={() => isCp(!cp)} />
+                      <label className="custom-control-label" htmlFor="cp">Change Password</label>
+                    </div>
+                    {
+                      cp ? (
+                        <div>
+                          <div className="form-group">
+                            <label className="label">Current Password</label>
+                            <div className="input-group mb-2">
+                              <input type={isCurr ? 'text' : 'password'} className="form-control secret custom-form" placeholder="password" />
+                              <div className="input-group-prepend">
+                                <a href="#" className="input-group-text secret-group" onClick={(e) => { e.preventDefault(); setIsCurr(!isCurr) }}>
+                                  <img src={eye} alt="eye" />
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="row">
+                            <div className="col-12 col-md">
+                              <div className="form-group">
+                                <label className="label">New Password</label>
+                                <div className="input-group mb-2">
+                                  <input type={isNew ? "text" : "password"} className="form-control secret custom-form" placeholder="password" />
+                                  <div className="input-group-prepend">
+                                    <a href="#" className="input-group-text secret-group" onClick={(e) => { e.preventDefault(); setIsNew(!isNew) }}>
+                                      <img src={eye} alt="eye" />
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-12 col-md">
+                              <div className="form-group">
+                                <label className="label">Confirm New Password</label>
+                                <div className="input-group mb-2">
+                                  <input type={isConfirm ? "text" : "password"} className="form-control secret custom-form" placeholder="password" />
+                                  <div className="input-group-prepend">
+                                    <a href="#" className="input-group-text secret-group" onClick={(e) => { e.preventDefault(); setIsConfirm(!isConfirm) }}>
+                                      <img src={eye} alt="eye" />
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ) : (<div />)
+                    }
                   </div>
                   <div className="custom-control custom-checkbox">
-                    <input type="checkbox" className="custom-control-input" id="cp" checked={cp} onChange={() => isCp(!cp)} />
-                    <label className="custom-control-label" htmlFor="cp">Change Password</label>
+                    <input type="checkbox" className="custom-control-input" id="pp" />
+                    <label className="custom-control-label" htmlFor="pp">I would like to receive the newsletter with the latest news and promotions. Consult our Privacy Policy for further information.</label>
                   </div>
-                  {
-                    cp ? (
-                      <div>
-                        <div className="form-group">
-                          <label className="label">Current Password</label>
-                          <div className="input-group mb-2">
-                            <input type={isCurr ? 'text' : 'password'} className="form-control secret custom-form" placeholder="password" />
-                            <div className="input-group-prepend">
-                              <a href="#" className="input-group-text secret-group" onClick={(e) => { e.preventDefault(); setIsCurr(!isCurr) }}>
-                                <img src={eye} alt="eye" />
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="row">
-                          <div className="col-12 col-md">
-                            <div className="form-group">
-                              <label className="label">New Password</label>
-                              <div className="input-group mb-2">
-                                <input type={isNew ? "text" : "password"} className="form-control secret custom-form" placeholder="password" />
-                                <div className="input-group-prepend">
-                                  <a href="#" className="input-group-text secret-group" onClick={(e) => { e.preventDefault(); setIsNew(!isNew) }}>
-                                    <img src={eye} alt="eye" />
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="col-12 col-md">
-                            <div className="form-group">
-                              <label className="label">Confirm New Password</label>
-                              <div className="input-group mb-2">
-                                <input type={isConfirm ? "text" : "password"} className="form-control secret custom-form" placeholder="password" />
-                                <div className="input-group-prepend">
-                                  <a href="#" className="input-group-text secret-group" onClick={(e) => { e.preventDefault(); setIsConfirm(!isConfirm) }}>
-                                    <img src={eye} alt="eye" />
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ) : (<div />)
-                  }
-                </div>
-                <div className="custom-control custom-checkbox">
-                  <input type="checkbox" className="custom-control-input" id="pp" />
-                  <label className="custom-control-label" htmlFor="pp">I would like to receive the newsletter with the latest news and promotions. Consult our Privacy Policy for further information.</label>
-                </div>
-                <div className="row justify-content-center">
-                  <div className="col-12 col-md-auto">
-                    <button className="btn-cancel" type={'reset'} onClick={() => closeModify()}>Cancel</button>
+                  <div className="row justify-content-center">
+                    <div className="col-12 col-md-auto">
+                      <button className="btn-cancel" type={'reset'} onClick={() => closeModify()}>Cancel</button>
+                    </div>
+                    <div className="col-12 col-md-auto">
+                      <button className="btn-save" type="submit">Save</button>
+                    </div>
                   </div>
-                  <div className="col-12 col-md-auto">
-                    <button className="btn-save">Save</button>
-                  </div>
-                </div>
+                </form>
               </div>
             </div>
             <div className="tab-pane fade" id="pills-creditcard" role="tabpanel" aria-labelledby="pills-creditcard-tab">
