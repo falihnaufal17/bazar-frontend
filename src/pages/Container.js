@@ -19,7 +19,7 @@ const Container = p => {
                                 render={p => {
                                     p = {
                                         ...p,
-                                        apiUrl: 'http://157.245.234.53'
+                                        apiUrl: 'https://api.shopbazar.co'
                                     }
                                     return (
                                         <ItemRoute component={<Page {...p} />} />
