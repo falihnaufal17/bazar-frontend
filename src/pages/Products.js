@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { fetchProducts } from '../actions/Products';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import imgProduct from '../assets/images/adidas-originals-black-3-stripes-t-shirt 1.svg';
-import {ProductItemLoader} from '../components/placeholders/AppPlaceholder'
+import {ProductItemLoader, ProductsPlaceholder} from '../components/placeholders/AppPlaceholder'
 const ProductItem = lazy(()=>import('../components/ProductItem'));
 const SideBarProducts = lazy(()=>import('../components/SideBarProducts'));
 
@@ -333,77 +333,81 @@ const Products = props => {
     }
     
     return(
-        <div className="container mt-5" id="product-lists">
-            <div className="row">
-                <div className="col-lg-3"></div>
-                <div className="col-md-12 col-lg-9" id="header">
-                    <div className="row align-items-center">
-                        <div className="col-12 col-md-12 col-lg">
-                            <h1 className="title">{props.match.params.menu.replace(/-/g, ' ')} | {props.match.params.category.replace(/-/g, ' ')}</h1>
-                        </div>
-                        <div className="col-6 col-md-auto">
-                            <div className="row align-items-center row-p">
-                                <div className="col">
-                                    <lable className="title subtitle">Brands</lable>
-                                </div>
-                                <div className="col">
-                                    <select className="form-control select">
-                                        <option>Tory Burch</option>
-                                    </select>
+        <Suspense fallback={<ProductsPlaceholder {...props}/>}>
+            <div className={activeClass}>
+            <div className={"container mt-5"} id="product-lists">
+                <div className="row">
+                    <div className="col-lg-3"></div>
+                    <div className="col-md-12 col-lg-9" id="header">
+                        <div className="row align-items-center">
+                            <div className="col-12 col-md-12 col-lg">
+                                <h1 className="title"><span className="obj-el">{props.match.params.menu.replace(/-/g, ' ')}</span> | <span className="obj-el">{props.match.params.category.replace(/-/g, ' ')}</span></h1>
+                            </div>
+                            <div className="col-6 col-md-auto">
+                                <div className="row align-items-center row-p">
+                                    <div className="col">
+                                        <lable className="title subtitle"><span className="obj-el">Brands</span></lable>
+                                    </div>
+                                    <div className="col obj-el">
+                                        <select className="form-control select">
+                                            <option>Tory Burch</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-6 col-md-auto">
-                            <div className="row align-items-center row-p">
-                                <div className="col">
-                                    <lable className="title subtitle">Short By</lable>
-                                </div>
-                                <div className="col">
-                                    <select className="form-control select">
-                                        <option>Price low - high</option>
-                                    </select>
+                            <div className="col-6 col-md-auto">
+                                <div className="row align-items-center row-p">
+                                    <div className="col">
+                                        <lable className="title subtitle"><span className="obj-el">Short By</span></lable>
+                                    </div>
+                                    <div className="col obj-el">
+                                        <select className="form-control select">
+                                            <option>Price low - high</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="row">
-                <div className="col-md-3">
-                    <SideBarProducts size={size} color={color} category={category} brand={brand} sizes={sizes} colors={colors} brands={brands} toggleClick={toggleClick} />
-                </div>
-                <div className={"col-md-9 " + activeClass}>
-                <InfiniteScroll
-                    dataLength={props.products.length} //This is important field to render the next data
-                    next={() => {
-                        let newPage = props.pagination.page;
-                        newPage++
-                        props.fetchProducts(props.apiUrl, pagination.per_page, newPage, props.match.params.category);
-                    
-                    }}
-                    hasMore={props.hasMore}
-                    loader={<ProductItemLoader isLoading={props.isLoading} />}
-                    endMessage={
-                        <p style={{ textAlign: 'center' }}>
-                        <b>Yay! You have seen it all</b>
-                        </p>
-                    }
-                >
-                    <div className="row grid-list">
-                    {
-                        props.products.map((item, key) => {
-                            return(
-                                <div className="col-6 col-md-4 col-lg-auto position-relative" key={key}>
-                                    <ProductItem data={item} key={key} isLoading={props.isLoading} />
-                                </div>
-                            )
-                        })
-                    }
+                <div className="row">
+                    <div className="col-md-3">
+                        <SideBarProducts size={size} color={color} category={category} brand={brand} sizes={sizes} colors={colors} brands={brands} toggleClick={toggleClick} />
                     </div>
-                </InfiniteScroll>
+                    <div className={"col-md-9"}>
+                    <InfiniteScroll
+                        dataLength={props.products.length} //This is important field to render the next data
+                        next={() => {
+                            let newPage = props.pagination.page;
+                            newPage++
+                            props.fetchProducts(props.apiUrl, pagination.per_page, newPage, props.match.params.category);
+                        
+                        }}
+                        hasMore={props.hasMore}
+                        loader={<ProductItemLoader isLoading={props.isLoading} />}
+                        endMessage={
+                            <p style={{ textAlign: 'center' }}>
+                            <b>Yay! You have seen it all</b>
+                            </p>
+                        }
+                    >
+                        <div className="row grid-list">
+                        {
+                            props.products.map((item, key) => {
+                                return(
+                                    <div className="col-6 col-md-4 col-lg-auto position-relative" key={key}>
+                                        <ProductItem data={item} key={key} isLoading={props.isLoading} />
+                                    </div>
+                                )
+                            })
+                        }
+                        </div>
+                    </InfiniteScroll>
+                    </div>
                 </div>
             </div>
-        </div>
+            </div>
+        </Suspense>
     )
 }
 
