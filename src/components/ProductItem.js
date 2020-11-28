@@ -15,7 +15,7 @@ const ProductItem = props => {
     }
 
     return(
-        <>
+        <div>
             <div className="favorite" onClick={() => setIsFavorite(!isFavorite)}>
                 <img src={isFavorite ? FavoriteActive : Favorite} alt="favorite-icon" />
             </div>
@@ -23,12 +23,14 @@ const ProductItem = props => {
                 <div className="image">
                     <div className={stock > 0 ? "" : 'disabled'}>
                     </div>
-                    <img src={props.data.path} className="card-img-top" alt={props.data.title} />
+                    <div className="obj-el">
+                        <img src={props.data.path} className="card-img-top" alt={props.data.title} />
+                    </div>
                 </div>
                 <div className="card-body">
-                    <div className="category">{props.data.subcategory}</div>
-                    <div className="product-name">{props.data.title}</div>
-                    <div className="price mb-2">${props.data.price}</div>
+                    <div className="category"><span className="obj-el">{props.data.subcategory}</span></div>
+                    <div className="product-name"><span className="obj-el">{props.data.title}</span></div>
+                    <div className="price mb-2"><span className="obj-el">${props.data.price}</span></div>
                     {/* <div className="row row-color">
                         {props.data.color.map((d, i) => {
                             return(
@@ -43,7 +45,7 @@ const ProductItem = props => {
                     </div> */}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

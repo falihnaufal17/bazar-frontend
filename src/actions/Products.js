@@ -16,6 +16,9 @@ export const fetchProducts = (url, per_page, page, subcategory) => {
                 })
             })
             .catch(error => {
+                dispatch({
+                    type: 'FETCH_PRODUCTS_FAILED',
+                })
                 throw (error);
             })
     }

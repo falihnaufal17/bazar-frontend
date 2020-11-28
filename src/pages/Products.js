@@ -2,7 +2,9 @@ import React, {lazy, useState, Suspense, useEffect} from 'react';
 import '../assets/styles/Products.scss';
 import { connect } from 'react-redux';
 import { fetchProducts } from '../actions/Products';
+import InfiniteScroll from 'react-infinite-scroll-component';
 import imgProduct from '../assets/images/adidas-originals-black-3-stripes-t-shirt 1.svg';
+import {ProductItemLoader} from '../components/placeholders/AppPlaceholder'
 const ProductItem = lazy(()=>import('../components/ProductItem'));
 const SideBarProducts = lazy(()=>import('../components/SideBarProducts'));
 
@@ -323,6 +325,13 @@ const Products = props => {
             brand: "Macy's"
         },
     ]
+
+    let activeClass = 'cp-placeholder transparent'
+
+    if(props.isLoading){
+        activeClass = activeClass + ' active'
+    }
+    
     return(
         <div className="container mt-5" id="product-lists">
             <div className="row">
@@ -363,18 +372,35 @@ const Products = props => {
                 <div className="col-md-3">
                     <SideBarProducts size={size} color={color} category={category} brand={brand} sizes={sizes} colors={colors} brands={brands} toggleClick={toggleClick} />
                 </div>
-                <div className="col-md-9">
+                <div className={"col-md-9 " + activeClass}>
+                <InfiniteScroll
+                    dataLength={props.products.length} //This is important field to render the next data
+                    next={() => {
+                        let newPage = props.pagination.page;
+                        newPage++
+                        props.fetchProducts(props.apiUrl, pagination.per_page, newPage, props.match.params.category);
+                    
+                    }}
+                    hasMore={props.hasMore}
+                    loader={<ProductItemLoader isLoading={props.isLoading} />}
+                    endMessage={
+                        <p style={{ textAlign: 'center' }}>
+                        <b>Yay! You have seen it all</b>
+                        </p>
+                    }
+                >
                     <div className="row grid-list">
                     {
                         props.products.map((item, key) => {
                             return(
                                 <div className="col-6 col-md-4 col-lg-auto position-relative" key={key}>
-                                    <ProductItem data={item} key={key} />
+                                    <ProductItem data={item} key={key} isLoading={props.isLoading} />
                                 </div>
                             )
                         })
                     }
                     </div>
+                </InfiniteScroll>
                 </div>
             </div>
         </div>
@@ -385,7 +411,8 @@ const mapStateToProps = state => {
     return {
         pagination: state.ProductsReducer.pagination,
         products: state.ProductsReducer.result,
-        isLoading: state.ProductsReducer.isLoading
+        isLoading: state.ProductsReducer.isLoading,
+        hasMore: state.ProductsReducer.hasMore
     }
 }
 
