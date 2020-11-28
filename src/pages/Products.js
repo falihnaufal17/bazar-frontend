@@ -1,9 +1,9 @@
-import React, {lazy, useState, Suspense, useEffect} from 'react';
+import React, {lazy, Suspense} from 'react';
 import '../assets/styles/Products.scss';
 import { connect } from 'react-redux';
 import { fetchProducts } from '../actions/Products';
-import {ProductsPlaceholder} from '../components/placeholders/AppPlaceholder'
-import ProductsComponent from '../components/Products';
+import ProductsPlaceholder from '../components/placeholders/Products'
+const ProductsComponent = lazy(()=>import('../components/Products'));
 
 const Products = props => {
 

@@ -98,12 +98,6 @@ export const ProductItemLoader = (props) => {
     )
 }
 
-export const ProductsPlaceholder = (props) => {
-    return(
-        <ProductsComponent {...props} />
-    )
-}
-
 export const ProductDetailPlaceholder = (props) => {
     let product = {
         images: [
