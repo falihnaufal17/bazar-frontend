@@ -486,7 +486,7 @@ const Navbar = (props) => {
                                                 {props.location.pathname == "/products/women-accessories/hats" ? <div className="active"/> : <div className="deactive"/>}
                                             </div>
                                             <div className="item">
-                                                <a className="dropdown-item"href="/products/women-accessories/jewlrey">jewlrey</a>
+                                                <a className="dropdown-item"href="/products/women-accessories/jewlrey">Jewellery</a>
                                                 {props.location.pathname == "/products/women-accessories/jewlrey" ? <div className="active"/> : <div className="deactive"/>}
                                             </div>
                                             <div className="item">
