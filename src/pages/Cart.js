@@ -1,7 +1,7 @@
-import React, {Suspense, lazy} from 'react';
-import Cart1 from '../assets/images/CART-1.svg';
-import Cart2 from '../assets/images/CART-2.svg';
-
+import React, {Suspense, lazy, useEffect, useState} from 'react';
+import { connect } from 'react-redux';
+import { fetchCarts } from '../actions/Carts';
+import { fetchDeliveryMethod } from '../actions/DeliveryMethod';
 import '../assets/styles/Cart.scss';
 
 const ShoppingBag = lazy(()=>import('../components/ShoppingBag'));
@@ -9,65 +9,64 @@ const DeliverMethod = lazy(() => import('../components/DeliverMethod'));
 const SummaryBags = lazy(() => import('../components/SummaryBags'));
 
 const Cart = props => {
-
-    const dataCart = [
-        {
-            id: 1,
-            product_name: 'Adidas Lotta Volkova',
-            price: 635,
-            image: Cart2,
-            category: 'Women’s Dress',
-            color: 'Green Light'
-        },
-        {
-            id: 2,
-            product_name: 'Alexander Mcqueen',
-            price: 1270,
-            image: Cart1,
-            category: 'Women’s Dress',
-            color: 'Pink-charcoal'
+    const [estimated, setEstimated] = useState({
+        price: 0
+    })
+    let [total, setTotal] = useState(0);
+    useEffect(() => {
+        if(JSON.parse(localStorage.getItem('profile')) != null){
+            props.fetchCarts(props.apiUrl, JSON.parse(localStorage.getItem('profile')).id);
         }
-    ]
-    const deliver = [
-        {
-            id: 1,
-            type: 'Postal',
-            detail: 'Import charges collected upon delivery',
-            delivery_in: 'Delivery in 4-6 weeks',
-            price: '9.70'
-        },
-        {
-            id: 2,
-            type: 'Standard',
-            detail: 'No additional import charges at delivery',
-            delivery_in: 'Delivery in 10-16 business days',
-            price: '20.70'
-        },
-        {
-            id: 3,
-            type: 'Express',
-            detail: 'No additional import charges at delivery',
-            delivery_in: 'Delivery in 9-14 business days',
-            price: '30.00'
-        }
-    ]
+        props.fetchDeliveryMethod(props.apiUrl);
+    }, [])
     return(
         <Suspense fallback={<div />}>
             <div id="bags">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-md-8">
-                            <ShoppingBag {...props} data={dataCart} />
-                            <DeliverMethod {...props} data={deliver}/>
-                        </div>
-                        <div className="col-12 col-md-4">
-                            <SummaryBags {...props}/> 
-                        </div>
-                    </div>
+                    {
+                        props.carts.length > 0 ?
+                        (
+                            <div className="row">
+                                <div className="col-12 col-md-8">
+                                    <ShoppingBag {...props} data={props.carts} />
+                                    <DeliverMethod {...props} data={props.deliveryMethod} estimated={estimated} setEstimated={setEstimated}/>
+                                </div>
+                                <div className="col-12 col-md-4">
+                                    <SummaryBags {...props} estimated={estimated} total={total} setTotal={setTotal} /> 
+                                </div>
+                            </div>
+                        ) : 
+                        (
+                            <div className="text-center mb-5">
+                                <h1>No Item Cart Here!</h1>
+                            </div>
+                        )
+                    }
+                    
                 </div>
             </div>
         </Suspense>
     )
 }
 
-export default Cart;
+const mapStateToProps = state => {
+    return {
+        carts: state.CartsReducer.result,
+        isLoading: state.CartsReducer.isLoading,
+        deliveryMethod: state.DeliveryMethodReducer.result,
+        isLoadingDeliveryMethod: state.DeliveryMethodReducer.isLoading
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchCarts: (url, user_id) => {
+            dispatch(fetchCarts(url, user_id))
+        },
+        fetchDeliveryMethod: (url) => {
+            dispatch(fetchDeliveryMethod(url))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);

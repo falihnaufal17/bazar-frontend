@@ -8,21 +8,21 @@ const CartList = props => {
                 <div className="col-auto">
                     <a href="#"><img src={Delete} alt="delete" /></a>
                 </div>
-                <div className="col-auto">
-                    <div className="image">
-                        <img src={props.image} alt={props.product_name}/>
+                <div className="col">
+                    <div className="image position-relative">
+                        <img src={props.image} alt={props.title} className="w-100 d-block"/>
                     </div>
                 </div>
                 <div className="col">
                     <div className="row align-items-center justify-content-between">
                         <div className="col-12 col-md">
-                            <div className="label">{props.product_name}</div>
+                            <div className="label">{props.title}</div>
                         </div>
                         <div className="col-12 col-md-auto">
                             <div className="label">${props.price}</div>
                         </div>
                     </div>
-                    <div className="label detail">{props.category}</div>
+                    <div className="label detail">{props.subcategory}</div>
                     <div className="row">
                         <div className="col-12 col-md-auto">
                             <div className="row align-items-center">

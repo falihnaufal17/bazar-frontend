@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import '../assets/styles/ProductDetail.scss';
 import { connect } from 'react-redux';
 import { fetchProductDetail } from '../actions/Products';

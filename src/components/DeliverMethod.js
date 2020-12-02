@@ -9,7 +9,7 @@ const DeliverMethod = props => {
                 props.data.map((d, i) => {
                     return(
                         <div key={i}>
-                            <DeliveryList type={d.type} detail={d.detail} delivery_in={d.delivery_in} price={d.price} />
+                            <DeliveryList delivery_type={d.delivery_type} delivery_additional={d.delivery_additional} delivery_in={d.delivery_in} price={d.price} estimated={props.estimated} setEstimated={props.setEstimated} />
                         </div>
                     )
                 })

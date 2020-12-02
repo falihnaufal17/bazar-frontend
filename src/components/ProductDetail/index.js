@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, lazy } from 'react';
 import '../../assets/styles/ProductDetail.scss';
 import Slider from 'react-slick';
 import { handleChange } from '../../helpers';
+import axios from 'axios';
 
 const ProductDetailComponent = (props) => {
     let token = localStorage.getItem('token');
@@ -26,13 +27,31 @@ const ProductDetailComponent = (props) => {
         color: '',
         listing_id: props.product.id,
         size: '',
+        price: props.product.sizes[0].price,
+        image: props.product.images[0].path,
         quantity: 1,
-        user_id: userId
+        user_id: null
     });
 
+    useEffect(() => {
+        setData({
+            listing_id: props.product.id,
+            price: props.product.sizes[0].price,
+            image: props.product.images[0].path,
+            user_id: userId
+        })
+    }, [props.product, userId])
+    
     const addToCart = () => {
         if(token != null){
             // hit api add to cart
+            axios.post(`${props.apiUrl}/cart?user_id=${data.user_id}&listing_id=${data.listing_id}`, data)
+                .then((response) => {
+                    return response;
+                })
+                .catch(err => {
+                    throw err;
+                })
         }else{
             window.location.href = '/login'
         }
