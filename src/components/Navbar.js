@@ -426,12 +426,12 @@ const Navbar = (props) => {
                                                 {props.location.pathname == "/products/women-bags/shoulder-bags" ? <div className="active"/> : <div className="deactive"/>}
                                             </div>
                                             <div className="item">
-                                                <a className="dropdown-item"href="/products/women-bags/walllet">Walllet</a>
-                                                {props.location.pathname == "/products/women-bags/walllet" ? <div className="active"/> : <div className="deactive"/>}
+                                                <a className="dropdown-item"href="/products/women-bags/wallet">Wallet</a>
+                                                {props.location.pathname == "/products/women-bags/wallet" ? <div className="active"/> : <div className="deactive"/>}
                                             </div>
                                             <div className="item">
                                                 <a className="dropdown-item"href="/products/women-bags/shop-all-bags">Shop all Bags</a>
-                                                {props.location.pathname == "/products/women-bags/walllet" ? <div className="active"/> : <div className="deactive"/>}
+                                                {props.location.pathname == "/products/women-bags/shop-all-bags" ? <div className="active"/> : <div className="deactive"/>}
                                             </div>
                                         </div>   
                                         <div className="col-12 col-md-4">
@@ -474,8 +474,8 @@ const Navbar = (props) => {
                                                 {props.location.pathname == "/products/women-accessories/belts" ? <div className="active"/> : <div className="deactive"/>}
                                             </div>
                                             <div className="item">
-                                                <a className="dropdown-item"href="/products/women-accessories/everywear">Everywear</a>
-                                                {props.location.pathname == "/products/women-accessories/everywear" ? <div className="active"/> : <div className="deactive"/>}
+                                                <a className="dropdown-item"href="/products/women-accessories/eyewear">Eyewear</a>
+                                                {props.location.pathname == "/products/women-accessories/eyewear" ? <div className="active"/> : <div className="deactive"/>}
                                             </div>
                                             <div className="item">
                                                 <a className="dropdown-item"href="/products/women-accessories/gloves">GLoves</a>
@@ -509,8 +509,8 @@ const Navbar = (props) => {
                                                 {props.location.pathname == "/products/men-accessories/belts" ? <div className="active"/> : <div className="deactive"/>}
                                             </div>
                                             <div className="item">
-                                                <a className="dropdown-item"href="/products/men-accessories/everywear">Everywear</a>
-                                                {props.location.pathname == "/products/men-accessories/everywear" ? <div className="active"/> : <div className="deactive"/>}
+                                                <a className="dropdown-item"href="/products/men-accessories/eyewear">Eyewear</a>
+                                                {props.location.pathname == "/products/men-accessories/eyewear" ? <div className="active"/> : <div className="deactive"/>}
                                             </div>
                                             <div className="item">
                                                 <a className="dropdown-item"href="/products/men-accessories/gloves">GLoves</a>
