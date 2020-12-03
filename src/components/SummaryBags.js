@@ -6,10 +6,10 @@ const SummaryBags = props => {
     useEffect(() => {
         setToken(localStorage.getItem('token'));
         props.carts.map((item, key) =>{
-            setSubTotal(subTotal = subTotal + item.price * item.quantity)
+            setSubTotal(subTotal = subTotal + Number(item.price) * Number(item.quantity))
         })
     }, [props.carts])
-    props.setTotal(Number(subTotal) + Number(props.estimated.price))
+    props.setTotal(Number(props.estimated.price) + Number(subTotal))
     return(
         <div className="main-card side-card">
             <div className="label">SUMMARY</div>
@@ -44,7 +44,7 @@ const SummaryBags = props => {
                     <div className="label">Total</div>
                 </div>
                 <div className="col-auto">
-                    <div className="label">${props.total}</div>
+                    <div className="label">${props.total.toFixed(1)}</div>
                 </div>
             </div>
             <a href={token != null ? "/checkout/payment" : "/checkout/login"} className="btn-primary">PROCEED TO CHECKOUT</a>

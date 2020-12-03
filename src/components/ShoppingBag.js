@@ -9,7 +9,7 @@ const ShoppingBag = props => {
                 props.data.map((d, i) => {
                     return(
                         <div key={i}>
-                            <CartList title={d.title} color={d.color} price={d.price} image={d.image} subcategory={d.subcategory}/>
+                            <CartList {...props} id={d.id} title={d.title} quantity={d.quantity} size={d.size} color={d.color} price={d.price} image={d.image} subcategory={d.subcategory}/>
                         </div>
                     )
                 })
