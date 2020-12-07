@@ -7,11 +7,15 @@ const AddressList = props => {
             <a href="#" className="delete">
                 <img src={Delete} alt="delete" />
             </a>
-            <div className="address-title text-center">Address {props.id + 1}</div>
-            <div className="address-title address-subtitle">Shipping Address</div>
+            <div className="row border-bottom mb-3">
+                <div className="col">
+                    <div className="address-title">{props.user.first_name} {props.user.last_name}</div>
+                </div>
+                <div className="col-auto">
+                    <div className="address-title">Address</div>
+                </div>
+            </div>
             <div className="address">{props.address}, {props.zip_code}, {props.state}</div>
-            <div className="address-title address-subtitle">Billing Address</div>
-            <div className="address mb-0">{props.address}, {props.zip_code}, {props.state}</div>
         </div>
     )
 }
