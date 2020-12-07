@@ -37,7 +37,7 @@ const Cart = props => {
                             </div>
                         ) : 
                         (
-                            <div className="text-center mb-5">
+                            <div className="text-center p-5">
                                 <h1>No Item Cart Here!</h1>
                             </div>
                         )
